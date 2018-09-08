@@ -4,6 +4,26 @@
 <link rel="stylesheet" type="text/css" href="css/construction.css" >
   <style>
 
+  .alpha, .beta, .gamma, .delta{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    left:450px;
+    top:450px;
+  }
+  .alpha{
+    background-color: tomato;
+  }
+  .beta{
+    background-color: gold;
+  }
+  .gamma{
+    background-color: orchid;
+  }
+  .delta{
+    background-color: paleturquoise;
+  }
+
   .wall{
     position: fixed;
     width: 20px;
@@ -43,6 +63,20 @@
     top:350px;
     transform: rotate(90deg);
   }
+
+  .alpha, .beta, .gamma, .delta{
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-iteration-count: 3;
+    transition-property: all;
+  }
+
+  .alpha:hover, .beta:hover, .gamma:hover, .delta:hover{
+    background-color: slategrey;
+  }
+
 
   .d, .e, .f, .g, .h, .i, .j, .k, .l, .m, .n, .o {
     position: fixed;
@@ -97,6 +131,11 @@
   .k{transform: rotate(240deg);}
   .l{transform: rotate(270deg);}
 
+  .alpha{animation-name: alpha;}
+  .beta{animation-name: beta;}
+  .gamma{animation-name: gamma;}
+  .delta{animation-name: delta;}
+
   .b{animation-name: b;}
   .c{animation-name: c;}
   .d{animation-name: d;}
@@ -111,6 +150,34 @@
   .m{animation-name: m;}
   .n{animation-name: n;}
   .o{animation-name: o;}
+
+  @keyframes alpha {
+    0% {left:450px; top:450px;}
+    30% {left:500px; top:450px;}
+    100% {left:500px; top:450px;}
+  }
+  @keyframes beta {
+    0% {left:450px; top:450px;}
+    30% {left:500px; top:450px;}
+    40% {left:500px; top:400px;}
+    50% {left:500px; top:400px;}
+    100% {left:500px; top:400px;}
+  }
+  @keyframes gamma {
+    0% {left:450px; top:450px;}
+    30% {left:500px; top:450px;}
+    40% {left:500px; top:400px;}
+    50% {left:550px; top:400px;}
+    100% {left:550px; top:400px;}
+  }
+  @keyframes delta {
+    0% {left:450px; top:450px;}
+    30% {left:500px; top:450px;}
+    40% {left:500px; top:400px;}
+    50% {left:550px; top:400px;}
+    60% {left:550px; top:350px;}
+    100% {left:550px; top:350px;}
+  }
 
     @keyframes d {
       0%   {left:285px; top:305px;-webkit-transform: rotate(45deg)}
@@ -174,7 +241,10 @@
   <div class="h"></div>
   <div class="i"></div>
 
-
+  <div class="alpha"></div>
+  <div class="beta"></div>
+  <div class="gamma"></div>
+  <div class="delta"></div>
 
 
 
