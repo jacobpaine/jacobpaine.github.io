@@ -1,264 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125431516-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125431516-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-125431516-1');
-</script>
-<!-- End Global site tag -->
-
-<link rel="stylesheet" type="text/css" href="css/construction.css" >
-  <style>
-
-  .alpha, .beta, .gamma, .delta{
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    left:450px;
-    top:450px;
-  }
-  .alpha{
-    background-color: tomato;
-  }
-  .beta{
-    background-color: gold;
-  }
-  .gamma{
-    background-color: orchid;
-  }
-  .delta{
-    background-color: paleturquoise;
-  }
-
-  .wall{
-    position: fixed;
-    width: 20px;
-    border-width: 20px 0px 20px 20px;
-    border-style: solid;
-    border-color: black transparent;
-    left:300px;
-    top:300px;
-  }
-  .wall2{
-    position: fixed;
-    width: 20px;
-    border-width: 20px 0px 20px 20px;
-    border-style: solid;
-    border-color: black transparent;
-    left:250px;
-    top:250px;
-    transform: rotate(270deg);
-  }
-  .wall3{
-    position: fixed;
-    width: 20px;
-    border-width: 20px 0px 20px 20px;
-    border-style: solid;
-    border-color: black transparent;
-    left:200px;
-    top:300px;
-    transform: rotate(180deg);
-  }
-  .wall4{
-    position: fixed;
-    width: 20px;
-    border-width: 20px 0px 20px 20px;
-    border-style: solid;
-    border-color: black transparent;
-    left:250px;
-    top:350px;
-    transform: rotate(90deg);
-  }
-
-  .alpha, .beta, .gamma, .delta{
-    animation-duration: 3s;
-    animation-direction: alternate;
-    animation-fill-mode: both;
-    animation-timing-function: linear;
-    animation-iteration-count: 3;
-    transition-property: all;
-  }
-
-  .alpha:hover, .beta:hover, .gamma:hover, .delta:hover{
-    background-color: slategrey;
-  }
-
-
-  .d, .e, .f, .g, .h, .i, .j, .k, .l, .m, .n, .o {
-    position: fixed;
-    width: 0px;
-    border-style: solid;
-    border-width: 0px 30px 30px 0px;
-    border-color: blue transparent;
-    position: absolute;
-    animation-duration: 3s;
-    animation-direction: alternate;
-    animation-fill-mode: both;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    left:10px;
-    top:200px;
-    transition-delay: 4s;
-    transition-property: all;
-  }
-
-  .d, .e, .f{
-    left:25px;
-    top:250px;
-    animation-duration: 7s;
-  }
-
-  .d{transform: rotate(30deg);
-    border-color: transparent blue;}
-  .e{transform: rotate(60deg);
-    border-color: transparent orange;}
-  .f{transform: rotate(30deg);
-    border-color: transparent red;}
-
-  .g, .h, .i{
-    left:25px;
-    top:250px;
-    animation-duration: 3s;
-    transition-delay: 4s;
-  }
-  .g{transform: rotate(30deg);
-    border-color: transparent green;}
-  .h{transform: rotate(60deg);
-    border-color: transparent indigo;}
-  .i{transform: rotate(30deg);
-    border-color: transparent gold;}
-
-  .j, .k, .l{
-    border-color: transparent orange;
-    left:25px;
-    top:250px;
-  }
-  .j{transform: rotate(210deg);}
-  .k{transform: rotate(240deg);}
-  .l{transform: rotate(270deg);}
-
-  .alpha{animation-name: alpha;}
-  .beta{animation-name: beta;}
-  .gamma{animation-name: gamma;}
-  .delta{animation-name: delta;}
-
-  .b{animation-name: b;}
-  .c{animation-name: c;}
-  .d{animation-name: d;}
-  .e{animation-name: e;}
-  .f{animation-name: f;}
-  .g{animation-name: g;}
-  .h{animation-name: h;}
-  .i{animation-name: i;}
-  .j{animation-name: j;}
-  .k{animation-name: k;}
-  .l{animation-name: l;}
-  .m{animation-name: m;}
-  .n{animation-name: n;}
-  .o{animation-name: o;}
-
-  @keyframes alpha {
-    0% {left:450px; top:450px;}
-    30% {left:500px; top:450px;}
-    100% {left:500px; top:450px;}
-  }
-  @keyframes beta {
-    0% {left:450px; top:450px;}
-    30% {left:500px; top:450px;}
-    40% {left:500px; top:400px;}
-    50% {left:500px; top:400px;}
-    100% {left:500px; top:400px;}
-  }
-  @keyframes gamma {
-    0% {left:450px; top:450px;}
-    30% {left:500px; top:450px;}
-    40% {left:500px; top:400px;}
-    50% {left:550px; top:400px;}
-    100% {left:550px; top:400px;}
-  }
-  @keyframes delta {
-    0% {left:450px; top:450px;}
-    30% {left:500px; top:450px;}
-    40% {left:500px; top:400px;}
-    50% {left:550px; top:400px;}
-    60% {left:550px; top:350px;}
-    100% {left:550px; top:350px;}
-  }
-
-    @keyframes d {
-      0%   {left:285px; top:305px;-webkit-transform: rotate(45deg)}
-      25%   {left:255px; top:335px;-webkit-transform: rotate(135deg)}
-      50%   {left:220px; top:305px;-webkit-transform: rotate(225deg)}
-      75%   {left:255px; top:275px;-webkit-transform: rotate(320deg)}
-      100% {left:285px; top:305px;-webkit-transform: rotate(400deg)}
-    }
-   @keyframes e {
-     0%   {left:220px; top:305px;-webkit-transform: rotate(225deg)}
-     25%   {left:255px; top:335px;-webkit-transform: rotate(135deg)}
-     50%   {left:285px; top:305px;-webkit-transform: rotate(45deg)}
-     75%   {left:255px; top:275px;-webkit-transform: rotate(320deg)}
-     100% {left:285px; top:305px;-webkit-transform: rotate(400deg)}
-    }
-    @keyframes f {
-      0%   {left:285px; top:305px;-webkit-transform: rotate(45deg)}
-      25% {left:285px; top:305px;-webkit-transform: rotate(400deg)}
-      50%   {left:255px; top:275px;-webkit-transform: rotate(320deg)}
-      75%   {left:255px; top:335px;-webkit-transform: rotate(135deg)}
-      100%   {left:220px; top:305px;-webkit-transform: rotate(225deg)}
-     }
-    @keyframes g {
-      0%   {left:255px; top:335px;-webkit-transform: rotate(135deg)}
-      25%   {left:285px; top:305px;-webkit-transform: rotate(45deg)}
-      50%   {left:255px; top:275px;-webkit-transform: rotate(320deg)}
-      75% {left:285px; top:305px;-webkit-transform: rotate(400deg)}
-      100%   {left:220px; top:305px;-webkit-transform: rotate(225deg)}
-    }
-    @keyframes h {
-      0%   {left:285px; top:305px;-webkit-transform: rotate(45deg)}
-      25%   {left:255px; top:335px;-webkit-transform: rotate(135deg)}
-      50%   {left:220px; top:305px;-webkit-transform: rotate(225deg)}
-      75%   {left:255px; top:275px;-webkit-transform: rotate(320deg)}
-      100% {left:285px; top:305px;-webkit-transform: rotate(400deg)}
-    }
-    @keyframes i {
-      0%   {left:285px; top:305px;-webkit-transform: rotate(45deg)}
-      25%   {left:255px; top:335px;-webkit-transform: rotate(135deg)}
-      50% {left:285px; top:305px;-webkit-transform: rotate(400deg)}
-      75%   {left:255px; top:275px;-webkit-transform: rotate(320deg)}
-      100%   {left:220px; top:305px;-webkit-transform: rotate(225deg)}
-    }
-
-    </style>
+    gtag('config', 'UA-125431516-1');
+  </script>
+  <!-- End Global site tag -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/construction.css" >
   </head>
   <body>
-  Currently under construction.
+    <div class="container-fluid">
+      Currently under construction.
+      <div class="wall"></div>
+      <div class="wall2"></div>
+      <div class="wall3"></div>
+      <div class="wall4"></div>
 
-  <div class="wall"></div>
-  <div class="wall2"></div>
-  <div class="wall3"></div>
-  <div class="wall4"></div>
+      <div class="a"></div>
+      <div class="b"></div>
+      <div class="d"></div>
+      <div class="e"></div>
+      <div class="f"></div>
+      <div class="g"></div>
+      <div class="h"></div>
+      <div class="i"></div>
 
-  <div class="a"></div>
-  <div class="b"></div>
-  <div class="d"></div>
-  <div class="e"></div>
-  <div class="f"></div>
-  <div class="g"></div>
-  <div class="h"></div>
-  <div class="i"></div>
+      <div class="alpha"></div>
+      <div class="beta"></div>
+      <div class="gamma"></div>
+      <div class="delta"></div>
+      <div class="epsilon"></div>
+      <div class="zeta"></div>
+      <div class="eta"></div>
+      <div class="theta"></div>
+      <div class="iota"></div>
 
-  <div class="alpha"></div>
-  <div class="beta"></div>
-  <div class="gamma"></div>
-  <div class="delta"></div>
+    </div>
 
-
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
   </body>
 <html>
