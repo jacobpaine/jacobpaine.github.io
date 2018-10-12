@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  </head>
+
+  <div>
+    <p>Game</p>
+  </div>
+
+  <style>
+    body{
+      text-align: center;
+    }
+    .box{
+      width: auto;
+      height: 25px;
+      padding: 0px;
+    }
+
+    .board{
+      display: inline-grid;
+      grid-gap: 5px;
+      grid-column-gap: 5px;
+      grid-template-columns:
+      25px 25px 25px 25px 25px 25px 25px 25px 25px 25px
+      25px 25px 25px 25px 25px 25px 25px 25px 25px 25px
+      25px 25px 25px 25px 25px 25px 25px 25px 25px 25px;
+      background-color: #2196F3;
+    }
+    #drag1, #drag2, #drag3{
+      width: 25px;
+      height: 25px;
+    }
+    #drag1{
+      background-color: black;
+    }
+    #drag2{
+      background-color: green;
+    }
+    #drag3{
+      background-color: red;
+    }
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.8);
+      font-size: 16px;
+      height: 25px;
+      text-align: center;
+    }
+    .storage{
+      display: inline-flex;
+      flex-basis: auto;
+      border: 1px solid #aaaaaa;
+      outline-style: inset;
+      min-width: 75px;
+      min-height: 25px;
+      margin-top: 25px;;
+    }
+    .storage-box{
+      min-height: 25px;
+      min-width: 25px;
+    }
+
+  </style>
+
+  <div class="board">
+  </div>
+
+<div class="storage">
+  <div class="storage-box grab" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div id="drag1" draggable="true" ondragstart="drag(event)"></div>
+  </div>
+  <div class="storage-box grab" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div id="drag2" draggable="true" ondragstart="drag(event)"></div>
+  </div>
+  <div class="storage-box grab" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div id="drag3" draggable="true" ondragstart="drag(event)"></div>
+  </div>
+  <div class="storage-box grab" ondrop="drop(event)" ondragover="allowDrop(event)">
+  </div>
+  <div class="storage-box" ondrop="drop(event)" ondragover="allowDrop(event)">
+  </div>
+  <div class="storage-box" ondrop="drop(event)" ondragover="allowDrop(event)">
+  </div>
+  <div class="storage-box" ondrop="drop(event)" ondragover="allowDrop(event)">
+  </div>
+  <div class="storage-box" ondrop="drop(event)" ondragover="allowDrop(event)">
+  </div>
+  <div class="storage-box" ondrop="drop(event)" ondragover="allowDrop(event)">
+  </div>
+  <div class="storage-box" ondrop="drop(event)" ondragover="allowDrop(event)">
+  </div>
+  <div class="storage-box" ondrop="drop(event)" ondragover="allowDrop(event)">
+  </div>
+  <div class="storage-box" ondrop="drop(event)" ondragover="allowDrop(event)">
+  </div>
+  <div class="storage-box" ondrop="drop(event)" ondragover="allowDrop(event)">
+  </div>
+  <div class="storage-box" ondrop="drop(event)" ondragover="allowDrop(event)">
+  </div>
+  <div class="storage-box" ondrop="drop(event)" ondragover="allowDrop(event)">
+  </div>
+</div>
+  <br>
+
+  </body>
+
+  <script src="./game.js"></script>
+
+</html>
+
+<!-- <div class="grid-item">
+<div class="box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="grid-item">2</div>
+<div class="grid-item">3</div> -->
