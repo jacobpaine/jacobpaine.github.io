@@ -3,7 +3,7 @@ Using a few of the more popular examples as inspiration, develop a portfolio sit
 
 ### Common Elements
 1. Intro splash including animation, name,
-<img src="https://github.com/jacobpaine/jacobpaine.github.io/blob/master/images/inigo's%20guide.jpg" width="300px" height="250px">
+<img src="https://github.com/jacobpaine/jacobpaine.github.io/blob/master/images/inigo's%20guide.jpg" width="250px" height="250px" float="left">
 2.
 3.
 4.
