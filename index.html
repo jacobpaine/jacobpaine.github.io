@@ -1,18 +1,76 @@
 <!DOCTYPE html>
-<style>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
-.blink {
-  animation: blinker .85s linear infinite;
-}
+<body>
 
-@keyframes blinker {
-  50% {
-    opacity: 0;
+  <p>
+    Site currently under construction. Please excuse the mess.
+  </p>
+
+  <!-- <div id="intro-block">
+    <div class="block animatable bounceInLeft">bounceInLeft</div>
+    <div class="block animatable bounceInRight">bounceInRight</div>
+    <div class="block animatable bounceInLeft"><a href="#work">My Work</a></div>
+  </div>
+  <div id="info">
+    <div class="fadeBlock animatable fadeInUp">fadeInUp</div>
+    <div class="fadeBlock animatable fadeInUp">fadeInUp</div>
+    <div class="fadeBlock animatable fadeInUp">fadeInUp</div>
+  </div>
+<div id="work" class="block">WORK</div> -->
+</body>
+
+
+<script>
+
+jQuery(function($) {
+  function windowChange(){
+    var windowWidth = window.innerWidth;
+    var windowHeight = window.innerHeight;
+    console.log("windowWidth: ", windowWidth);
+    console.log("windowHeight: ", windowHeight);
+    $(".block").css('height', windowHeight/3);
+    $(".fadeBlock").css('height', windowHeight);
+    $(".fadeBlock").css('width', windowWidth);
+    $("#work").css('height', windowHeight);
   }
-}
+  windowChange();
 
-</style>
-<div style="text-align:center;">
-  <p>Forgive the mess. Currently under construction..<span class="blink">.</span></p>
-</div>
+  $( window ).resize(function() {
+    windowChange();
+  });
+
+  // Function which adds the 'animated' class to any '.animatable' in view
+  var doAnimations = function() {
+
+    // Calc current offset and get all animatables
+    var offset = $(window).scrollTop() + $(window).height(),
+        $animatables = $('.animatable');
+
+    // Unbind scroll handler if we have no animatables
+    if ($animatables.length == 0) {
+      $(window).off('scroll', doAnimations);
+    }
+
+    // Check all animatables and animate them if necessary
+		$animatables.each(function(i) {
+       var $animatable = $(this);
+			if (($animatable.offset().top + $animatable.height() - 20) < offset) {
+        $animatable.removeClass('animatable').addClass('animated');
+			}
+    });
+
+	};
+
+  // Hook doAnimations on scroll, and trigger a scroll
+	$(window).on('scroll', doAnimations);
+  $(window).trigger('scroll');
+
+});
+
+</script>
+
 </html>

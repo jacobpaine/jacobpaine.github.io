@@ -1,309 +1,102 @@
-.purple{
-  color: #645394;
-}
+/* TODO in styles  */
+/* Do an example of  */
+/* Colors */
 
-a {
-  color: black;
-  text-decoration: none;
-}
-a:hover{
 
-}
-a i:hover{
-  color: #645394;
-}
-#about-display,
-#experience-display,
-#projects-display,
-#blog-display{
-  display: none;
-  flex-wrap: wrap;
-}
-.about{
-  display: inline-block;
-  margin: 0 auto;
-}
-#about-button, #experience-button, #projects-button, #blog-button{
-  padding: 5px;
-}
-.about-intro{
-  align-self: center;
-  text-align: center;
-}
-.active{
-  background-color: #645394;
-  color: white;
-  padding: 5px;
-}
-.blog{
+/* Tag Styles */
+.block {
+  height: 8em;
+  line-height: 5em;
   width: 100%;
-  padding: 30px;
-  border: 1px solid black;
-}
-.blog-chapter{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-#blog-display{
-  margin-top: 10px;
-  justify-content: center;
-}
-.blog-leaf{
-  border: 1px solid black;
-  padding: 10px;
+  background: #464646;
+  color: #fdfdfd;
   text-align: center;
-  width: 25%;
+  margin: 0em auto;
 }
-div.blog-leaf:hover{
-  background-color: #645394;
-}
-.blog-leaf:nth-child(4n+1){
-  background-color: #355F69;
-}
-.blog-leaf:nth-child(4n+2){
-  background-color: #418392;
-}
-.blog-leaf:nth-child(4n+3){
-  background-color: #08596C;
-}
-.blog-leaf:nth-child(4n+4){
-  background-color: #32798A
-}
-#blurb p{
-  margin-right: 15px;
-}
-.card{
-  margin: 3%;
-  padding-top: 30px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 30px;
-  border: 1px solid black;
-  -webkit-box-shadow: 5px 3px 5px 0px rgba(0,0,0,0.25);
-  -moz-box-shadow: 5px 3px 5px 0px rgba(0,0,0,0.25);
-  box-shadow: 5px 3px 5px 0px rgba(0,0,0,0.25);
-}
-.card-box{
-  display: inline-block;
-  margin: 1%;
-}
-.card-head{
-  width: 200px;
-  font-size: 14px;
-  margin-bottom: -41px;
-  margin-left: 14px;
-  background-color: #645394;
-  color: white;
-  text-align: center;
-  padding: 5px;
-}
-.card-title{
-  text-align: center;
-}
-.center-flex{
-  display: flex;
-  justify-content: center;
-}
-.column{
-  display: inline-block;
-}
-.contact-buttons{
-  display: flex;
-  width: 100%;
-  margin-right: 140px;
-  flex-flow: row-reverse;
-}
-.contact-buttons a{
-  padding-left: 1.1em;
-  padding-right: 1.1em;
-  font-size: 1.5em;
-}
-#developer-info{
-  display: flex;
-}
-.dot:before{
-  content: "\f192";
-  font-size: 20px;
-  vertical-align: bottom;
-}
-.dot{
-  font-family: "Font Awesome 5 Free";
-}
-.dot-end:before{
-  content: "\f04d";
-  font-size: 22px;
-}
-.dot-end{
-  font-family: "Font Awesome 5 Free";
-}
-.dot ul li, .dot span{
-    font-family:Merriweather;
-}
-.ed-date{
-  font-size: .89em;
-  float: right;
-}
-.ed-title{
-  font-size: 1em;
-}
-h4{
+body{
   margin: 0px;
 }
-
-html, body {
-  height: 100%;
-  font-family: Merriweather, serif;
-  margin: 0px;
-  padding: 0px;
+.animatable {
+  visibility: hidden;
+  animation-play-state: paused;
 }
-#intro-box{
-  height: 150px;
-  background-color: black;
-  -webkit-clip-path: polygon(40% 0%, 65% 0%, 100% 0%, 100% 70%, 75% 35%, 35% 45%, 15% 20%, 0% 0%);
-  clip-path: polygon(40% 0%, 65% 0%, 100% 0%, 100% 70%, 75% 35%, 35% 45%, 15% 20%, 0% 0%);
-  background-size: cover;
+
+.animated {
+  visibility: visible;
+  animation-fill-mode: both;
+  animation-duration: 1s;
+  animation-play-state: running;
+}
+
+.animated.bounceInRight {
+	animation-name: bounceInRight;
+}
+.animated.bounceInLeft {
+	animation-name: bounceInLeft;
+}
+
+
+@keyframes bounceInLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-2000px);
+	}
+
+	60% {
+		transform: translateX(20px);
+	}
+
+	80% {
+		transform: translateX(-5px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+
+@keyframes bounceInRight {
+	0% {
+		opacity: 0;
+		transform: translateX(2000px);
+	}
+
+	60% {
+		transform: translateX(-20px);
+	}
+
+	80% {
+		transform: translateX(5px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+.animated.fadeInUp {
+	-webkit-animation-name: fadeInUp;
+	-moz-animation-name: fadeInUp;
+	-o-animation-name: fadeInUp;
+	animation-name: fadeInUp;
+}
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+#intro-block{
+  background-color: red;
+}
+#info{
   display: flex;
-  justify-content: flex-end;
-}
-.line{
-  border-left: 1px solid black;
-  height: auto;
-  margin-left: 9px;
-  padding: 15px;
-}
-nav{
-  border-top: 1px black solid;
-  border-bottom: 1px black solid;
-  display: flex;
-  justify-content: space-around;
-}
-/* Prevents annoying page load jerking */
-.preload * {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important;
-}
-.project-box{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.project{
-  margin: 10px;
-  border: 1px solid black;
-  flex-basis: 395px;
-  padding: 12px;
-  text-align: center;
-}
-.project-image-box{
-  display: flex;
-}
-.project img{
-  margin: 0 auto;
-}
-#primary-content{
-}
-#projects-display{
-  flex-flow: column;
-}
-.show-display{
-  display:block;
-}
-.toolbox{
-  padding-top: 12px;
-  font-size: 25px;
-  text-align: center;
-}
-ul{
-  margin-block-start: 0em;
-  margin-block-end: 0em;
-}
-ul li{
-  font-size: .9em;
-  list-style-type: circle;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-@media (min-width: 0px) {
-  #blurb{
-    display: none;
-    margin-top: 0em;
-    padding-left: 0px;
-  }
-  .card-box{
-    width: 100%;
-  }
-  .contact-buttons{
-    margin-top: 10px;
-
-  }
-  #developer-info{
-    font-size: .87em;
-    /* Marginning to work around clip-path */
-    margin-top: -6.5em;
-  }
-  #developer-image{
-    display: none;
-  }
-  #developer-name{
-    font-size: 2em;
-    color: white;
-    margin-top: .4em;
-    z-index: 1;
-    text-shadow: 3px 3px #000;
-  }
-  .hello{
-    position: relative;
-    font-size: 105px;
-    color: lightgrey;
-    margin: 0 auto;
-    text-align: center;
-    z-index: -1;
-  }
-  nav{
-    margin-top: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-}
-
-@media (min-width: 576px) {
-  #blurb{
-    position: relative;
-    display: block;
-    margin-left: -500px;
-    margin-top: -185px;
-    font-size: 100px;
-    color: grey;
-    z-index: -1;
-  }
-  .card-box{
-    width: 48%;
-  }
-  .contact-buttons{
-    margin-top: 1.75em;
-  }
-  #developer-info{
-    padding-top: 10px;
-    font-size: 1.1em;
-    display: flex;
-  }
-  #developer-image{
-    display: block;
-  }
-  .hello{
-    font-size: 200px;
-  }
-}
-
-@media (min-width: 768px) {
-}
-
-@media (min-width: 992px) {
-}
-
-@media (min-width: 1200px) {
 }
