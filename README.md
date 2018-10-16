@@ -27,8 +27,6 @@ Using a few of the more popular examples as inspiration, develop a portfolio sit
   * Color choice
 
 ### Checklist
-
-1. Layout
   * Introduction
     1. Greeting
     2. Name
