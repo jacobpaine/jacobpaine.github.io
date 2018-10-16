@@ -3,24 +3,20 @@
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+  <link href="css/main.css" rel="stylesheet">
 
 <body>
 
-  <p>
+  <!-- <p>
     Site currently under construction. Please excuse the mess.
-  </p>
+  </p> -->
 
-  <!-- <div id="intro-block">
-    <div class="block animatable bounceInLeft">bounceInLeft</div>
-    <div class="block animatable bounceInRight">bounceInRight</div>
-    <div class="block animatable bounceInLeft"><a href="#work">My Work</a></div>
+  <div id="intro-block">
+    <div class="block animatable bounceInLeft periwinkle-back"></div>
+    <div class="block animatable bounceInRight periwinkle-back"></div>
+    <div class="block animatable bounceInLeft periwinkle-back"></div>
   </div>
-  <div id="info">
-    <div class="fadeBlock animatable fadeInUp">fadeInUp</div>
-    <div class="fadeBlock animatable fadeInUp">fadeInUp</div>
-    <div class="fadeBlock animatable fadeInUp">fadeInUp</div>
-  </div>
-<div id="work" class="block">WORK</div> -->
+
 </body>
 
 
@@ -30,11 +26,12 @@ jQuery(function($) {
   function windowChange(){
     var windowWidth = window.innerWidth;
     var windowHeight = window.innerHeight;
-    console.log("windowWidth: ", windowWidth);
-    console.log("windowHeight: ", windowHeight);
+
     $(".block").css('height', windowHeight/3);
+
     $(".fadeBlock").css('height', windowHeight);
     $(".fadeBlock").css('width', windowWidth);
+
     $("#work").css('height', windowHeight);
   }
   windowChange();

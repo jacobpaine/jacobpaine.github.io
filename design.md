@@ -10,6 +10,7 @@ Using a few of the more popular examples as inspiration, develop a portfolio sit
 
 3. Measurements of comfort with popular front-end frameworks, fundamentals (HTML, CSS, JS), and backend languages.
 
+
 ### Inspiration
 1. http://findmatthew.com/
   * Width AND Height resizes.
@@ -31,7 +32,7 @@ Using a few of the more popular examples as inspiration, develop a portfolio sit
     2. Name
     3. Occupation
     4. Link to About
-    5. ~~Animation - Bars from the side~~
+    5. Animation -Bars from the side
   * Navbar
     1. Home, About (w/resume download), Portfolio, Contact
     2. Sticky Bar / Mobile Hamburger
@@ -41,7 +42,7 @@ Using a few of the more popular examples as inspiration, develop a portfolio sit
     1. Tools (Statistics - use Highcharts)
     2. Profile picture w/introductory paragraph
     3. Responsive, Multi-faceted, Resourceful (SVG icons)
-    4. Resume download button - PDF
+    4. Resume download button - pdf
     5. Animation - Fade-in up
   * Portfolio
     1. Image blocks
@@ -51,11 +52,3 @@ Using a few of the more popular examples as inspiration, develop a portfolio sit
   * Contact
     1. Contact form (Name, email, phone number, message)
     2. Animation - Slide-out - cancel - submit
-
-### Colors
-  1. #38f2ff sky blue
-  2. #38b0ff periwinkle
-  3. #ff4538 burnt orange
-  4. #ffffff white
-  5. #9b9b9b lighter grey
-  6. #000000 black

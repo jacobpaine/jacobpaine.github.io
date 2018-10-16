@@ -1,14 +1,46 @@
-/* TODO in styles  */
-/* Do an example of  */
-/* Colors */
-
+/* Color Styles */
+.black{
+  color: #000000;
+}
+.black-back{
+  background: #000000;
+}
+.burntorange{
+  color: #ff4538;
+}
+.burntorange-back{
+  background: #ff4538;
+}
+.grey{
+  color: #9b9b9b;
+}
+.grey-back{
+  background: #9b9b9b;
+}
+.lightblue{
+  color: #38f2ff;
+}
+.lightblue-back{
+  background: #38f2ff;
+}
+.periwinkle{
+  color: #38b0ff;
+}
+.periwinkle-back{
+  background: #38b0ff;
+}
+.white{
+  color: #fdfdfd
+}
+.white-back{
+  background: #fdfdfd
+}
 
 /* Tag Styles */
 .block {
   height: 8em;
   line-height: 5em;
   width: 100%;
-  background: #464646;
   color: #fdfdfd;
   text-align: center;
   margin: 0em auto;
@@ -24,7 +56,7 @@ body{
 .animated {
   visibility: visible;
   animation-fill-mode: both;
-  animation-duration: 1s;
+  animation-duration: 2.2s;
   animation-play-state: running;
 }
 
@@ -94,9 +126,10 @@ body{
 	}
 }
 
-#intro-block{
-  background-color: red;
-}
 #info{
   display: flex;
+}
+
+#intro-block{
+  background-color: #ff4538;
 }
