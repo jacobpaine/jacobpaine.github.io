@@ -11,7 +11,6 @@ Using a few of the more popular examples as inspiration, develop a portfolio sit
 3. Measurements of comfort with popular front-end frameworks, fundamentals (HTML, CSS, JS), and backend languages.
 
 
-
 ### Inspiration
 1. http://findmatthew.com/
   * Width AND Height resizes.
@@ -21,8 +20,36 @@ Using a few of the more popular examples as inspiration, develop a portfolio sit
 2. http://ejosue.com/
   * On click of toolbar => Fuzzy Modal showing navbar
   * SVG animations of icons
-  * Resume - Clean, Concise
+  * Resume as pdf - Clean, Concise
 
 3. http://kyleledbetter.com
   * Statistics
   * Color choice
+
+### Checklist
+1. Layout
+  * Introduction
+    2. Greeting
+    3. Name
+    4. Occupation
+    5. Link to About
+    5. Animation -Bars from the side
+  * Navbar
+    1. Home, About (w/resume download), Portfolio, Contact
+    2. Sticky Bar / Mobile Hamburger
+    3. Animate Icons (SVG)
+    4. Animation - Fade down slowly
+  * About
+    1. Tools (Statistics - use Highcharts)
+    2. Profile picture w/introductory paragraph
+    3. Responsive, Multi-faceted, Resourceful (SVG icons)
+    4. Resume download button - pdf
+    5. Animation - Fade-in up
+  * Portfolio
+    1. Image blocks
+    2. Hover-over text blurb
+    3. Anchor to Github
+    4. Animation - Fade down
+  * Contact
+    1. Contact form (Name, email, phone number, message)
+    2. Animation - Slide-out - cancel - submit
