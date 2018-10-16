@@ -26,6 +26,8 @@ Using a few of the more popular examples as inspiration, develop a portfolio sit
   * Statistics
   * Color choice
 
+....
+
 ### Checklist
 1. Layout
   * Introduction
