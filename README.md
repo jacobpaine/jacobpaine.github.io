@@ -26,15 +26,14 @@ Using a few of the more popular examples as inspiration, develop a portfolio sit
   * Statistics
   * Color choice
 
-....
-
 ### Checklist
+
 1. Layout
   * Introduction
-    2. Greeting
-    3. Name
-    4. Occupation
-    5. Link to About
+    1. Greeting
+    2. Name
+    3. Occupation
+    4. Link to About
     5. Animation -Bars from the side
   * Navbar
     1. Home, About (w/resume download), Portfolio, Contact
