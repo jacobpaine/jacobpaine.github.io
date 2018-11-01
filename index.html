@@ -3,20 +3,47 @@
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link href="css/main.css" rel="stylesheet">
 
 <body>
-
-  <!-- <p>
-    Site currently under construction. Please excuse the mess.
-  </p> -->
-
-  <div id="intro-block">
-    <div class="block animatable bounceInLeft periwinkle-back"></div>
-    <div class="block animatable bounceInRight periwinkle-back"></div>
-    <div class="block animatable bounceInLeft periwinkle-back"></div>
+  <div id="intro-block" class="pom-back">
+    <div id="intro-top" class="block animatable bounceInLeft periwinkle-back">
+      <img id="profile-image" src="./images/profile.jpg">
+      <h2 id="hello">Hi.</h2>
+    </div>
+    <div id="intro-mid" class="block animatable bounceInRight periwinkle-back">
+      <h2>I'm <span class="black">Jacob Paine</span>.</h2>
+      <p id="occupation">I'm a full-stack developer.</p>
+    </div>
+    <div id="intro-bottom" class="block pom-back">
+    </div>
   </div>
-
+  <div id="about-block" class="grey-back">
+    <div class="block circle animatable fadeInUp white-back">
+      <p class="black-text">Agile</p>
+      <p class="subtext black-text">Prefers Agile for promote fast, effective, and sustainable development</p>
+    </div>
+    <div class="block animatable fadeInDown black-back">
+      <p>Unbiased</p>
+      <p class="subtext">Enjoys multiple languages and frameworks,</br> including plain old Javascript.</p>
+    </div>
+    <div class="block animatable fadeInUp white-back">
+      <p class="black-text">Adaptable</p>
+      <p class="black-text subtext">Adjusting to project requirements and quickly changing realities</p>
+    </div>
+    <div class="block animatable fadeInDown black-back">
+      <p>Flexible</p>
+      <p class="subtext">Thrives on a team, and works well alone</p>
+    </div>
+  </div>
+  <div id="portfolio-block" class="daisy-back">
+    <div class="block animatable fadeInDown mint-back">
+      <a href="https://github.com/jacobpaine"><i class="fab fa-github"></i></a>
+      <a href="./download/resume.pdf" download><i class="fas fa-file-download"></i></a>
+      <a href="mailto:painejacob@gmail.com"><i class="fas fa-envelope-square"></i></a>
+    </div>
+  </div>
 </body>
 
 

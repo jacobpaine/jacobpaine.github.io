@@ -32,7 +32,7 @@ Using a few of the more popular examples as inspiration, develop a portfolio sit
     3. Occupation
     4. Link to About
     5. ~~Animation - Bars from the side~~
-  * Navbar
+  * Navbar  
     1. Home, About (w/resume download), Portfolio, Contact
     2. Sticky Bar / Mobile Hamburger
     3. Animate Icons (SVG)
@@ -52,7 +52,7 @@ Using a few of the more popular examples as inspiration, develop a portfolio sit
     1. Contact form (Name, email, phone number, message)
     2. Animation - Slide-out - cancel - submit
 
-### Colors
+### Colors (tentative)
   1. #38f2ff sky blue
   2. #38b0ff periwinkle
   3. #ff4538 burnt orange
