@@ -12,7 +12,7 @@
   color: #f08669;
 }
 .daisy-back{
-  background: url(../images/william-morris-daisy-sm.png);
+  background-color: yellow);
 }
 .grey{
   color: #adadad;
@@ -33,7 +33,7 @@
   background: #69a6f0;
 }
 .pom-back{
-  background: url(../images/william-morris-pom-sm.png);
+  background-color: red);
 }
 .white{
   color: #fdfdfd
@@ -193,6 +193,7 @@ body{
 }
 #occupation{
   border-left: 1px solid black;
+  font-size: 2em;
 }
 #profile-image{
   height:100%;
@@ -201,19 +202,26 @@ body{
   text-align: center;
 }
 #portfolio-block .block{
+  height: 100%;
   display: flex;
   padding: 15px;
   align-items: center;
   justify-content: center;
 }
-.subtext{
-  font-size: 1.1em!important;
-}
+/* .subtext{
+  font-size: 1.1em;
+} */
 
 @media (min-height: 0px) and (min-width: 0px) {
   #about-block div{
     padding: 5%;
     width: 40%;
+  }
+  #about-block h3{
+    font-size: 1.2em;
+  }
+  #about-block p{
+    font-size: .75em;
   }
   .block h2{
     font-size: 1.5em;
@@ -225,7 +233,13 @@ body{
     font-size: 1.0em;
   }
 }
-@media (min-height: 400px) and (min-width: 350px) {
+@media (min-height: 400px) and (min-width: 425px) {
+  #about-block h3{
+    font-size: 1.5em;
+  }
+  #about-block p{
+    font-size: .9em;
+  }
   .block h2{
     font-size: 2.5em;
   }
@@ -236,20 +250,34 @@ body{
     font-size: 1.8em;
   }
 }
-@media (min-height: 550px) and (min-width: 425px) {
+@media (min-height: 550px) and (min-width: 525px) {
+  #about-block h3{
+    font-size: 1.5em;
+  }
+  #about-block p{
+    font-size: 1em;
+  }
   .block h2{
     font-size: 3.3em;
   }
   .block p{
-    font-size: 2em;
+    font-size: 1em;
   }
   .block a{
     font-size: 2em;
   }
 }
-@media (min-height: 550px) and (min-width: 650px) {
+@media (min-width: 750px) {
   #about-block div{
     width: 15%;
-    padding: 15px;
+    padding: 30px;
   }
+  #about-block h3{
+    font-size: 1.3em;
+  }
+  #about-block p{
+    font-size: 1em;
+  }
+}
+@media (min-width: 1050px) {
 }
