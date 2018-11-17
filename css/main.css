@@ -208,9 +208,6 @@ body{
   align-items: center;
   justify-content: center;
 }
-/* .subtext{
-  font-size: 1.1em;
-} */
 
 @media (min-height: 0px) and (min-width: 0px) {
   #about-block div{
