@@ -1,5 +1,5 @@
 p {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 .contact{
   background-color: #d3d3d3;
@@ -13,6 +13,9 @@ p {
 .index{
   background-color: #d3d3d3;
 }
+.index p{
+  font-size: 2.5rem;
+}
 .nav {
   background-color: lightblue;
 }
@@ -22,4 +25,17 @@ p {
 }
 .portfolio{
   background-color: #545454;
+}
+
+@media (max-height: 580px), screen and (orientation: portrait) {
+  header{
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  .header-content{
+    padding-bottom: 5%;
+  }
+  .index p{
+    font-size: 2.8rem;
+  }
 }
