@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<link href="index.css" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script
@@ -8,11 +9,10 @@ crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-
 <style>
-.hide{
-  display: none;
-}
+  .hide{
+    display: none;
+  }
 </style>
 
 <head>
@@ -21,18 +21,29 @@ crossorigin="anonymous"></script>
 
 <body>
   <header>
-    <div class="container">
-      <div class="row">
-        <h1>Main Title</h1>
-        <img src="https://via.placeholder.com/150">
+    <div class="d-flex justify-content-end">
+      <div class="align-self-center">
+        <h1>Jacob Paine</h1>
+        <p class="text-center">Web Developer</p>
       </div>
+      <img src="https://via.placeholder.com/350">
     </div>
     <ul class="nav justify-content-center">
       <li class="nav-item">
-        <a id="education" class="nav-link active" href="#">education</a>
+        <a id="index" class="nav-link active" href="#">
+          index
+        </a>
       </li>
       <li class="nav-item">
-        <a id="experience" class="nav-link" href="#">experience</a>
+        <a id="education" class="nav-link active" href="#">
+          education
+        </a>
+      </li>
+      <li class="nav-item">
+        <a id="experience" class="nav-link" href="#">
+          <i class="fas fa-scroll"></i>
+          experience
+        </a>
       </li>
       <li class="nav-item">
         <a id="portfolio" class="nav-link" href="#">portfolio</a>
@@ -43,23 +54,24 @@ crossorigin="anonymous"></script>
     </ul>
   </header>
   <div class="container">
-    <div class="index page">
-    Index
-    </div>
-    <div class="education hide page">
-      Education
-    </div>
-    <div class="experience hide page">
-      Experience
-    </div>
-    <div class="portfolio hide page">
-      Portfolio
-    </div>
-    <div class="contact hide page">
-      Contact
+    <div class="row">
+      <div class="index page">
+        <p>Index: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut pretium turpis, vitae egestas tortor. Nulla nulla ante, tincidunt vel sollicitudin ac, vulputate a eros. Proin consectetur elit sem, ac gravida eros dapibus quis. Cras blandit blandit ex, ac finibus odio venenatis sit amet.</p>
+      </div>
+      <div class="education hide page">
+        <p>Education: Ut venenatis leo non est ullamcorper, eu finibus nunc varius. Nulla facilisi. Vestibulum tellus leo, tempor vel cursus sit amet, pulvinar at nisi. Pellentesque luctus purus in enim interdum, quis ornare risus tempor. Donec vitae rhoncus diam. Pellentesque porta velit sit amet urna interdum, at varius urna dapibus.</p>
+      </div>
+      <div class="experience hide page">
+        <p>Experience: Vestibulum tellus leo, tempor vel cursus sit amet, pulvinar at nisi. Pellentesque luctus purus in enim interdum, quis ornare risus tempor. Donec vitae rhoncus diam. Pellentesque porta velit sit amet urna interdum, at varius urna dapibus.</p>
+      </div>
+      <div class="portfolio hide page">
+        <p>Portfolio: Morbi ut pretium turpis, vitae egestas tortor. Nulla nulla ante, tincidunt vel sollicitudin ac, vulputate a eros. Proin consectetur elit sem, ac gravida eros dapibus quis. Cras blandit blandit ex, ac finibus odio venenatis sit amet at varius urna dapibus</p>
+      </div>
+      <div class="contact hide page">
+        <p>Contact: Pellentesque porta velit sit amet urna interdum, at varius urna dapibus. Cras blandit blandit ex, ac finibus odio venenatis sit amet at varius urna dapibus. Donec vitae rhoncus diam. Vestibulum tellus leo, tempor vel cursus sit amet, pulvinar at nisi.</p>
+      </div>
     </div>
   </div>
-
 </body>
 
 <script>
@@ -68,8 +80,8 @@ crossorigin="anonymous"></script>
       el.preventDefault();
       $(".page").hide();
       $("."+this.id).fadeIn();
-    })
-  })
+    });
+  });
 </script>
 
 </html>
