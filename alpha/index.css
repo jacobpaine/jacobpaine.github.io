@@ -10,9 +10,10 @@ p {
 .experience{
   background-color: #7e7e7e;
 }
-
+.hide{
+  display: none;
+}
 .index{}
-
 .index p{
   font-size: 2.5rem;
 }
@@ -27,22 +28,47 @@ p {
   background-color: #545454;
 }
 
-@media (max-height: 580px), screen and (orientation: portrait) {
+@media (min-width: 0px) {
+  .education .card-title{
+    font-size: 2rem;
+  }
+  .education .card-subtitle{
+    font-size: 1.70rem;
+  }
+  .education .card-text{
+    font-size: 1.35rem;
+  }
   h1{
-    font-size: 4rem!important;
-    margin-right: 100px!important;
+    font-size: 3.5rem!important;
   }
   header{
     padding-top: 5%;
     padding-bottom: 5%;
   }
-  .header-content{
-    padding-bottom: 5%;
-  }
   .index p{
     font-size: 2.8rem;
   }
+  .mobile-card{
+    margin-bottom: 20px;
+    border: 3px solid black;
+    width: 100px;
+  }
   .nav-link{
     font-size: 2em;
+  }
+  .profile-card{
+    display: inherit;
+    border: 3px solid black;
+    -webkit-border-radius: 275px;
+    -moz-border-radius: 275px;
+    border-radius: 275px;
+    width: 100%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+  }
+}
+@media (min-width: 981px) {
+  .mobile-card{
+    display: none;
   }
 }
