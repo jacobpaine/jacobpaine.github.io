@@ -10,9 +10,9 @@ p {
 .experience{
   background-color: #7e7e7e;
 }
-.index{
-  background-color: #d3d3d3;
-}
+
+.index{}
+
 .index p{
   font-size: 2.5rem;
 }
@@ -28,6 +28,10 @@ p {
 }
 
 @media (max-height: 580px), screen and (orientation: portrait) {
+  h1{
+    font-size: 4rem!important;
+    margin-right: 100px!important;
+  }
   header{
     padding-top: 5%;
     padding-bottom: 5%;
@@ -37,5 +41,8 @@ p {
   }
   .index p{
     font-size: 2.8rem;
+  }
+  .nav-link{
+    font-size: 2em;
   }
 }

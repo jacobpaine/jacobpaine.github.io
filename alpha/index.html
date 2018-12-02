@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <link href="index.css" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -26,48 +27,84 @@ crossorigin="anonymous"></script>
         <h1>Jacob Paine</h1>
         <p class="text-center">Web Developer</p>
       </div>
-      <img src="https://via.placeholder.com/350">
+      <img src="https://via.placeholder.com/350" alt="Jacob Paine's profile">
     </div>
     <ul class="nav justify-content-center">
       <li class="nav-item">
-        <a id="index" class="nav-link active" href="#">
+        <a id="index" class="nav-link active" title="Go to the Cover Page" href="#">
           index
         </a>
       </li>
       <li class="nav-item">
-        <a id="education" class="nav-link active" href="#">
+        <a id="education" class="nav-link active" title="Go to the Education Page" href="#">
           education
         </a>
       </li>
       <li class="nav-item">
-        <a id="experience" class="nav-link" href="#">
+        <a id="experience" class="nav-link" title="Go to the Experience Page" href="#">
           <i class="fas fa-scroll"></i>
           experience
         </a>
       </li>
       <li class="nav-item">
-        <a id="portfolio" class="nav-link" href="#">portfolio</a>
+        <a id="portfolio" class="nav-link" title="Go to the Portfolio Page" href="#">portfolio</a>
       </li>
       <li class="nav-item">
-        <a id="contact" class="nav-link" href="#">contact</a>
+        <a id="contact" class="nav-link" title="Go to the Contact Form" href="#">contact</a>
       </li>
     </ul>
   </header>
   <div class="container">
     <div class="row">
-      <div class="index page">
-        <p>Index: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut pretium turpis, vitae egestas tortor. Nulla nulla ante, tincidunt vel sollicitudin ac, vulputate a eros. Proin consectetur elit sem, ac gravida eros dapibus quis. Cras blandit blandit ex, ac finibus odio venenatis sit amet.</p>
+      <div class="index page text-center col-12">
+        <p>Hi.</p>
+        <p>I'm Jacob Paine.</p>
+        <p>I'm a full-stack developer.</p>
       </div>
-      <div class="education hide page">
-        <p>Education: Ut venenatis leo non est ullamcorper, eu finibus nunc varius. Nulla facilisi. Vestibulum tellus leo, tempor vel cursus sit amet, pulvinar at nisi. Pellentesque luctus purus in enim interdum, quis ornare risus tempor. Donec vitae rhoncus diam. Pellentesque porta velit sit amet urna interdum, at varius urna dapibus.</p>
+      <div class="education hide page col-12">
+        <div class="row">
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="experience hide page">
+      <div class="experience hide page col-12">
         <p>Experience: Vestibulum tellus leo, tempor vel cursus sit amet, pulvinar at nisi. Pellentesque luctus purus in enim interdum, quis ornare risus tempor. Donec vitae rhoncus diam. Pellentesque porta velit sit amet urna interdum, at varius urna dapibus.</p>
       </div>
-      <div class="portfolio hide page">
+      <div class="portfolio hide page col-12">
         <p>Portfolio: Morbi ut pretium turpis, vitae egestas tortor. Nulla nulla ante, tincidunt vel sollicitudin ac, vulputate a eros. Proin consectetur elit sem, ac gravida eros dapibus quis. Cras blandit blandit ex, ac finibus odio venenatis sit amet at varius urna dapibus</p>
       </div>
-      <div class="contact hide page">
+      <div class="contact hide page col-12">
         <p>Contact: Pellentesque porta velit sit amet urna interdum, at varius urna dapibus. Cras blandit blandit ex, ac finibus odio venenatis sit amet at varius urna dapibus. Donec vitae rhoncus diam. Vestibulum tellus leo, tempor vel cursus sit amet, pulvinar at nisi.</p>
       </div>
     </div>
@@ -80,6 +117,10 @@ crossorigin="anonymous"></script>
       el.preventDefault();
       $(".page").hide();
       $("."+this.id).fadeIn();
+    });
+    $(".card").click(function(el){
+      $(".card").css("z-index", 0);
+      $(this).css("z-index", 1);
     });
   });
 </script>
