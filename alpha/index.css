@@ -59,8 +59,8 @@ p {
   .profile-card{
     display: inherit;
     border: 3px solid black;
-    -webkit-border-radius: 275px;
-    -moz-border-radius: 275px;
+      /* -webkit-border-radius: 275px;
+      -moz-border-radius: 275px; */
     border-radius: 275px;
     width: 100%;
     padding-top: 20%;
