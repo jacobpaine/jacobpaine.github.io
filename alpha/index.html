@@ -10,113 +10,178 @@ crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <link href="index.css" rel="stylesheet">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jacob Paine: Web Developer</title>
 <head>
-<body>
-  <header>
-    <div class="container">
-      <div class="row align-items-end justify-content-between mb-2">
-        <div class="col-2">
-          <div class="mobile-card text-center">
-            <p>111</p>
-            <p>222</p>
-            <p>111</p>
-          </div>
-          <div class="mobile-card text-center">
-            <p>111</p>
-            <p>222</p>
-            <p>111</p>
-          </div>
-        </div>
-        <div class="col-6 align-self-center">
-          <div class="profile-card">
-            <div class="row d-flex justify-content-center header-content">
-              <img src="https://via.placeholder.com/210" alt="Jacob Paine's profile">
-            </div>
-            <div class="row d-flex justify-content-center header-content">
-              <h1>Jacob Paine</h1>
-            </div>
-            <div class="row d-flex justify-content-center header-content">
-              <p class="text-center">Web Developer</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-2">
-          <div class="mobile-card text-center">
-            <p>111</p>
-            <p>333</p>
-            <p>111</p>
-          </div>
-          <div class="mobile-card text-center">
-            <p>111</p>
-            <p>333</p>
-            <p>111</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <ul class="nav justify-content-center">
-      <li class="nav-item">
-        <a id="index" class="nav-link active" title="Go to the Cover Page" href="#">
-          index
-        </a>
-      </li>
-      <li class="nav-item">
-        <a id="education" class="nav-link active" title="Go to the Education Page" href="#">
-          education
-        </a>
-      </li>
-      <li class="nav-item">
-        <a id="experience" class="nav-link" title="Go to the Experience Page" href="#">
-          <i class="fas fa-scroll"></i>
-          experience
-        </a>
-      </li>
-      <li class="nav-item">
-        <a id="portfolio" class="nav-link" title="Go to the Portfolio Page" href="#">portfolio</a>
-      </li>
-      <li class="nav-item">
-        <a id="contact" class="nav-link" title="Go to the Contact Form" href="#">contact</a>
-      </li>
-    </ul>
-  </header>
-  <div class="container">
-    <div class="row">
-      <div class="index page text-center col-12">
-        <p>Hi.</p>
-        <p>I'm Jacob Paine.</p>
-        <p>I'm a full-stack developer.</p>
-      </div>
-      <div class="education hide page col-12">
-        <div class="row justify-content-center">
-          <p>Nashville Software School - 2018</p>
-        </div>
-      </div>
-      <div class="experience hide page col-12">
-        <p>Experience: Vestibulum tellus leo, tempor vel cursus sit amet, pulvinar at nisi. Pellentesque luctus purus in enim interdum, quis ornare risus tempor. Donec vitae rhoncus diam. Pellentesque porta velit sit amet urna interdum, at varius urna dapibus.</p>
-      </div>
-      <div class="portfolio hide page col-12">
-        <p>Portfolio: Morbi ut pretium turpis, vitae egestas tortor. Nulla nulla ante, tincidunt vel sollicitudin ac, vulputate a eros. Proin consectetur elit sem, ac gravida eros dapibus quis. Cras blandit blandit ex, ac finibus odio venenatis sit amet at varius urna dapibus</p>
-      </div>
-      <div class="contact hide page col-12">
-        <p>Contact: Pellentesque porta velit sit amet urna interdum, at varius urna dapibus. Cras blandit blandit ex, ac finibus odio venenatis sit amet at varius urna dapibus. Donec vitae rhoncus diam. Vestibulum tellus leo, tempor vel cursus sit amet, pulvinar at nisi.</p>
-      </div>
-    </div>
-  </div>
-</body>
 
-<script>
-  $(function(){
-    $(".nav-item a").click(function(el){
-      el.preventDefault();
-      $(".page").hide();
-      $("."+this.id).fadeIn();
+<body>
+  <section id="intro" class="d-flex align-items-center justify-content-center flex-column">
+    <h1>Hi. I'm Jacob Paine.</h1>
+    <h2>A full-stack developer</h2>
+
+    <a class="btn btn-outline-light btn-lg" href="#portfolio" role="button" aria-pressed="true">See my work.</a>
+
+  </section>
+  <nav id="navbar">
+    <div class="topnav d-flex justify-content-around" id="myTopnav">
+      <a href="#intro" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="navDrop()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </nav>
+  <section id="about">
+    <div class="container">
+      <div class="row justify-content-center">
+        <h2>About</h2>
+      </div>
+      <div class="row facet">
+        <div class="col">
+          <div class="square"></div>
+          <h3>TITLE</h3>
+          <p>A paragraph of some sort somehow</p>
+        </div>
+        <div class="col">
+          <div class="square"></div>
+          <h3>TITLE</h3>
+          <p>A paragraph of some sort somehow</p>
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          <div class="square"></div>
+          <h3>TITLE</h3>
+          <p>A paragraph of some sort somehow</p>
+        </div>
+        <div class="col">
+          <div class="square"></div>
+          <h3>TITLE</h3>
+          <p>A paragraph of some sort somehow</p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="d-flex flex-column align-items-center text-center">
+        <img src="../images/profile.jpg" style="width: 25%; height:50%;">
+        <p>Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph</p>
+      </div>
+
+      <div class="d-flex flex-column">
+        <div class="progress text-dark justify-content-between m-1">
+          <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Javascript</div>
+          <span class="d-flex flex-column-reverse align-items-end text-dark">75%</span>
+        </div>
+        <div class="progress text-dark justify-content-between m-1">
+          <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">CSS</div>
+          <span class="d-flex flex-column-reverse align-items-end text-dark">65%</span>
+        </div>
+        <div class="progress text-dark justify-content-between m-1">
+          <div class="progress-bar" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">Java</div>
+          <span class="d-flex flex-column-reverse align-items-end text-dark">45%</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="portfolio">
+    <div class="row justify-content-center">
+      <h2>Portfolio</h2>
+    </div>
+    <div class="d-flex flex-row justify-content-around">
+      <h4 id="allOptions" class="portfolioMenu activeMenu">All</h4>
+      <h4 id="node" class="portfolioMenu node">Node</h4>
+      <h4 id="java" class="portfolioMenu java">Java</h4>
+      <h4 id="javascript" class="portfolioMenu javascript">Javascript</h4>
+    </div>
+    <div class="d-flex flex-row flex-wrap justify-content-center">
+      <img class="p-2 portfolioOption node" src="https://via.placeholder.com/150">
+      <img class="p-2 portfolioOption java javascript" src="https://via.placeholder.com/150">
+      <img class="p-2 portfolioOption javascript" src="https://via.placeholder.com/150">
+      <img class="p-2 portfolioOption javascript" src="https://via.placeholder.com/150">
+      <img class="p-2 portfolioOption java" src="https://via.placeholder.com/150">
+      <img class="p-2 portfolioOption node javascript java" src="https://via.placeholder.com/150">
+    </div>
+  </section>
+  <section id="blog">
+    <div class="row justify-content-center">
+      <h2>Blog</h2>
+    </div>
+    <div class="row justify-content-center">
+      <div class="blogImage">Some Image</div>
+      <div class="col-12 text-center">
+        <h3>Blog Title</h3>
+        <p> blog blog blog blog blog blog blog blog blog</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="blogImage">Some Image</div>
+      <div class="col-12 text-center">
+        <h3>Blog Title</h3>
+        <p>blog blog blog blog blog blog blog blog blog</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="blogImage">Some Image</div>
+      <div class="col-12 text-center">
+        <h3>Blog Title</h3>
+        <p> blog blog blog blog blog blog blog blog blog</p>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="row justify-content-center">
+      <h2>Contact</h2>
+    </div>
+
+    <div id="contact-form">
+
+      <form action="https://formspree.io/painejacob@gmail.com" method="POST" />
+        <input type="text" name="name">
+        <input type="submit" value="submit">
+      </form>
+
+    </div>
+
+  </section>
+  <script>
+    window.onscroll = function() {stickyBar()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function stickyBar() {
+      if (window.pageYOffset > sticky) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+
+    function navDrop() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+
+    $(".portfolioMenu").click(function(item){
+      $(".portfolioMenu").removeClass("activeMenu");
+      $(this).addClass("activeMenu");
+      if(item.currentTarget.id !== "allOptions"){
+        $(".portfolioOption").hide();
+        $("."+item.currentTarget.id).show();
+      } else {
+        $(".portfolioOption").show();
+      }
     });
-    $(".card").click(function(el){
-      $(".card").css("z-index", 0);
-      $(this).css("z-index", 1);
-    });
-  });
-</script>
+
+  </script>
+</body>
 
 </html>
