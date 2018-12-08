@@ -54,7 +54,7 @@ gulp.task('vendor', function() {
   gulp.src([
       './node_modules/mixitup/dist/*',
     ])
-    .pipe(gulp.dest('./vendor/mixitup'))
+    .pipe(gulp.dest('./vendor/mixitup'))  
 });
 
 // Compile SCSS
