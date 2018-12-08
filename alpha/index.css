@@ -1,3 +1,11 @@
+.arrow-up {
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+  border-top: 60px solid #B4C5E4;
+  margin-top: 10px;
+  background-color: #3C3744;
+}
+
 :target:before {
   content: "";
   display: flex;
@@ -5,11 +13,16 @@
   margin: -50px 0 0;
 }
 #about{
-  background-color: pink;
+  background-color: #3D52D5;
   height: 100%;
-  padding-bottom: 75px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#about p, #about h4{
+  color: #FBFFF1;
 }
 .about-block{
+  color: #B4C5E4;
   width:150px;
   height: 250px;
 }
@@ -18,24 +31,38 @@
   color: black;
 }
 .activeMenu{
-  background-color: orange;
-  color: white;
+  color: #3D52D5;
   text-decoration: underline;
+  font-weight: bolder;
 }
 #blog{
-  background-color: red;
+  background-color: #B4C5E4;
   height: 100%;
-  padding-bottom: 25px;
+  padding-bottom: 45px;
+  color: #3C3744;
 }
 .blogImage{
   max-width: 100%;
-  width: 150px;
+  width: 500px;
+  height: 150px;
   height: auto;
 }
 #contact{
-  background-color: green;
+  background-color: #3C3744;
+  color: #B4C5E4;
+  height: 800px;
+}
+#contact h2{
+  text-decoration: underline;
 }
 form input{
+  color: #FBFFF1;
+}
+form{
+  background-color: #090C9B;
+}
+form .submitButton{
+  background-color: #3D52D5;
 }
 h1{
   font-size: 2.5rem;
@@ -44,15 +71,15 @@ h2{
   font-size: 2rem;
 }
 #intro{
-  background-color: black;
-  color: white;
+  background-color: #3C3744;
+  color: #3D52D5;
   height: calc(100vh + 53px);
 }
 #portfolio{
-  /* height: calc(100vh + 53px); */
   height: 100%;
   padding-bottom: 25px;
-  background-color: lavender;
+  background-color: #FBFFF1;
+  color: #090C9B;
 }
 .portfolioMenu{
   cursor: pointer;
@@ -69,7 +96,7 @@ body {
   text-align: center;
 }
 #navbar {
-  color: #f1f1f1;
+  color: #ffffff;
   height: 50px;
   position: fixed;
 }
@@ -95,7 +122,7 @@ nav{
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #000000;
 }
 
 .topnav a {
@@ -143,7 +170,7 @@ nav{
   margin: 0 auto;
   width: 100px;
   height: 100px;
-  background-color: red;
+  background-color: #090C9B;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -151,7 +178,7 @@ nav{
 
 /* Animated background */
 #intro{
-  background: linear-gradient(269deg, #000000, #a29d9d);
+  background: linear-gradient(0deg, #B4C5E4, #3C3744);
   background-size: 400% 400%;
   -webkit-animation: AnimationName 15s ease infinite;
   -moz-animation: AnimationName 15s ease infinite;
@@ -185,7 +212,7 @@ nav{
 }
 
 .progressbar-animate {
-  background-color: #0063C6;
+  background-color: #3C3744;
   height: 100%;
   border-radius: -10rem;
   animation:loadbar 2s normal forwards ease-in-out;
