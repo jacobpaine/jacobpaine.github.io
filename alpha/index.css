@@ -23,8 +23,8 @@
 }
 .about-block{
   color: #B4C5E4;
-  width:150px;
-  height: 250px;
+  width: 205px;
+  height: 255px;
 }
 .activeLink:hover, .link:hover{
   background-color: grey;
