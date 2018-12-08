@@ -1,9 +1,3 @@
-.arrow-up {
-  border-left: 120px solid transparent;
-  border-right: 120px solid transparent;
-  border-top: 60px solid #B4C5E4;
-  background-color: #3C3744;
-}
 
 :target:before {
   content: "";
@@ -15,7 +9,7 @@
   background-color: #3D52D5;
   height: 100%;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 75px;
 }
 #about p, #about h4{
   color: #FBFFF1;
@@ -34,6 +28,12 @@
   text-decoration: underline;
   font-weight: bolder;
 }
+.arrow-up {
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+  border-top: 90px solid #B4C5E4;
+  background-color: #3C3744;
+}
 #blog{
   background-color: #B4C5E4;
   height: 100%;
@@ -49,7 +49,7 @@
 #contact{
   background-color: #3C3744;
   color: #B4C5E4;
-  height: 800px;
+  height: 650px;
 }
 #contact h2{
   text-decoration: underline;
@@ -63,16 +63,30 @@ form{
 form .submitButton{
   background-color: #3D52D5;
 }
+
+@media only screen and (max-width: 992px) {
+    .full-width{
+      display: none;
+    }
+}
+
 h1{
   font-size: 2.5rem;
 }
 h2{
   font-size: 2rem;
 }
+i{
+  color:#B4C5E4;
+  text-shadow: 3.5px 0px 0px #000;
+}
 #intro{
   background-color: #3C3744;
   color: #3D52D5;
   height: calc(100vh + 53px);
+}
+#intro h1, #intro h2{
+  text-shadow: .5px 0px 0px #000;
 }
 #portfolio{
   height: 100%;
@@ -201,15 +215,14 @@ nav{
 
 /* Loadbar  */
 .progress{
-  height:25px;
+  height:35px;
 }
 .progressbar {
-  padding: 3px;
+  padding-left: 12px;
   display: flex;
   align-items: center;
   color: white;
 }
-
 .progressbar-animate {
   background-color: #3C3744;
   height: 100%;
