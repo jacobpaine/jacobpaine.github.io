@@ -16,19 +16,17 @@ crossorigin="anonymous"></script>
 
 <body>
   <section id="intro" class="d-flex align-items-center justify-content-center flex-column">
-    <h1>Hi. I'm Jacob Paine.</h1>
+    <h1>Hi. I'm <span style="color:blue">Jacob Paine</span>.</h1>
     <h2>A full-stack developer</h2>
-
-    <a class="btn btn-outline-light btn-lg" href="#portfolio" role="button" aria-pressed="true">See my work.</a>
-
+    <a class="btn btn-outline-light btn-lg link" href="#portfolio" role="button" aria-pressed="true">See my work.</a>
   </section>
   <nav id="navbar">
-    <div class="topnav d-flex justify-content-around" id="myTopnav">
-      <a href="#intro" class="active">Home</a>
-      <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#blog">Blog</a>
-      <a href="#contact">Contact</a>
+    <div id="navDropdown" class="topnav">
+      <a class="link link-intro" href="#intro" class="active">Home</a>
+      <a class="link link-about" href="#about">About</a>
+      <a class="link link-portfolio" href="#portfolio">Portfolio</a>
+      <a class="link link-blog" href="#blog">Blog</a>
+      <a class="link link-contact" href="#contact">Contact</a>
       <a href="javascript:void(0);" class="icon" onclick="navDrop()">
         <i class="fa fa-bars"></i>
       </a>
@@ -39,119 +37,148 @@ crossorigin="anonymous"></script>
       <div class="row justify-content-center">
         <h2>About</h2>
       </div>
-      <div class="row facet">
-        <div class="col">
-          <div class="square"></div>
-          <h3>TITLE</h3>
-          <p>A paragraph of some sort somehow</p>
+      <div class="row facet justify-content-around">
+        <div class="imageLeft col">
+          <div class="about-block">
+            <div class="square">
+              <i class="fa fas fa-4x fa-code-branch"></i>
+            </div>
+            <h4 class="imageFadeIn">Flexible</h4>
+            <p class="imageFadeIn">A paragraph of some sort somehow</p>
+          </div>
         </div>
-        <div class="col">
-          <div class="square"></div>
-          <h3>TITLE</h3>
-          <p>A paragraph of some sort somehow</p>
+        <div class="imageLeft col">
+          <div class="about-block">
+            <div class="square">
+              <i class="fa fas fa-4x fa-brain"></i>
+            </div>
+            <h4 class="imageFadeIn">Curious</h4>
+            <p class="imageFadeIn">A paragraph of some sort somehow</p>
+          </div>
         </div>
-        <div class="w-100"></div>
-        <div class="col">
-          <div class="square"></div>
-          <h3>TITLE</h3>
-          <p>A paragraph of some sort somehow</p>
+        <div class="imageRight col">
+          <div class="about-block">
+            <div class="square">
+              <i class="fab fa-stack-exchange" style="font-size:65px;"></i>
+            </div>
+            <h4 class="imageFadeIn">Communicative</h4>
+            <p class="imageFadeIn">A paragraph of some sort somehow</p>
+          </div>
         </div>
-        <div class="col">
-          <div class="square"></div>
-          <h3>TITLE</h3>
-          <p>A paragraph of some sort somehow</p>
+        <div class="imageRight col">
+          <div class="about-block">
+            <div class="square">
+              <i class="fab fa-stack-overflow" style="font-size:65px;"></i>
+            </div>
+            <h4 class="imageFadeIn">Full-stack</h4>
+            <p class="imageFadeIn">A paragraph of some sort somehow</p>
+            </div>
         </div>
       </div>
       <hr>
 
-      <div class="d-flex flex-column align-items-center text-center">
-        <img src="../images/profile.jpg" style="width: 25%; height:50%;">
-        <p>Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph</p>
-      </div>
-
-      <div class="d-flex flex-column">
-        <div class="progress text-dark justify-content-between m-1">
-          <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Javascript</div>
-          <span class="d-flex flex-column-reverse align-items-end text-dark">75%</span>
-        </div>
-        <div class="progress text-dark justify-content-between m-1">
-          <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">CSS</div>
-          <span class="d-flex flex-column-reverse align-items-end text-dark">65%</span>
-        </div>
-        <div class="progress text-dark justify-content-between m-1">
-          <div class="progress-bar" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">Java</div>
-          <span class="d-flex flex-column-reverse align-items-end text-dark">45%</span>
+      <div class="d-flex flex-row text-center">
+          <img src="../images/profile.jpg" style="width:25%; height:50%;">
+        <div class="flex-column m-3 col">
+          <p>Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph</p>
+          <div class="progress text-dark justify-content-between m-1">
+            <div class="progressbar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="75">Javascript</div>
+            <span class="d-flex flex-column-reverse align-items-end text-dark p-1">75%</span>
+          </div>
+          <div class="progress text-dark justify-content-between m-1">
+            <div class="progressbar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="65">CSS</div>
+            <span class="d-flex flex-column-reverse align-items-end text-dark p-1">65%</span>
+          </div>
+          <div class="progress text-dark justify-content-between m-1">
+            <div class="progressbar" role="progressbar" style="width: 99%;" aria-valuenow="99" aria-valuemin="0" aria-valuemax="99">HTML</div>
+            <span class="d-flex flex-column-reverse align-items-end text-dark p-1">99%</span>
+          </div>
+          <div class="progress text-dark justify-content-between m-1">
+            <div class="progressbar" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="45">Java</div>
+            <span class="d-flex flex-column-reverse align-items-end text-dark p-1">45%</span>
+          </div>
+          <div class="progress text-dark justify-content-between m-1">
+            <div class="progressbar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="25">Vue.js</div>
+            <span class="d-flex flex-column-reverse align-items-end text-dark p-1">25%</span>
+          </div>
+          <div class="progress text-dark justify-content-between m-1">
+            <div class="progressbar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="85">Node.js</div>
+            <span class="d-flex flex-column-reverse align-items-end text-dark p-1">85%</span>
+          </div>
         </div>
       </div>
     </div>
 
   </section>
-
   <section id="portfolio">
-    <div class="row justify-content-center">
-      <h2>Portfolio</h2>
-    </div>
-    <div class="d-flex flex-row justify-content-around">
-      <h4 id="allOptions" class="portfolioMenu activeMenu">All</h4>
-      <h4 id="node" class="portfolioMenu node">Node</h4>
-      <h4 id="java" class="portfolioMenu java">Java</h4>
-      <h4 id="javascript" class="portfolioMenu javascript">Javascript</h4>
-    </div>
-    <div class="d-flex flex-row flex-wrap justify-content-center">
-      <img class="p-2 portfolioOption node" src="https://via.placeholder.com/150">
-      <img class="p-2 portfolioOption java javascript" src="https://via.placeholder.com/150">
-      <img class="p-2 portfolioOption javascript" src="https://via.placeholder.com/150">
-      <img class="p-2 portfolioOption javascript" src="https://via.placeholder.com/150">
-      <img class="p-2 portfolioOption java" src="https://via.placeholder.com/150">
-      <img class="p-2 portfolioOption node javascript java" src="https://via.placeholder.com/150">
+    <div class="container">
+      <div class="row justify-content-center">
+        <h2>Portfolio</h2>
+      </div>
+      <div class="d-flex flex-row justify-content-around">
+        <h4 id="allOptions" data-filter=".portfolioOption" class="portfolioMenu activeMenu">All</h4>
+        <h4 id="node" data-filter=".node" class="portfolioMenu node">Node</h4>
+        <h4 id="java" data-filter=".java" class="portfolioMenu java">Java</h4>
+        <h4 id="javascript" data-filter=".javascript" class="portfolioMenu javascript">Javascript</h4>
+      </div>
+      <div class="portfolio-images">
+        <div class="d-flex flex-row flex-wrap justify-content-around col-12">
+          <img class="p-2 portfolioOption mix node" src="https://via.placeholder.com/150">
+          <img class="p-2 portfolioOption mix java javascript" src="https://via.placeholder.com/150">
+          <img class="p-2 portfolioOption mix javascript" src="https://via.placeholder.com/150">
+        </div>
+        <div class="d-flex flex-row flex-wrap justify-content-around col-12">
+          <img class="p-2 portfolioOption mix javascript" src="https://via.placeholder.com/150">
+          <img class="p-2 portfolioOption mix java" src="https://via.placeholder.com/150">
+          <img class="p-2 portfolioOption mix node javascript java" src="https://via.placeholder.com/150">
+        </div>
+      </div>
     </div>
   </section>
   <section id="blog">
-    <div class="row justify-content-center">
-      <h2>Blog</h2>
-    </div>
-    <div class="row justify-content-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <h2>Blog</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="blogImage">Some Image</div>
+        <div class="col-12 text-center">
+          <h3>Blog Title</h3>
+          <p> blog blog blog blog blog blog blog blog blog</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="blogImage">Some Image</div>
+        <div class="col-12 text-center">
+          <h3>Blog Title</h3>
+          <p>blog blog blog blog blog blog blog blog blog</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
       <div class="blogImage">Some Image</div>
       <div class="col-12 text-center">
         <h3>Blog Title</h3>
         <p> blog blog blog blog blog blog blog blog blog</p>
       </div>
     </div>
-    <div class="row justify-content-center">
-      <div class="blogImage">Some Image</div>
-      <div class="col-12 text-center">
-        <h3>Blog Title</h3>
-        <p>blog blog blog blog blog blog blog blog blog</p>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="blogImage">Some Image</div>
-      <div class="col-12 text-center">
-        <h3>Blog Title</h3>
-        <p> blog blog blog blog blog blog blog blog blog</p>
-      </div>
     </div>
   </section>
   <section id="contact">
-    <div class="row justify-content-center">
-      <h2>Contact</h2>
-    </div>
-
-    <div id="contact-form">
-
+    <div class="container">
+      <div class="row justify-content-center">
+        <h2>Contact</h2>
+      </div>
+      <div id="contact-form">
       <form action="https://formspree.io/painejacob@gmail.com" method="POST" />
         <input type="text" name="name" placeholder="What's your name?">
         <input type="email" name="email" placeholder="Email?">
         <textarea rows="5" cols="20" name="message" placeholder="What did you want to say?"></textarea>
         <input type="submit" value="submit">
       </form>
-
     </div>
-
+    </div>
   </section>
   <script>
-    window.onscroll = function() {stickyBar()};
-
     var navbar = document.getElementById("navbar");
     var sticky = navbar.offsetTop;
 
@@ -164,25 +191,72 @@ crossorigin="anonymous"></script>
     }
 
     function navDrop() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
+      if ($("#navDropdown").hasClass("responsive")) {
+          $("#navDropdown").removeClass("responsive");
+      } else {
+        $("#navDropdown").addClass("responsive");
+      }
     }
 
-    $(".portfolioMenu").click(function(item){
-      $(".portfolioMenu").removeClass("activeMenu");
-      $(this).addClass("activeMenu");
-      if(item.currentTarget.id !== "allOptions"){
-        $(".portfolioOption").hide();
-        $("."+item.currentTarget.id).show();
-      } else {
-        $(".portfolioOption").show();
+    function checkAnimation(element){
+      if($('.'+ element)){
+        var elementLocation = $('.' + element)[0].getBoundingClientRect().top;
+        if(elementLocation <= 600 && elementLocation >= -100){
+          if( element === "imageFadeIn" ){
+            setTimeout(function(){
+              $('.' + element).addClass(element+"-animate");
+            }, 2500);
+          } else {
+            $('.' + element).addClass(element+"-animate");
+          }
+
+        }
       }
+    }
+
+    $(".link").click(function(){
+      $("#navDropdown").removeClass("responsive");
     });
 
+    // $(".portfolioMenu").click(function(item){
+    //   $(".portfolioMenu").removeClass("activeMenu");
+    //   $(this).addClass("activeMenu");
+    //
+    //   if(item.currentTarget.id !== "allOptions"){
+    //     $(".portfolioOption").hide();
+    //     $("."+item.currentTarget.id).show();
+    //   } else {
+    //     $(".portfolioOption").show();
+    //   }
+    // });
+
+    $("section").hover(function(){
+      $("#navDropdown a").removeClass("activeLink");
+      $("#navDropdown .link-"+this.id).addClass("activeLink");
+    });
+
+    window.onscroll = function() {
+      let animationArr = ["progressbar", "imageLeft", "imageFadeIn"];
+      animationArr.forEach(function(item){
+        checkAnimation(item);
+      });
+      stickyBar();
+    };
+
+  </script>
+  <script src="../node_modules/mixitup/dist/mixitup.min.js"></script>
+  <script>
+    var mixer = mixitup('.portfolio-images', {
+      selectors: {
+          target: '.portfolioOption'
+      },
+      animation: {
+          effects: 'fade translateX(50%)',
+          effectsOut: 'fade translateY(-100%)',
+          reverseOut: true,
+          nudge: false // Disable nudging to create a carousel-like effect
+      }
+    });
   </script>
 </body>
 
