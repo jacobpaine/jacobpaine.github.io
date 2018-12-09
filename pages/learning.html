@@ -14,21 +14,28 @@ crossorigin="anonymous"></script>
   <title>Jacob Paine: Learning</title>
 <head>
 
-<body>
   <nav id="navbar">
     <div id="navDropdown" class="topnav">
-      <a class="link link-intro" href="#intro" class="active">Home</a>
-      <a class="link link-about" href="#about">About</a>
-      <a class="link link-portfolio" href="#portfolio">Portfolio</a>
-      <a class="link link-blog" href="#blog">Blog</a>
-      <a class="link link-contact" href="#contact">Contact</a>
+      <a class="link link-intro" href="../alpha/index.html" class="active">Home</a>
+      <a class="link link-learning" href="#learning">Learning</a>
+      <a class="link link-reading" href="#reading">Reading</a>
+      <a class="link link-writing" href="#writing">Writing</a>
       <a href="javascript:void(0);" class="icon" onclick="navDrop()">
         <i class="fa fa-bars"></i>
       </a>
     </div>
   </nav>
-LEARN
-<div >
+<body>
+<div class="catalog">
+  <div class="row">
+    <div class="col-xs-12 col-sm-2 mt-3 pt-5">
+      <div id="catalog" class="row">
+      </div>
+    </div>
+    <div id="learning-body" class="col-xs-12 col-sm-10 mt-3 pt-5">
+
+    </div>
+  </div>
 </div>
 
 </body>
@@ -52,10 +59,15 @@ src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'><
     // articles: date, img_first, img_second, img_third, paragraph_first, paragraph_second, paragraph_third ,paragraph_fourth, paragraph_fifth, title
     data.articles.elements.forEach(function(val, ind, arr){
 
-      console.log("value: ", val);
-      console.log("ind: ", ind);
-      console.log("array: ", arr);
+      $("#catalog").append("<a id='"+val.id+"' class='catalog-item' >"+val.title+"</a>");
 
+      $('#learning-body').append("<div class='blog_item paragraph_"+val.id+"'>" + val.title + val.img_first + val.date + val.paragraph_first + val.paragraph_second + val.paragraph_third + val.paragraph_fourth + val.paragraph_fifth + "</div>");
+      $('.blog_item').hide();
+
+      $('#'+val.id).click(function(){
+        $('.blog_item').hide(600);
+        $('.paragraph_'+val.id).show(500);
+      })
 
     });
 
