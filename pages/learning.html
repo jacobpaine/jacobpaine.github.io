@@ -1,6 +1,91 @@
-LEARNING!
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<link href="../css/index.css" rel="stylesheet">
 
-{% assign x = site.data.db %}
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jacob Paine: Learning</title>
+<head>
+
+<body>
+  <nav id="navbar">
+    <div id="navDropdown" class="topnav">
+      <a class="link link-intro" href="#intro" class="active">Home</a>
+      <a class="link link-about" href="#about">About</a>
+      <a class="link link-portfolio" href="#portfolio">Portfolio</a>
+      <a class="link link-blog" href="#blog">Blog</a>
+      <a class="link link-contact" href="#contact">Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="navDrop()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </nav>
+LEARN
+<div >
+</div>
+
+</body>
 
 
-<p> {{ db }} </p>
+<script
+src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+
+<script type='text/javascript'>
+
+  let publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/12heStvIYVlepe6meW6z0YdRuRElmcnGuhhGi-kVAl04/edit?usp=sharing';
+
+  function init() {
+    Tabletop.init( { key: publicSpreadsheetUrl,
+                     callback: showInfo,
+                     simpleSheet: false } )
+  }
+
+  function showInfo(data, tabletop) {
+    console.log("articles: ", data.articles.elements);
+    // articles: date, img_first, img_second, img_third, paragraph_first, paragraph_second, paragraph_third ,paragraph_fourth, paragraph_fifth, title
+    data.articles.elements.forEach(function(val, ind, arr){
+
+      console.log("value: ", val);
+      console.log("ind: ", ind);
+      console.log("array: ", arr);
+
+
+    });
+
+  }
+
+  window.addEventListener('DOMContentLoaded', init)
+
+
+
+
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
+
+  function stickyBar() {
+    if (window.pageYOffset > sticky) {
+      navbar.classList.add("sticky");
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+
+  function navDrop() {
+    if ($("#navDropdown").hasClass("responsive")) {
+        $("#navDropdown").removeClass("responsive");
+    } else {
+      $("#navDropdown").addClass("responsive");
+    }
+  }
+  stickyBar();
+
+
+</script>
+</html>
