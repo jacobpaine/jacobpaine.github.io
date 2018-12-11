@@ -17,13 +17,13 @@ crossorigin="anonymous"></script>
   <section id="intro" class="d-flex align-items-center justify-content-center flex-column">
     <h1>Hi. I'm <span style="color:#FBFFF1">Jacob Paine</span>.</h1>
     <h2>A full-stack developer</h2>
-    <a class="btn btn-outline-light btn-lg link" href="#portfolio" role="button" aria-pressed="true">See my work.</a>
+    <!-- <a class="btn btn-outline-light btn-lg link" href="#portfolio" role="button" aria-pressed="true">See my work.</a> -->
   </section>
   <nav id="navbar">
     <div id="navDropdown" class="topnav">
       <a class="link link-intro" href="#intro" class="active">Home</a>
       <a class="link link-about" href="#about">About</a>
-      <a class="link link-portfolio" href="#portfolio">Portfolio</a>
+      <!-- <a class="link link-portfolio" href="#portfolio">Portfolio</a> -->
       <a class="link link-blog" href="#blog">Blog</a>
       <a class="link link-contact" href="#contact">Contact</a>
       <a href="javascript:void(0);" class="icon" onclick="navDrop()">
@@ -115,11 +115,9 @@ crossorigin="anonymous"></script>
         </div>
     </div>
   </section>
-  <section id="portfolio">
+  <!-- <section id="portfolio">
     <div class="container">
-      <div class="row justify-content-center">
-        <h2>Projects</h2>
-      </div>
+      <h2 class="text-center p-4">Projects</h2>
       <div class="d-flex flex-row justify-content-around">
         <h4 id="allOptions" data-filter=".portfolioOption" class="portfolioMenu activeMenu">All</h4>
         <h4 id="node" data-filter=".node" class="portfolioMenu node">Node</h4>
@@ -139,22 +137,22 @@ crossorigin="anonymous"></script>
         </div>
       </div>
     </div>
-  </section>
-  <section id="blog" class="mt-4">
-    <h2 class="text-center pb-4">Articles</h2>
+  </section> -->
+  <section id="blog">
+    <h2 class="text-center p-4">Articles</h2>
     <div class="container">
       <div class="row text-center">
         <a href="../pages/learning.html" class="col-sm-12 col-md-4 align-self-center">
-          <img class="blogImage" src="../images/desk.jpg" style="">
-          <h4>What I'm Learning</h4>
+          <i class="fas fa-coffee"></i>
+          <h4>Recent Tools</h4>
         </a>
         <a href="../pages/reading.html" class="col-sm-12 col-md-4 align-self-center">
-          <img class="blogImage" src="../images/gears.jpg" style="">
-          <h4>What I'm Reading</h4>
+          <i class="far fa-newspaper"></i>
+          <h4>Articles I'm Reading</h4>
         </a>
         <a href="../pages/writing.html" class="col-sm-12 col-md-4 align-self-center">
-          <img class="blogImage" src="../images/handshake.jpg" style="height:150px; width:150px;">
-          <h4>What I'm Writing</h4>
+          <i class="fas fa-laptop"></i>
+          <h4>Articles I'm Writing</h4>
         </a>
       </div>
     </div>
@@ -178,6 +176,8 @@ crossorigin="anonymous"></script>
       </div>
     </div>
   </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+
   <script>
     var navbar = document.getElementById("navbar");
     var sticky = navbar.offsetTop;
@@ -236,23 +236,31 @@ crossorigin="anonymous"></script>
       });
       stickyBar();
     };
+
+    // var mixer = mixitup('.portfolio-images', {
+    //   selectors: {
+    //       target: '.portfolioOption'
+    //   },
+    //   animation: {
+    //       effects: 'fade translateX(50%)',
+    //       effectsOut: 'fade translateY(-100%)',
+    //       reverseOut: true,
+    //       nudge: false
+    //   }
+    // });
+
+  $("#blog a").hover(function(){
+    var i = $(this)[0].firstElementChild
+    $(this).addClass("blogHighlight");
+    $(i).addClass("blogHighlight");
+  }).mouseleave(function(){
+    var i = $(this)[0].firstElementChild
+    $(this).removeClass("blogHighlight");
+    $(i).removeClass("blogHighlight");
+  });
+
   </script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
-
-  <script>
-    var mixer = mixitup('.portfolio-images', {
-      selectors: {
-          target: '.portfolioOption'
-      },
-      animation: {
-          effects: 'fade translateX(50%)',
-          effectsOut: 'fade translateY(-100%)',
-          reverseOut: true,
-          nudge: false
-      }
-    });
-  </script>
 </body>
 
 </html>

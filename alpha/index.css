@@ -11,6 +11,10 @@
   padding-top: 50px;
   padding-bottom: 75px;
 }
+#about i{
+  color:#B4C5E4;
+  text-shadow: 3.5px 0px 0px #000;
+}
 #about p, #about h4{
   color: #FBFFF1;
 }
@@ -28,6 +32,9 @@
   text-decoration: underline;
   font-weight: bolder;
 }
+.activeArticle{
+  background-color: #B4C5E4;
+}
 .arrow-up {
   border-left: 120px solid transparent;
   border-right: 120px solid transparent;
@@ -41,6 +48,19 @@
 }
 #blog h4{
   padding-top: 15px;
+}
+.blogHighlight{
+  background-color: #090C9B!important;
+  color: #B4C5E4!important;
+}
+#blog h2{
+  color: #090C9B;
+}
+
+#blog i, #blog a{
+  background-color: #B4C5E4;
+  color: #090C9B;
+  font-size: 5rem;
 }
 .blogImage{
   height:150px;
@@ -78,10 +98,7 @@ h1{
 h2{
   font-size: 2rem;
 }
-i{
-  color:#B4C5E4;
-  text-shadow: 3.5px 0px 0px #000;
-}
+
 #intro{
   background-color: #3C3744;
   color: #3D52D5;
@@ -122,8 +139,8 @@ body {
 
 /* Navbar */
 .active {
-  background-color: #4CAF50;
-  color: white;
+  background-color: #3D52D5;
+  color: #FBFFF1;
 }
 
 body {

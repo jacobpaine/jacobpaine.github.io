@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<body>
+  Temporarily down for maintenance and updates. Please check back Dec. 7.
+</body>
+<!-- <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href="css/main.css" rel="stylesheet">
+
+<body>
+  <div id="intro-block">
+    <div id="intro-top" class="block animatable bounceInLeft periwinkle-back">
+      <img id="profile-image" src="./images/profile.jpg">
+      <h2 id="hello">Hi.</h2>
+    </div>
+    <div id="intro-mid" class="block animatable bounceInRight periwinkle-back">
+      <h2>I'm <span class="black">Jacob Paine</span>.</h2>
+      <p id="occupation">I'm a full-stack developer.</p>
+    </div>
+    <div id="intro-bottom" class="block">
+    </div>
+  </div>
+  <div id="about-block" class="grey-back">
+    <div class="block circle animatable fadeInUp white-back">
+      <h3 class="black-text">Agile</h3>
+      <p class="subtext black-text">Prefers Agile for promote fast, effective, and sustainable development</p>
+    </div>
+    <div class="block animatable fadeInDown black-back">
+      <h3>Unbiased</h3>
+      <p class="subtext">Enjoys multiple languages and frameworks,</br> including plain old Javascript.</p>
+    </div>
+    <div class="block animatable fadeInUp white-back">
+      <h3 class="black-text">Adaptable</h3>
+      <p class="black-text subtext">Adjusts to project requirements and quickly changing circumstances</p>
+    </div>
+    <div class="block animatable fadeInDown black-back">
+      <h3>Flexible</h3>
+      <p class="subtext">Thrives on a team, and works well alone</p>
+    </div>
+  </div>
+  <div id="portfolio-block">
+    <div class="block animatable fadeInDown periwinkle-back">
+      <a href="https://github.com/jacobpaine"><i class="fab fa-github"></i></a>
+      <a href="./download/resume.pdf" download><i class="fas fa-file-download"></i></a>
+      <a href="mailto:painejacob@gmail.com"><i class="fas fa-envelope-square"></i></a>
+    </div>
+  </div>
+</body>
+
+<script>
+jQuery(function($) {
+  function windowChange(){
+    var windowWidth = window.innerWidth;
+    var windowHeight = window.innerHeight;
+
+    if( windowWidth >= 1050){
+      $(".block").css('height', windowHeight/2);
+    } else {
+      $(".block").css('height', windowHeight/5);
+    }
+    $(".fadeBlock").css('height', windowHeight);
+    $(".fadeBlock").css('width', windowWidth);
+    $("#work").css('height', windowHeight);
+  }
+  windowChange();
+
+  $( window ).resize(function() {
+    windowChange();
+  });
+
+  // Function which adds the 'animated' class to any '.animatable' in view
+  var doAnimations = function() {
+    // Calc current offset and get all animatables
+    var offset = $(window).scrollTop() + $(window).height(),
+        $animatables = $('.animatable');
+    // Unbind scroll handler if we have no animatables
+    if ($animatables.length === 0) {
+      $(window).off('scroll', doAnimations);
+    }
+
+    // Check all animatables and animate them if necessary
+		$animatables.each(function(i) {
+      var $animatable = $(this);
+			if (($animatable.offset().top + $animatable.height() - 1000) < offset) {
+        $animatable.removeClass('animatable').addClass('animated');
+			}
+    });
+	};
+
+  // Hook doAnimations on scroll, and trigger a scroll
+	$(window).on('scroll', doAnimations);
+  $(window).on('touchmove', doAnimations); // for mobile
+  $(window).trigger('scroll');
+
+});
+</script> -->
+
+</html>
