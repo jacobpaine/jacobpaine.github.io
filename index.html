@@ -18,6 +18,10 @@ crossorigin="anonymous"></script>
     <h1>Hi. I'm <span style="color:#FBFFF1">Jacob Paine</span>.</h1>
     <h2>A full-stack developer</h2>
     <!-- <a class="btn btn-outline-light btn-lg link" href="#portfolio" role="button" aria-pressed="true">See my work.</a> -->
+    <div>
+      <a href="./download/resume.pdf" style="text-decoration:none;" download><i class="far fa-2x fa-file-pdf"></i></a>
+      <a href="https://github.com/jacobpaine" style="text-decoration:none;"><i class="fab fa-2x fa-github"></i></a>
+    </div>
   </section>
   <nav id="navbar">
     <div id="navDropdown" class="topnav">
@@ -26,6 +30,7 @@ crossorigin="anonymous"></script>
       <!-- <a class="link link-portfolio" href="#portfolio">Portfolio</a> -->
       <a class="link link-blog" href="#blog">Blog</a>
       <a class="link link-contact" href="#contact">Contact</a>
+
       <a href="javascript:void(0);" class="icon" onclick="navDrop()">
         <i class="fa fa-bars"></i>
       </a>
@@ -179,6 +184,7 @@ crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
 
   <script>
+
     var navbar = document.getElementById("navbar");
     var sticky = navbar.offsetTop;
 
@@ -259,7 +265,6 @@ crossorigin="anonymous"></script>
     $(this).removeClass("blogHighlight");
     $(i).removeClass("blogHighlight");
   });
-
   </script>
 
 </body>
