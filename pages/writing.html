@@ -11,13 +11,13 @@ crossorigin="anonymous"></script>
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jacob Paine: Learning</title>
+  <title>Jacob Paine: Tools</title>
 <head>
 
   <nav id="navbar">
     <div id="navDropdown" class="topnav" style="display:inline-grid;">
       <a class="link link-intro" href="../alpha/index.html" class="active">Home</a>
-      <a class="link link-learning" href="../pages/learning.html">Learning</a>
+      <a class="link link-learning" href="../pages/learning.html">Tools</a>
       <a class="link link-reading" href="../pages/reading.html">Reading</a>
       <a class="link link-writing active" href="../pages/writing.html">Writing</a>
       <a href="javascript:void(0);" class="icon" onclick="navDrop()">
@@ -40,7 +40,7 @@ crossorigin="anonymous"></script>
 <script
 src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
 
-<!-- <script type='text/javascript'>
+<script type='text/javascript'>
 
   let publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/12heStvIYVlepe6meW6z0YdRuRElmcnGuhhGi-kVAl04/edit?usp=sharing';
 
@@ -54,7 +54,7 @@ src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'><
 
   function showInfo(data, tabletop) {
     // articles: date, img_first, img_second, img_third, paragraph_first, paragraph_second, paragraph_third ,paragraph_fourth, paragraph_fifth, title
-    data.articles.elements.forEach(function(val, ind, arr){
+    data.writing.elements.forEach(function(val, ind, arr){
 
       $("#catalog").append("<a id='"+val.id+"' class='catalog-item pt-2' >"+val.title+"</a>");
 
@@ -95,5 +95,5 @@ src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'><
   }
   stickyBar();
 
-</script> -->
+</script>
 </html>

@@ -67,6 +67,14 @@
   width:150px;
   max-width:100%;
 }
+.catalog-item{
+  cursor: pointer;
+}
+ .catalog-item h4:hover{
+  background-color: #3D52D5;
+  color:#FBFFF1;
+}
+
 #contact{
   background-color: #3C3744;
   color: #B4C5E4;
