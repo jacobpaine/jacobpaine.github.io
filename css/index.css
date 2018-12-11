@@ -254,8 +254,8 @@ nav{
   background-color: #3C3744;
   height: 100%;
   border-radius: -10rem;
-  animation:loadbar .5s normal forwards ease-in-out;
-  -webkit-animation:loadbar .5s normal forwards ease-in-out;
+  animation:loadbar 1.5s normal forwards ease-in-out;
+  -webkit-animation:loadbar 1.5s normal forwards ease-in-out;
 }
 
 @keyframes loadbar {
