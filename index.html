@@ -201,15 +201,15 @@ crossorigin="anonymous"></script>
     function checkAnimation(element){
       if($('.'+ element)){
         var elementLocation = $('.' + element)[0].getBoundingClientRect().top;
-        if(elementLocation <= 600 && elementLocation >= -100){
+        if(elementLocation <= 700 && elementLocation >= -200){
           if( element === "imageFadeIn" ){
             setTimeout(function(){
               $('.' + element).addClass(element+"-animate");
-            }, 1000);
+            }, 800);
           } else if ( element === "progressbar" ){
             setTimeout(function(){
               $('.' + element).addClass(element+"-animate");
-            }, 1000);
+            }, 800);
           } else {
             $('.' + element).addClass(element+"-animate");
           }

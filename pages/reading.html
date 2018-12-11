@@ -31,7 +31,9 @@ crossorigin="anonymous"></script>
       <div class="col-xs-12 col-sm-3 col-md-2">
         <div id="catalog" class="row"></div>
       </div>
-      <div id="learning-body" class="col-xs-12 col-sm-9 col-md-8 mt-5"></div>
+      <div id="learning-body" class="col-xs-12 col-sm-9 col-md-8 mt-5">
+        <div class="notice">My notes on the longer How-tos, READMEs, and manuals.</div>
+      </div>
     </div>
   </div>
 </body>
@@ -92,5 +94,8 @@ src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'><
   }
   stickyBar();
 
+  $("#catalog").click(function(){
+    $(".notice").hide();
+  })
 </script>
 </html>
