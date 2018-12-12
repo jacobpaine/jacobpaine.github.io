@@ -58,7 +58,7 @@ src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'><
     // articles: date, img_first, img_second, img_third, paragraph_first, paragraph_second, paragraph_third ,paragraph_fourth, paragraph_fifth, title
     data.writing.elements.forEach(function(val, ind, arr){
 
-      $("#catalog").append("<a id='"+val.id+"' class='catalog-item pt-2' >"+val.title+"</a>");
+      $("#catalog").append("<a id='"+val.id+"' class='catalog-item pt-2' style='display:none'>"+val.title+"</a>");
 
       $('#learning-body').append("<div class='ml-4 blog_item paragraph_"+val.id+"'>" + val.title + val.img_first +"</div>" + "<div class='ml-4 blog_item paragraph_"+val.id+"'>"+ val.date + val.paragraph_first + val.paragraph_second + val.paragraph_third + val.paragraph_fourth + val.paragraph_fifth + "</div>");
       $('.blog_item').hide();
@@ -70,6 +70,7 @@ src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'><
         $('.paragraph_'+val.id).show(500);
       })
     });
+    $(".catalog-item").fadeIn(500);
   }
 
   window.addEventListener('DOMContentLoaded', init)
