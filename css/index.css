@@ -220,9 +220,9 @@ nav{
 #intro{
   background: linear-gradient(0deg, #B4C5E4, #3C3744);
   background-size: 400% 400%;
-  -webkit-animation: AnimationName 12 ease infinite;
-  -moz-animation: AnimationName 12 ease infinite;
-  animation: AnimationName 12 ease infinite;
+  -webkit-animation: AnimationName 15s ease infinite;
+  -moz-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
 }
 @-webkit-keyframes AnimationName {
     0%{background-position:94% 0%}
