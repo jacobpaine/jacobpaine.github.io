@@ -1,8 +1,138 @@
-<html>
-<div>
-    <h2>Sorry.</h2>
-    <p>I'm currently updating my site this week. Feel free to catch up with me on <a href="https://www.linkedin.com/in/jacobpaine">LinkedIn</a>.
-    </p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<link href="index.css" rel="stylesheet">
+
+<head>
+    <meta charset="utf-8">
+    <title>Jacob Paine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div id="main">
+        <header>
+            <div id="title-box">
+                <h1>Jacob Paine</h1>
+                <p><em>web developer</em></p>
+            </div>
+        </header>
+        <div id="nav-menu">
+            <img id="nav-toggle" src="images/JP.png">
+            <div id="nav-list">
+                <ul>
+                    <li id="learning">Learning</li>
+                    <li id="blog">Blog</li>
+                </ul>
+            </div>
+        </div>
+        <div id="portfolio-image-box">
+            <img id="portfolio-image" src="images/profile.jpg">
+        </div>
+
+        <div id='topic-box'>
+            <ul id="profile-topics">
+                <li class="topic" id='about'>About</li>
+                <li class="topic" id='technologies'>Technologies</li>
+                <li class="topic" id='portfolio'>Portfolio</li>
+                <li class="topic" id='contact'>Contact</li>
+            </ul>
+        </div>
+        <div></div>
+        <div id="display-topics">
+            <div class="display" id="display-about">
+                <h2>About</h2>
+                <p>Located in Franklin, Tennessee, I'm a developer emerging from the first couple years of his career.
+                    I love working in plain Vanilla javascript equally with frameworks like Vue and React. Feel free to
+                    <span onclick="changeTopic('contact')">contact</span> me about positions. </p>
+            </div>
+            <div class="display" id="display-technologies">
+                <h2>Technologies</h2>
+                <ul>
+                    <li>HTML / CSS</li>
+                    <li>Javascript</li>
+                    <li>React</li>
+                    <li>VueJS</li>
+                    <li>Node.js</li>
+                    <li>MySQL</li>
+                </ul>
+            </div>
+            <div class="display" id="display-portfolio">
+                <h2>Portfolio</h2>
+                <p> Stub out dotted lines and a GitHub link</p>
+            </div>
+            <div class="display" id="display-contact">
+                <h2>Contact</h2>
+                <div>Email Icon: painejacob@gmail.com</div>
+                <div>LinkedIn Icon: www.linkedin.com/in/jacobpaine</div>
+                <div>Github Icon: https://github.com/jacobpaine</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var navList = document.querySelector("#nav-list");
+
+        // Show the menu, add class, clip extra content
+        function showMenu(e) {
+            navList.classList.add("show");
+            document.body.style.overflow = "hidden";
+        }
+
+        // Hide menu - scroll if necessary
+        function hideMenu(e) {
+            navList.classList.remove("show");
+            document.body.style.overflow = "auto";
+        }
+
+        // Show / Hides clicked topics
+        function changeTopic(id) {
+            // Hide previous, if applicable
+            var previous = document.querySelector('.show-topic');
+            if (previous) {
+                previous.classList.remove("show-topic");
+            }
+            var target = document.querySelector('#display-' + id)
+            target.classList.add("show-topic");
+        }
+
+        // Handle all the clicks on screen
+        function clickHandler(event) {
+            var target = event.target.id;
+            console.log('click: ', target)
+            // Click the button to open the menu
+            if (target === 'nav-toggle') {
+                showMenu();
+            }
+
+            // To the learning page
+            if (target === 'learning') {
+                window.location.href = './learning.html'
+            }
+
+            // To the blog page
+            if (target === 'blog') {
+                window.location.href = './blog.html'
+            }
+
+            // Click anywhere to close the nav
+            if (target !== 'nav-toggle') {
+                hideMenu();
+            }
+
+            // Show the topic selected
+            if (event.target.classList[0] === "topic") {
+                changeTopic(target)
+            }
+
+        }
+
+
+        // An event listener for clicks
+        document.addEventListener('click', clickHandler, false);
+
+
+    </script>
+
+</body>
 
 </html>

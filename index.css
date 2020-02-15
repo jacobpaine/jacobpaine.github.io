@@ -1,0 +1,182 @@
+/* General */
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+header {
+    text-align: center;
+    font-size: 1.3em;
+    padding-top: 10px;
+}
+@media only screen and (max-width: 600px) {
+    header {
+        font-size: 1em;
+    }
+  }
+
+
+header, div#nav-menu {
+    max-height: 10vh;
+}
+
+div#title-box{
+    display: inline-block;
+}
+
+/* Navigation */
+div#nav-menu{
+    float: right;
+}
+
+img#nav-toggle{
+    width: 75px;
+    vertical-align: middle;
+    float: right;
+    background-color: lightgrey;
+    margin: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 10px solid grey;
+    outline: none;
+    transition: transform .3s cubic-bezier(0, 0, .11, 0);
+
+}
+img#nav-toggle:hover {
+    background-color: #96D9FF;
+    cursor: pointer;
+    border-color: #003557;
+    transform: scale(1.5, 1.5);
+}
+
+img#nav-toggle:active {
+    border-color: #003557;
+    background-color: #FFF;
+}
+
+
+/* The Nav Div that pulls out over the screen */
+#nav-list {
+    width: 100vw;
+    height: 100vh;
+    background-color: grey;
+    opacity: 0.89;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate3d(100vw, 0, 0);
+    transition: transform .3s cubic-bezier(0, .52, 0, 0);
+    cursor: pointer;
+    z-index: 2;
+}
+
+#nav-list.show {
+    transform: translate3d(55vw, 0, 0);
+}
+
+#nav-list h2 a {
+    color: #333;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+#nav-list h2 a:hover {
+    text-decoration: underline;
+}
+
+#nav-list ul{
+    margin: 0;
+    padding: 0;
+}
+
+#nav-list ul li{
+    list-style-type: none;
+    width: 100%;
+    padding: 5% 0 5% 5%;
+    font-size: 3em;
+}
+
+#nav-list ul li:hover{
+    background-color: cornflowerblue;
+}
+
+div#main{
+    background-color: red;
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+/* Profile Image */
+img#portfolio-image{
+    width: 100%;
+    border-radius: 0 75% 75% 0;
+}
+
+div#portfolio-image-box, div#topic-box{
+    height: 20vh;
+
+}
+
+ul#profile-topics{
+    list-style-type: none;
+    margin: 1em 0 1em 0;  
+}
+
+div.display{
+    display: none;
+    max-width: 40vw;
+}
+
+/* Choose a topic */
+div#topic-box{
+    margin-left: 10%;
+    font-size: 2em;
+}
+
+div.show-topic{
+    display: block;
+}
+/* Topics shown */
+div#display-topics{
+    height: 30vh;
+    margin: 10%;
+}   
+
+
+/* Auto underline the topics */
+
+li.topic {
+    text-decoration: none;
+    color: black;
+    z-index: 1;
+    position: relative;
+    margin: 5%;
+}
+  
+li.topic:before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background:black;
+    visibility: hidden;
+    border-radius: 2px;
+    transform: scaleX(.1);
+    transition: .35s linear;
+}
+li.topic:hover:before,
+li.topic:focus:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
