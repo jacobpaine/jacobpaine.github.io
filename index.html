@@ -13,7 +13,6 @@
         <header>
             <div id="title-box">
                 <h1>Jacob Paine</h1>
-                <p><em>web developer</em></p>
             </div>
         </header>
         <div id="nav-menu">
@@ -42,11 +41,22 @@
             <div class="display" id="display-about">
                 <h2>About</h2>
                 <p>Located in Franklin, Tennessee, I'm a developer emerging from the first couple years of his career.
-                    I love working in plain Vanilla javascript equally with frameworks like Vue and React. Feel free to
-                    <span onclick="changeTopic('contact')">contact</span> me about positions. </p>
+                    I love working in plain Javascript as much as with frameworks like Vue and React. My new project is
+                    digging deeper into design patterns and CSS.</p>
+
+                <p>I'm currently available for full, contract or remote positions. Feel free to <span class="contactLink"
+                        onclick="changeTopic('contact')">contact</span> me by email or LinkedIn. </p>
             </div>
             <div class="display" id="display-technologies">
                 <h2>Technologies</h2>
+                <div id="tech-icons">
+                    <img id="htmlIcon" class="icons" src="./icons/html5.svg">
+                    <img id="cssIcon" class="icons" src="./icons/css3-alt.svg">
+                    <img id="jsIcon" class="icons" src="./icons/js-square.svg">
+                    <img id="reactIcon" class="icons" src="./icons/react.svg">
+                    <img id="vueIcon" class="icons" src="./icons/vuejs.svg">
+                    <img id="mysqlIcon" class="icons" src="./icons/mysql.svg">
+                </div>
                 <ul>
                     <li>HTML / CSS</li>
                     <li>Javascript</li>
@@ -62,9 +72,12 @@
             </div>
             <div class="display" id="display-contact">
                 <h2>Contact</h2>
-                <div>Email Icon: painejacob@gmail.com</div>
-                <div>LinkedIn Icon: www.linkedin.com/in/jacobpaine</div>
-                <div>Github Icon: https://github.com/jacobpaine</div>
+                <div id="contact-subdisplay"></div>
+                <div id="contact-icons-box">
+                    <img id="emailJacob" class="icons" src="./icons/envelope.svg">
+                    <img id="linkedinJacob" class="icons" src="./icons/linkedin.svg">
+                    <img id="githubJacob" class="icons" src="./icons/github.svg">
+                </div>
             </div>
         </div>
     </div>
@@ -123,7 +136,22 @@
             if (event.target.classList[0] === "topic") {
                 changeTopic(target)
             }
-
+            // When the contact links are clicked
+            if (target === 'emailJacob') {
+                var display = document.querySelector('#contact-subdisplay');
+                display.innerHTML = "";
+                display.innerHTML = "<p>Feel free to contact me directly at </p><p><b>painejacob@gmail.com</b></p>"
+            };
+            if (target === 'linkedinJacob') {
+                var linkedinURL = "https://www.linkedin.com/in/jacobpaine";
+                // Open a new tab
+                window.open(linkedinURL, '_blank');
+            };
+            if (target === 'githubJacob') {
+                var githubURL = "https://github.com/jacobpaine";
+                // Open a new tab
+                window.open(githubURL, '_blank');
+            };
         }
 
 
