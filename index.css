@@ -245,13 +245,13 @@ div#contact-icons-box *, div#tech-icons *{
     display: inline-block;
 }
 
-div.icons{
+div.icons, div#githubJacob{
     fill: #426fa7;
     width: 50px;
     display: inline-block;
 }
-div#contact-icons-box img.icons:hover{
-    background-color: yellow;
+
+div#contact-icons-box div.icons:hover, div#githubJacob:hover{
+    background-color: #9faebf;
     cursor: pointer;
 }
-
