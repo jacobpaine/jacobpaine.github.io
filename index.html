@@ -24,6 +24,7 @@
                 </ul>
             </div>
         </div>
+
         <div id="portfolio-image-box">
             <img id="portfolio-image" src="images/profile.jpg">
         </div>
@@ -36,6 +37,7 @@
                 <li class="topic" id='contact'>Contact</li>
             </ul>
         </div>
+
         <div></div>
         <div id="display-topics">
             <div class="display" id="display-about">
@@ -56,19 +58,35 @@
                     <img id="reactIcon" class="icons" src="./icons/react.svg">
                     <img id="vueIcon" class="icons" src="./icons/vuejs.svg">
                     <img id="mysqlIcon" class="icons" src="./icons/mysql.svg">
+                    <img id="awsIcon" class="icons" src="./icons/aws.svg">
+                    <img id="guthubIcon" class="icons" src="./icons/github-square.svg">
+
                 </div>
-                <ul>
-                    <li>HTML / CSS</li>
-                    <li>Javascript</li>
-                    <li>React</li>
-                    <li>VueJS</li>
-                    <li>Node.js</li>
-                    <li>MySQL</li>
-                </ul>
+                <div class="technology-list">
+                    <ul>
+                        <li>HTML / CSS</li>
+                        <li>Javascript</li>
+                        <li>React</li>
+                    </ul>
+                    <ul>
+                        <li>VueJS</li>
+                        <li>Node.js</li>
+                        <li>MySQL</li>
+                    </ul>
+                    <ul>
+                        <li>AWS</li>
+                        <li>GitHub</li>
+                    </ul>
+                </div>
             </div>
             <div class="display" id="display-portfolio">
                 <h2>Portfolio</h2>
-                <p> Stub out dotted lines and a GitHub link</p>
+                <img id="githubJacob" class="icons" src="./icons/github.svg">
+                <div id="portfolio-box">
+                    <div class="portfolio-item">Future Item</div>
+                    <div class="portfolio-item">Future Item</div>
+                    <div class="portfolio-item">Future Item</div>
+                </div>
             </div>
             <div class="display" id="display-contact">
                 <h2>Contact</h2>
@@ -76,7 +94,7 @@
                 <div id="contact-icons-box">
                     <img id="emailJacob" class="icons" src="./icons/envelope.svg">
                     <img id="linkedinJacob" class="icons" src="./icons/linkedin.svg">
-                    <img id="githubJacob" class="icons" src="./icons/github.svg">
+                    <img id="githubJacob2" class="icons" src="./icons/github.svg">
                 </div>
             </div>
         </div>
@@ -147,7 +165,7 @@
                 // Open a new tab
                 window.open(linkedinURL, '_blank');
             };
-            if (target === 'githubJacob') {
+            if (target === 'githubJacob' || target === 'githubJacob2') {
                 var githubURL = "https://github.com/jacobpaine";
                 // Open a new tab
                 window.open(githubURL, '_blank');

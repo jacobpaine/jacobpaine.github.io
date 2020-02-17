@@ -7,12 +7,12 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    width: 100vw;
+    /* width: 100vw; */
+    background-color: #5d728c;
 }
 header {
     text-align: center;
     font-size: 1.4em;
-    /* padding-top: 10px; */
 }
 @media only screen and (max-width: 600px) {
     header {
@@ -24,10 +24,8 @@ p{
     font-size: 1em;
 }
 header, div#nav-menu {
-    max-height: 10vh;
-}
-
-div#title-box{
+    min-height: 20vh;
+    max-height: 25vh;
 }
 
 /* Navigation */
@@ -107,13 +105,17 @@ img#nav-toggle:active {
     background-color: #d5dae1;
 }
 
+/* The landing display styles  */
 div#main{
-    background-color: #5d728c;
     max-width: 100%;
-    height: 100%;
+    /* height: 100vh; */
     margin: 0 auto;
     display: grid;
     grid-template-columns: 2fr 3fr;
+}
+
+div.technology-list{
+    display: inline-flex
 }
 
 /* Profile Image */
@@ -124,7 +126,7 @@ img#portfolio-image{
 }
 
 div#portfolio-image-box{
-    height: 33vh;
+    height: 25vh;
 }
 
 ul#profile-topics{
@@ -139,9 +141,7 @@ div.display{
 
 /* Choose a topic */
 div#topic-box{
-    margin-left: 10%;
     font-size: 1.8em;
-    height: 33vh;
 }
 
 div.show-topic{
@@ -151,7 +151,7 @@ div.show-topic{
     border-width: 12px;
     border-style: ridge;
     margin: 0 auto;
-    padding: 25px;  
+    padding: 5px;  
 }
 
 div.show-topic h2{
@@ -159,9 +159,8 @@ div.show-topic h2{
 }
 
 /* Topics shown */
-div#display-topics{
-    /* height: 30vh; */
-    /* margin: 10%; */
+div#display-technologies{
+    max-width: 70%;
 }   
 
 div#contact-subdisplay{
@@ -175,6 +174,25 @@ span.contactLink{
 span.contactLink:hover{
     color: red;
     text-decoration: underline;
+    cursor: pointer;
+}
+
+div#display-portfolio{
+    text-align: center
+}
+
+div#portfolio-box{
+    display: inline-flex;
+}
+
+div.portfolio-item{
+    padding: 100px 50px;
+    border: 2px dashed black;
+    margin: 5px;
+}
+
+img#githubJacob:hover{
+    background-color: yellow;
     cursor: pointer;
 }
 
@@ -213,7 +231,7 @@ div#contact-icons-box, div#tech-icons{
     text-align: center;
 }
 div#contact-icons-box *, div#tech-icons *{
-    margin: 3%;
+    margin: 2%;
 }
 
 img.icons{
@@ -223,3 +241,4 @@ div#contact-icons-box img.icons:hover{
     background-color: yellow;
     cursor: pointer;
 }
+
