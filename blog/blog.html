@@ -1,4 +1,6 @@
+<!DOCTYPE html>
 <html lang="en">
+<link href="blog.css" rel="stylesheet">
 
 <head>
     <meta charset="utf-8">
@@ -7,10 +9,35 @@
 
 </head>
 
-<div id='blog-intro'>
-    <p>Thanks for taking an interest in my blog. This is just where I put my articles and links about work and hobbies I have.</p>
-</div>
+<body>
 
+    <div id='blog-intro'>
+        <p>Thanks for taking an interest in my blog. This is just where I put my articles and links about work and
+            hobbies I have.</p>
+    </div>
+
+    <div id="article-viewer">
+
+    </div>
+    <div id="article-list">
+
+    </div>
+    <script>
+        let jsonAddress = 'https://www.jacobpaine.com/blog/articles.json';
+        let request = new XMLHttpRequest();
+        request.open('GET', jsonAddress);
+        request.responseType = 'json';
+        request.send();
+        request.onload = function () {
+            console.log(request.response)
+        }
+
+        // Variables
+        console.log('here')
+
+
+    </script>
+</body>
 
 
 </html>
