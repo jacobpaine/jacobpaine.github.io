@@ -23,17 +23,28 @@
 
     </div>
     <script>
-        let jsonAddress = 'https://jacobpaine.github.io/blog/articles.json';
+        let jsonAddress = 'https://jacobpaine.com/articles.json';
         let request = new XMLHttpRequest();
-        request.open('GET', jsonAddress);
+        request.open('GET', "https://s3.us-east-1.amazonaws.com/jacobpaine.com/articles.json");
         request.responseType = 'json';
         request.send();
         request.onload = function () {
             console.log(request.response)
         }
+        // let url = "https://s3.us-east-1.amazonaws.com/jacobpaine.com/articles.json";
 
+        // let parsedObject = {};
+
+        // fetch(url)
+        //     .then(response => response.json())
+        //     .then(stringifiedData => parsedObject = JSON.parse(stringifiedData))
+        //     .catch(error => console.log(`Failed because: ${error}`));
+
+        // console.log(parsedObject);
         // Variables
-        console.log('here')
+        console.log('he  re', request.response)
+
+
 
 
     </script>
