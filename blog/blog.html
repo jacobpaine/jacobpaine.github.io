@@ -94,7 +94,7 @@
                         // Create each paragraph
                         var paragraphNode = document.createElement('p');
                         paragraphNode.className += current.paragraph_classes;
-                        paragraphNode.textContent = paragraph;
+                        paragraphNode.innerHTML = paragraph;
                         articleViewer.append(imageNode, paragraphNode);
                     })
                 }
@@ -115,12 +115,12 @@
 
             // Create an array of all types
             var types = data.map(function (current) {
-                return current.type;
+                return current.type.toLowerCase();
             })
 
             // There could be many articles of a given type, we only want one of each group.
             var topLevel = unique(types);
-
+            console.log('topLevel: ', topLevel)
             // For each in item in the topLevel, populate the navigation
             topLevel.map(function (current) {
                 // create a new Element (because Strings don't work with Events)

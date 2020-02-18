@@ -1,25 +1,17 @@
 [
     {
         "uuid": "00001",
-        "type": "test",
-        "images": [
-            {
-                "src": "../images/test.jpg",
-                "classes": "center",
-                "alt": "alt"
-            },
-            {
-                "src": "../images/test.jpg",
-                "classes": "right",
-                "alt": "alt"
-            }
-        ],
-        "title": "Title",
+        "type": "coding",
+        "images": [],
+        "title": "DRAFT VanillaJS Toolkit & Chris Ferdinandi",
         "paragraphs": [
-            "paragraph 1",
-            "paragraph 2",
-            "paragraph 3",
-            "paragraph 4"
+            "<h2>Vanilla JS</h2>",
+            "<p>Vanilla Javascript is just a complicated way to say plain Javascript, unadorned with frameworks or too many outside libraries. At this point in my career, I think it is possibly the best place to start for anyone starting out in web development.</p>",
+            "<p>Why? Simplicity & gradual complexity. Adding frameworks or libraries on top of the dozens of other methods you can't recall does not establish a good foundation. Believe me, I've lived it. </p>",
+            "<p>As much as I enjoy web development, the culture has a significant lack of good teaching practice. Devs in my experience, for whatever reason, struggle to communicate.</p>",
+            "<p>  \"But Jacob!\", you say incredulously, \"Take any five YouTube tutorials, and you will find beginners effusively thanking the poster for their clarity\". Well stranger, you're right! The problem isn't the students, it's the teaching. And kudos to those people who post tutorials. I haven't had the courage to start doing that.</p>",
+            "<p>What do I mean that something wrong wth the teaching? Well, when we communicate, we make assumptions about our audience. I assume my audience reads English (or has a passable translator). Also, I have to admit I use a more advanced vocabulary. You're typical YouTube tutorial uses a vocabulary (and thought patterns) that come naturally to people who find coding easy. Words and concepts that have much deeper implications get thrown at students faster and harder than can be understood.</p>",
+            "<p>So when I recommend Chris Ferdinandi's VanillaJS Toolkit and his guides, I'm saying they are approachable for me. I found them an astoundingly good refresher on a lot of concepts I had encountered but forgot. Or my Sr. Devs knew, but only implicitly mentioned (<b>*ahem*</b> design patterns <b>*ahem*</b>).</p>"
         ],
         "paragraph_classes": []
     },
@@ -27,38 +19,26 @@
         "uuid": "00002",
         "type": "Coding",
         "images": [],
-        "title": "Title 2 !",
+        "title": " _Test_ A second article in web dev",
         "paragraphs": [
-            "paragraph 1",
-            "paragraph 2",
-            "paragraph 3",
-            "paragraph 4"
+            " Test paragraph w/o image"
         ],
         "paragraph_classes": []
     },
     {
         "uuid": "00003",
-        "type": "Coding",
+        "type": "acro",
         "images": [
             {
                 "src": "../images/test.jpg",
                 "width": "",
                 "classes": "center",
                 "alt": "alt"
-            },
-            {
-                "src": "../images/test.jpg",
-                "width": "",
-                "classes": "right",
-                "alt": "alt"
             }
         ],
-        "title": "Title 3",
+        "title": "_TEST_ Acroyoga article",
         "paragraphs": [
-            "paragraph 1",
-            "paragraph 2",
-            "paragraph 3",
-            "paragraph 4"
+            "test paragraph w/image"
         ],
         "paragraph_classes": []
     }
