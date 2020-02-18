@@ -1,5 +1,6 @@
 [
     {
+        "uuid": "00001",
         "type": "test",
         "images": [
             {
@@ -22,6 +23,7 @@
         ]
     },
     {
+        "uuid": "00002",
         "type": "Coding",
         "images": [
             {
@@ -35,7 +37,30 @@
                 "alt": "alt"
             }
         ],
-        "title": "Title 2",
+        "title": "Title 2 !",
+        "paragraphs": [
+            "paragraph 1",
+            "paragraph 2",
+            "paragraph 3",
+            "paragraph 4"
+        ]
+    },
+    {
+        "uuid": "00003",
+        "type": "Coding",
+        "images": [
+            {
+                "src": "",
+                "placement": "center",
+                "alt": "alt"
+            },
+            {
+                "src": "",
+                "placement": "right",
+                "alt": "alt"
+            }
+        ],
+        "title": "Title 3",
         "paragraphs": [
             "paragraph 1",
             "paragraph 2",
@@ -43,4 +68,4 @@
             "paragraph 4"
         ]
     }
-];
+]

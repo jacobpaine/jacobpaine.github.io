@@ -16,36 +16,128 @@
             hobbies I have.</p>
     </div>
 
-    <div id="article-viewer">
-
-    </div>
-    <div id="article-list">
-
+    <div id="article-viewer"></div>
+    <div id="article-nav-box">
+        <ul id="article-list"></ul>
     </div>
     <script>
-        let jsonAddress = 'https://jacobpaine.com/articles.json';
-        let request = new XMLHttpRequest();
-        request.open('GET', "https://s3.us-east-1.amazonaws.com/jacobpaine.com/articles.json");
-        request.responseType = 'json';
-        request.send();
-        request.onload = function () {
-            console.log(request.response)
-        }
-        // let url = "https://s3.us-east-1.amazonaws.com/jacobpaine.com/articles.json";
 
-        // let parsedObject = {};
-
-        // fetch(url)
-        //     .then(response => response.json())
-        //     .then(stringifiedData => parsedObject = JSON.parse(stringifiedData))
-        //     .catch(error => console.log(`Failed because: ${error}`));
-
-        // console.log(parsedObject);
         // Variables
-        console.log('here', request.response)
+        // A global (gasp!) intentional, in this particular case.
+        var articles;
 
+        // Methods
+        // Handy titleCasing for Article Titles
+        var toTitleCase = function (str) {
+            str = str.toLowerCase().split(' ');
+            for (var i = 0; i < str.length; i++) {
+                str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+            }
+            return str.join(' ');
+        };
 
+        // Click Handler
+        // Drop the articles down in the nav
+        var displayArticlesNav = function (event) {
+            event.preventDefault();
+            var target = event.target.id;
 
+            // Map and Boolean filter the global articles to get ready for display in the nav
+            var listOfArticles = articles.map(function (current) {
+                if (current.type.toLowerCase() !== target) return null;
+                return current;
+            }).filter(Boolean);
+
+            // Create each item and display the list
+            var createList = listOfArticles.map(function (current) {
+                var newItem = document.createElement('li');
+                newItem.id = current.title.toLowerCase();
+                newItem.innerHTML = toTitleCase(current.title);
+                newItem.addEventListener('click', renderArticles, false);
+                document.querySelector('#' + target).append(newItem);
+            });
+        }
+
+        // Render an article on demand
+        var renderArticles = function (data) {
+            console.log('articles rendered')
+            var articleViewer = document.querySelector('#article-viewer')
+        }
+
+        // Render the navigation on demand
+        var renderNavigation = function (data) {
+            // Variables
+            var navigation = document.querySelector('#article-list');
+
+            // Methods
+            var unique = function (arr) {
+                return arr.filter(function (item, index) {
+                    return arr.indexOf(item) === index;
+                });
+            };
+
+            // Create an array of all types
+            var types = data.map(function (current) {
+                return current.type;
+            })
+
+            // There could be many articles of a given type, we only want one of each group.
+            var topLevel = unique(types);
+
+            // For each in item in the topLevel, populate the navigation
+            topLevel.map(function (current) {
+                // create a new Element (because Strings don't work with Events)
+                var newItem = document.createElement('ul');
+                newItem.id = current.toLowerCase();
+                newItem.innerHTML = toTitleCase(current);
+                newItem.addEventListener('click', displayArticlesNav, false);
+                navigation.append(newItem);
+            });
+        }
+
+        // Render the page, primarily on load
+        var renderPage = function (data) {
+            articles = data;
+            console.log('rendering...', data)
+            renderNavigation(data);
+            // renderArticles(data);
+
+        }
+
+        var renderNoArticles = function () {
+            var output = document.querySelector('article-viewer')
+            output.innerHTML = "<p>There seems to have an error in the S3 bucket.</p>"
+        }
+        // Make an XHR request to a public read-only S3 bucket
+        var getArticles = function () {
+            // Set up our HTTP request
+            var xhr = new XMLHttpRequest();
+
+            // Set up our listener to process request state changes
+            xhr.onreadystatechange = function () {
+
+                // Only run if the request is complete
+                if (xhr.readyState !== 4) return;
+
+                // Process our return data
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    // Request successful
+                    renderPage(JSON.parse(xhr.responseText))
+                } else {
+                    // Request fails
+                    renderNoArticles();
+                }
+
+            };
+
+            // Create and send a GET request
+            xhr.open('GET', 'https://s3.us-east-1.amazonaws.com/jacobpaine.com/articles.json');
+            xhr.send();
+        }
+
+        // Executables and Event Listeners
+        // Get API data
+        getArticles();
 
     </script>
 </body>
