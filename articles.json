@@ -4,12 +4,12 @@
         "type": "test",
         "images": [
             {
-                "src": "./images/test.jpg",
+                "src": "../images/test.jpg",
                 "classes": "center",
                 "alt": "alt"
             },
             {
-                "src": "./images/test.jpg",
+                "src": "../images/test.jpg",
                 "classes": "right",
                 "alt": "alt"
             }
@@ -41,13 +41,13 @@
         "type": "Coding",
         "images": [
             {
-                "src": "./images/test.jpg",
+                "src": "../images/test.jpg",
                 "width": "",
                 "classes": "center",
                 "alt": "alt"
             },
             {
-                "src": "./images/test.jpg",
+                "src": "../images/test.jpg",
                 "width": "",
                 "classes": "right",
                 "alt": "alt"
