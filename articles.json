@@ -4,13 +4,13 @@
         "type": "test",
         "images": [
             {
-                "src": "",
-                "placement": "center",
+                "src": "foo",
+                "classes": "center",
                 "alt": "alt"
             },
             {
-                "src": "",
-                "placement": "right",
+                "src": "bar",
+                "classes": "right",
                 "alt": "alt"
             }
         ],
@@ -20,43 +20,36 @@
             "paragraph 2",
             "paragraph 3",
             "paragraph 4"
-        ]
+        ],
+        "paragraph_classes": []
     },
     {
         "uuid": "00002",
         "type": "Coding",
-        "images": [
-            {
-                "src": "",
-                "placement": "center",
-                "alt": "alt"
-            },
-            {
-                "src": "",
-                "placement": "right",
-                "alt": "alt"
-            }
-        ],
+        "images": [],
         "title": "Title 2 !",
         "paragraphs": [
             "paragraph 1",
             "paragraph 2",
             "paragraph 3",
             "paragraph 4"
-        ]
+        ],
+        "paragraph_classes": []
     },
     {
         "uuid": "00003",
         "type": "Coding",
         "images": [
             {
-                "src": "",
-                "placement": "center",
+                "src": "bork",
+                "width": "",
+                "classes": "center",
                 "alt": "alt"
             },
             {
-                "src": "",
-                "placement": "right",
+                "src": "bork",
+                "width": "",
+                "classes": "right",
                 "alt": "alt"
             }
         ],
@@ -66,6 +59,7 @@
             "paragraph 2",
             "paragraph 3",
             "paragraph 4"
-        ]
+        ],
+        "paragraph_classes": []
     }
 ]

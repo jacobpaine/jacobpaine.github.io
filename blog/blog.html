@@ -12,16 +12,19 @@
 <body>
 
     <div id='blog-intro'>
-        <p>Thanks for taking an interest in my blog. This is just where I put my articles and links about work and
-            hobbies I have.</p>
+        <p>Thanks for taking an interest in my blog. It's a small project that I put together over a couple of days as
+            proof of concept. It's done in HTML/CSS/JS using a read-only AWS S3 bucket to provide the JSON.</p>
+
+        <p>If none of that made any sense, this is just where I put my articles and links about work and hobbies I
+            have. </p>
     </div>
 
     <div id="article-viewer"></div>
     <div id="article-nav-box">
         <ul id="article-list"></ul>
     </div>
-    <script>
 
+    <script>
         // Variables
         // A global (gasp!) intentional, in this particular case.
         var articles;
@@ -50,18 +53,52 @@
 
             // Create each item and display the list
             var createList = listOfArticles.map(function (current) {
+
+                // Prevent duplicates in the list & hide the list
+                if (document.getElementById(current.uuid)) {
+                    while (document.querySelector('#' + target + ' li')) {
+                        document.querySelector('#' + target + ' li').remove()
+                        return;
+                    }
+                }
+
                 var newItem = document.createElement('li');
-                newItem.id = current.title.toLowerCase();
+                var id = current.uuid;
+                newItem.id = id;
                 newItem.innerHTML = toTitleCase(current.title);
-                newItem.addEventListener('click', renderArticles, false);
+                newItem.addEventListener('click', function () { renderArticles(id) }, false);
                 document.querySelector('#' + target).append(newItem);
             });
         }
 
         // Render an article on demand
-        var renderArticles = function (data) {
-            console.log('articles rendered')
+        var renderArticles = function (id) {
             var articleViewer = document.querySelector('#article-viewer')
+            // Each click rerenders from memory, so clear it out to prevent duplicates.
+            articleViewer.innerHTML = "";
+            var articleToDisplay = articles.map(function (current) {
+                if (current.uuid === id) {
+                    current.paragraphs.map(function (paragraph, index, array) {
+                        
+                        // Check for an image, create a node, use all the available info
+                        var currentImage = current.images[index];
+
+                        // Create the Image Node, use classes to simply manipulate in CSS
+                        var imageNode = document.createElement('img');
+                        if (currentImage && currentImage.src !== "" && currentImage.src !== undefined) {
+                            imageNode.src = currentImage.src;
+                            imageNode.className = currentImage.classes;
+                            imageNode.alt = currentImage.alt;
+                        }
+
+                        // Create each paragraph
+                        var paragraphNode = document.createElement('p');
+                        paragraphNode.className += current.paragraph_classes;
+                        paragraphNode.textContent = paragraph;
+                        articleViewer.append(imageNode, paragraphNode);
+                    })
+                }
+            })
         }
 
         // Render the navigation on demand
@@ -98,10 +135,7 @@
         // Render the page, primarily on load
         var renderPage = function (data) {
             articles = data;
-            console.log('rendering...', data)
             renderNavigation(data);
-            // renderArticles(data);
-
         }
 
         var renderNoArticles = function () {
