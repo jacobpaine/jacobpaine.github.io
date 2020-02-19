@@ -3,16 +3,19 @@ body{
 }
 header{
     text-align: center;
+    border-bottom: 8px ridge #426fa7;
+    display: inline-flex;
 }
 header img{
     display: inline-block;
-    width: 30%;
+    width: 150px;
+    height: 100px;
 }
 div#blog-intro{
     display: inline-block;
-    width: 30%;
     margin-left: 5%;
     text-align: left;
+    width: 70%;
 }
 
 div#article-viewer{
@@ -25,7 +28,7 @@ div#article-nav-box {
     width: 40%;
     margin-top: 15vh;
     height: 100%;
-    border: 8px ridge darkgrey;
+    border: 8px ridge #426fa7;
 }
 
  div#article-list {
