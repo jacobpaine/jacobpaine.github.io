@@ -1,9 +1,18 @@
 body{
     padding: 5vw;
 }
+header{
+    text-align: center;
+}
+header img{
+    display: inline-block;
+    width: 30%;
+}
 div#blog-intro{
-    width: 75%;
-    margin: 0 auto;
+    display: inline-block;
+    width: 30%;
+    margin-left: 5%;
+    text-align: left;
 }
 
 div#article-viewer{

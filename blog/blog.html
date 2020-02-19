@@ -8,18 +8,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
-<img id="blog-header-image" src="../images/blog.png">
 
 <body>
-    <div id='blog-intro'>
-        <p>Thanks for taking an interest in my blog. It's a small project that I put together quickly as
-            proof of concept. It's done in HTML/CSS/JS using a read-only AWS S3 bucket to provide the JSON. Very
-            straightforward and simple, it's an easy win for newer developers.</p>
+    <header>
+        <img id="blog-header-image" src="../images/blog.png">
+        <div id='blog-intro'>
+            <p>Thanks for taking an interest in my blog. It's a small project that I put together quickly as
+                proof of concept. It's done in HTML/CSS/JS using a read-only AWS S3 bucket to provide the JSON. Very
+                straightforward and simple, it's an easy win for newer developers.</p>
 
-        <p>If none of that made any sense, this is just where I put my articles and links about work and hobbies I
-            have. The code is complete, but the content is a work-in-progress. I'll write more throughout the month
-            February 2020.</p>
-    </div>
+            <p>If none of that made any sense, this is just where I put my articles and links about work and hobbies I
+                have. The code is complete, but the content is a work-in-progress. I'll write more throughout the month
+                February 2020.</p>
+        </div>
+    </header>
 
     <div id="article-nav-box">
         <div id="article-list"></div>
@@ -124,7 +126,6 @@
 
             // There could be many articles of a given type, we only want one of each group.
             var topLevel = unique(types);
-            console.log('topLevel: ', topLevel)
             // For each in item in the topLevel, populate the navigation
             topLevel.map(function (current) {
                 // create a new Element (because Strings don't work with Events)

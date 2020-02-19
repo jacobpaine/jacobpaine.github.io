@@ -190,11 +190,26 @@ div#portfolio-box{
     display: inline-block;
 }
 
-div.portfolio-item{
+div.portfolio-unknown-item{
     display: inline-block;
     padding: 100px 50px;
     border: 2px dashed black;
     margin: 5px;
+}
+
+div.portfolio-item{
+    border: 4px ridge grey;
+    margin: 5px;
+}
+div.portfolio-item:hover{
+    background-color: #9faebf;
+    cursor: pointer;
+}
+
+div.portfolio-item img{
+    display: inline-block;
+    margin: 5px;
+    width: 50%;
 }
 
 img#githubJacob:hover{
