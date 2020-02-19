@@ -31,6 +31,11 @@ function navHandler(event) {
         window.open('/blog/blog.html', '_blank');
     }
 
+    // To the main page
+    if (dataHref === 'home') {
+        window.open('/index.html', '_blank');
+    }
+    
     // Click anywhere to close the nav
     if (target !== 'nav-toggle') {
         hideMenu();
