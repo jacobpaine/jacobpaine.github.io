@@ -1,0 +1,24 @@
+body{
+    padding: 5%;
+}
+div#text-viewer textarea {
+	min-height: 5em;
+	max-height: 50vh;
+    width: 75%;
+    font-size: 1.3em;
+}
+div#text-suggestions{
+}
+
+div.radio-box{
+    display: block;
+}
+
+div.wordBox{
+    margin: 10px;
+    user-select: all;
+    display: inline-block;
+}
+span.highlight{
+    background-color: yellow;
+}

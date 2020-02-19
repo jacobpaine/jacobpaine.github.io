@@ -1,23 +1,191 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<link href="word.css" rel="stylesheet">
+
+<head>
+    <meta charset="utf-8">
+    <title>Some help with writing...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
 
 <body>
     <title>Words Project</title>
+    <header>
+        <h1>Description assistant</h1>
+        <p>Type or copy text into the area below. <span class='highlight'>Highlight</span> and <b>select</b> a button
+            to operate.</p>
+    </header>
+    <div id='text-viewer'>
+        <textarea id='textBox' placeholder="Type or copy/paste what you're working on here" onblur=getSelectedText()></textarea>
+    </div>
+
+    <div id='text-controls'>
+        <div class='radio-box'>
+            <input type="radio" id="wordsLike" name="choice" value="words like" data-query="ml">
+            <label for="wordsLike">Words Like</label>
+        </div>
+
+        <div class='radio-box'>
+            <input type="radio" id="soundsLike" name="choice" value="soundsLike" data-query="sl">
+            <label for="soundsLike">Sounds Like</label>
+        </div>
+
+        <div class='radio-box'>
+            <input type="radio" id="spelledLike" name="choice" value="spelledLike" data-query="sp">
+            <label for="spelledLike">Spelled like</label>
+        </div>
+
+        <div class='radio-box'>
+            <input type="radio" id="rhymesWith" name="choice" value="rhymesWith" data-query="rel_rhy">
+            <label for="rhymesWith">Rhymes with</label>
+        </div>
+
+        <div class='radio-box'>
+            <input type="radio" id="adjectivesThatDescribe" name="choice" value="adjectivesThatDescribe" data-query="rel_jjb">
+            <label for="adjectivesThatDescribe">Adjectives that describe (noun)</label>
+        </div>
+
+        <div class='radio-box'>
+            <input type="radio" id="nounsDescribedBy" name="choice" value="nounsDescribedBy" data-query="rel_jja">
+            <label for="nounsDescribedBy">Nouns described by (adjective)</label>
+        </div>
+
+        <div class='radio-box'>
+            <input type="radio" id="wordsThatFollow" name="choice" value="wordsThatFollow" data-query="lc">
+            <label for="wordsThatFollow">Words that often follow</label>
+        </div>
+
+        <div class='radio-box'>
+            <input type="radio" id="wordsAssociatedWith" name="choice" value="wordsAssociatedWith" data-query="rel_trg">
+            <label for="wordsAssociatedWith">Words associated with</label>
+        </div>
+
+        <div class='radio-box'>
+            <input type="radio" id="suggestions" name="choice" value="suggestions" data-query="sug">
+            <label for="suggestions">Suggested completion</label>
+        </div>
+
+    </div>
+
+    <div id='text-suggestions'></div>
+
 </body>
 
 <script>
+    /*!
+    * Automatically expand a textarea as the user types
+    * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
+    * @param  {Node} field The textarea
+    */
+    var autoExpand = function (field) {
 
-    var http = new XMLHttpRequest();
-    var url = 'https://api.datamuse.com/words?ml=ringing+in+the+ears';
-    http.open("GET", url);
-    http.send();
+        // Reset field height
+        field.style.height = 'inherit';
 
-    http.onreadystatechange = function () {
-        console.log(this)
-        if (this.readyState == 4 && this.status == 200) {
-            console.log(http.responseText)
+        // Get the computed styles for the element
+        var computed = window.getComputedStyle(field);
+
+        // Calculate the height
+        var height = parseInt(computed.getPropertyValue('border-top-width'), 10)
+            + parseInt(computed.getPropertyValue('padding-top'), 10)
+            + field.scrollHeight
+            + parseInt(computed.getPropertyValue('padding-bottom'), 10)
+            + parseInt(computed.getPropertyValue('border-bottom-width'), 10);
+
+        field.style.height = height + 'px';
+
+    };
+
+    // Methods
+    var filterAndDisplay = function (data) {
+        var output = document.querySelector('#text-suggestions');
+        data = JSON.parse(data);
+
+        // Empty the output div so we don't get overwhelmed with words
+        while (output.firstChild) {
+            output.removeChild(output.firstChild);
+        }
+
+        var sortedArray = data.sort(function (curr, next) {
+            var current = curr.word.toUpperCase();
+            var next = next.word.toUpperCase();
+            return (current < next) ? -1 : (current > next) ? 1 : 0;
+        });
+
+        for (let i = 0; i < sortedArray.length; i++) {
+            var wordBox = document.createElement('div');
+            wordBox.id = sortedArray[i].word;
+            wordBox.innerText = sortedArray[i].word;
+            wordBox.className = 'wordBox';
+            wordBox.score = sortedArray[i].score;
+            output.append(wordBox);
         }
     }
 
+    // Text area loses focus on blur, so here we manually keep focus
+    function selectText(start, end, txtarea) {
+        // Chrome / Firefox
+        if (typeof (txtarea.selectionStart) != "undefined") {
+            txtarea.focus();
+            txtarea.selectionStart = start;
+            txtarea.selectionEnd = end;
+            return true;
+        }
+        // IE 
+        if (document.selection && document.selection.createRange) {
+            txtarea.focus();
+            txtarea.select();
+            var range = document.selection.createRange();
+            range.collapse(true);
+            range.moveEnd("character", end);
+            range.moveStart("character", start);
+            range.select();
+            return true;
+        }
+    }
+
+    function getSelectedText() {
+        var txtarea = document.getElementById('textBox');
+        var start = txtarea.selectionStart;
+
+        var finish = txtarea.selectionEnd;
+        if (start === finish) return;
+        selectText(start, finish, txtarea)
+    }
+
+
+
+    // Handle clicks
+    var clickHandler = function (event) {
+        var dataQuery = event.target.getAttribute('data-query');
+
+        // When someone selects a radio button the request fires
+        if (dataQuery) {
+            var highlightedValue = window.getSelection().toString().split(' ').join('+');
+
+            // Suggested is a slightly different call. Using a ternary for brevity.
+            var url = (dataQuery === "sug") ? '/sug?s' + '=' + highlightedValue : '/words?' + dataQuery + '=' + highlightedValue;
+
+            var http = new XMLHttpRequest();
+            var call = 'https://api.datamuse.com/' + url;
+            http.open("GET", call);
+            http.send();
+
+            http.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    filterAndDisplay(http.responseText);
+                }
+            }
+
+        }
+
+
+    }
+
+    // Event Listeners
+
+    document.addEventListener('click', clickHandler, false)
 
 
 
