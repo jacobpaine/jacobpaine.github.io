@@ -1,7 +1,9 @@
 div#article-viewer{
     float: left;
+    width: 50%;
 }
 
 div#article-nav-box{
     float: right;
+    width: 48%;
 }

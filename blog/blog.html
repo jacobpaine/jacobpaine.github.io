@@ -43,7 +43,7 @@
         // Drop the articles down in the nav
         var displayArticlesNav = function (event) {
             event.preventDefault();
-            var target = event.target.id;
+            var target = event.target.parentNode.id;
 
             // Map and Boolean filter the global articles to get ready for display in the nav
             var listOfArticles = articles.map(function (current) {
@@ -53,9 +53,11 @@
 
             // Create each item and display the list
             var createList = listOfArticles.map(function (current) {
+                document.getElementById(target).firstChild.innerHTML = '&#129110;';
 
                 // Prevent duplicates in the list & hide the list
                 if (document.getElementById(current.uuid)) {
+                    document.getElementById(target).firstChild.innerHTML = '&#8594;';
                     while (document.querySelector('#' + target + ' li')) {
                         document.querySelector('#' + target + ' li').remove()
                         return;
@@ -124,11 +126,21 @@
             // For each in item in the topLevel, populate the navigation
             topLevel.map(function (current) {
                 // create a new Element (because Strings don't work with Events)
+                var articleBox = document.createElement('div');
+                articleBox.id = current.toLowerCase();
+
+                // Either arrow or the UL will drop the nav menu
+                var arrow = document.createElement('span');
+                arrow.innerHTML = '&#8594;';
+                arrow.addEventListener('click', displayArticlesNav, false);
+
                 var newItem = document.createElement('ul');
-                newItem.id = current.toLowerCase();
                 newItem.innerHTML = toTitleCase(current);
                 newItem.addEventListener('click', displayArticlesNav, false);
-                navigation.append(newItem);
+
+                articleBox.append(arrow, newItem);
+                navigation.append(articleBox);
+
             });
         }
 
@@ -142,36 +154,36 @@
             var output = document.querySelector('article-viewer')
             output.innerHTML = "<p>There seems to have an error in the S3 bucket.</p>"
         }
-        // Make an XHR request to a public read-only S3 bucket
-        var getArticles = function () {
-            // Set up our HTTP request
-            var xhr = new XMLHttpRequest();
+            // Make an XHR request to a public read-only S3 bucket
+            var getArticles = function () {
+                // Set up our HTTP request
+                var xhr = new XMLHttpRequest();
 
-            // Set up our listener to process request state changes
-            xhr.onreadystatechange = function () {
+                // Set up our listener to process request state changes
+                xhr.onreadystatechange = function () {
 
-                // Only run if the request is complete
-                if (xhr.readyState !== 4) return;
+                    // Only run if the request is complete
+                    if (xhr.readyState !== 4) return;
 
-                // Process our return data
-                if (xhr.status >= 200 && xhr.status < 300) {
-                    // Request successful
-                    renderPage(JSON.parse(xhr.responseText))
-                } else {
-                    // Request fails
-                    renderNoArticles();
-                }
+                    // Process our return data
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        // Request successful
+                        renderPage(JSON.parse(xhr.responseText))
+                    } else {
+                        // Request fails
+                        renderNoArticles();
+                    }
 
-            };
+                };
 
-            // Create and send a GET request
-            xhr.open('GET', 'https://s3.us-east-1.amazonaws.com/jacobpaine.com/articles.json');
-            xhr.send();
-        }
+                // Create and send a GET request
+                xhr.open('GET', 'https://s3.us-east-1.amazonaws.com/jacobpaine.com/articles.json');
+                xhr.send();
+            }
 
-        // Executables and Event Listeners
-        // Get API data
-        getArticles();
+            // Executables and Event Listeners
+            // Get API data
+            getArticles();
 
     </script>
 </body>
