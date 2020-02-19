@@ -1,9 +1,44 @@
+body{
+    padding: 5vw;
+}
+div#blog-intro{
+    width: 75%;
+    margin: 0 auto;
+}
+
 div#article-viewer{
     float: left;
     width: 50%;
 }
 
-div#article-nav-box{
+div#article-nav-box {
     float: right;
-    width: 48%;
+    width: 40%;
+    margin-top: 15vh;
+    height: 100%;
+    border: 8px ridge darkgrey;
+}
+
+ div#article-list {
+    display: grid;
+}
+
+div#article-list div{
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1.3em;
+} 
+
+div#article-list div li{
+    list-style-type: none;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+div#article-list div div:hover, div#article-list div span:hover{
+    cursor: pointer;
+}
+
+div#article-list div li:hover{
+    background-color: yellow;
+    cursor: pointer;
 }
