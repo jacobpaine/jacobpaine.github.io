@@ -23,12 +23,12 @@ function navHandler(event) {
 
     // To the learning page
     if (target === 'learning') {
-        window.open('learning.html', '_blank');
+        window.open('/learning.html', '_blank');
     }
 
     // To the blog page
     if (dataHref === 'blog') {
-        window.open('blog/blog.html', '_blank');
+        window.open('/blog/blog.html', '_blank');
     }
 
     // Click anywhere to close the nav
