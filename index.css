@@ -81,7 +81,7 @@ div.show-topic{
     border-width: 12px;
     border-style: ridge;
     margin: 0 auto;
-    padding: 20px;  
+    padding: 10px;  
 }
 
 div.show-topic h2{
@@ -111,7 +111,6 @@ div#display-portfolio{
 }
 
 div#portfolio-box{
-    display: inline-block;
 }
 
 div.portfolio-unknown-item{
@@ -119,21 +118,22 @@ div.portfolio-unknown-item{
     padding: 100px 50px;
     border: 2px dashed black;
     margin: 5px;
+    vertical-align: top;
 }
 
 div.portfolio-item{
-    border: 4px ridge grey;
-    margin: 5px;
+    display: inline-block;
 }
+
 div.portfolio-item:hover{
     background-color: #9faebf;
     cursor: pointer;
+    border: 3px double black;
 }
 
 div.portfolio-item img{
-    display: inline-block;
-    margin: 5px;
-    width: 50%;
+    width: 185px;
+    height: 200px;
 }
 
 img#githubJacob:hover{
