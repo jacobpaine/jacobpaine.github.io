@@ -21,9 +21,9 @@ function navHandler(event) {
         showMenu();
     }
 
-    // To the learning page
-    if (target === 'learning') {
-        window.open('/learning.html', '_blank');
+    // To the resources page
+    if (target === 'resources') {
+        window.open('/resources.html', '_blank');
     }
 
     // To the blog page
