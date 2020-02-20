@@ -6,6 +6,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    position: absolute;
     background-color: #9faebf;
 }
 header {
@@ -95,6 +96,7 @@ div.show-topic h2{
 
 /* Topics shown */
 div#display-topics{
+    margin-left: 50%;
 }
 div#display-technologies{
     text-align: center;
