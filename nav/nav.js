@@ -35,7 +35,7 @@ function navHandler(event) {
     if (dataHref === 'home') {
         window.open('/index.html', '_blank');
     }
-    
+
     // Click anywhere to close the nav
     if (target !== 'nav-toggle') {
         hideMenu();

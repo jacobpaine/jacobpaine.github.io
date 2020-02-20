@@ -102,7 +102,7 @@
                 </div>
                 <div id="portfolio-box">
                     <div data-href='blog' class="portfolio-item"><img data-href='blog' src="/images/blog.png"></div>
-                    <div class="portfolio-item"><img data-href='blog' src="/images/lorem.jpg"></div>
+                    <div data-href='words' class="portfolio-item"><img data-href='words' src="/images/lorem.jpg"></div>
                     <div class="portfolio-unknown-item">Future Item</div>
                     <div class="portfolio-unknown-item">Future Item</div>
                 </div>
@@ -169,11 +169,13 @@
                 display.innerHTML = "";
                 display.innerHTML = "<p>Feel free to contact me directly at </p><p><b>painejacob@gmail.com</b></p>"
             };
+
             if (target === 'linkedinJacob' || dataHref === 'linkedinJacob') {
                 var linkedinURL = "https://www.linkedin.com/in/jacobpaine";
                 // Open a new tab
                 window.open(linkedinURL, '_blank');
             };
+            
             if (dataHref === 'github') {
                 var githubURL = "https://github.com/jacobpaine";
                 // Open a new tab
