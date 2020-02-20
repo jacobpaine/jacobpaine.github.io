@@ -68,8 +68,8 @@ ul#profile-topics{
 
 div.display{
     display: none;
-    max-width: 55vw;
-    min-width: 55vw;
+    /* max-width: 55vw;
+    min-width: 55vw; */
     color: #426fa7;
 }
 
@@ -94,10 +94,11 @@ div.show-topic h2{
 
 /* Topics shown */
 div#display-topics{
-    margin-left: 50%;
+    /* margin-left: 25%; */
+    margin: 0 auto auto 25%;
 }
 div#display-technologies{
-text-align: center;
+    text-align: center;
 }   
 
 div#contact-subdisplay{
