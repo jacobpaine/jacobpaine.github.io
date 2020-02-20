@@ -8,19 +8,21 @@ div#resources-main{
 }
 
 div.column{
-    width: 33vw;
     height: 100vh;
     padding: 8px;
 }
 
 div#topics-col{
-    background-color: lightcoral;
+    background-color: #426fa7;
+    width: 30vw;
 }
 div#sites-col{
-    background-color: lightseagreen;
+    background-color: #9faebf;
+    width: 40vw;
 }
 div#notes-col{
-    background-color: lightsteelblue;
+    background-color: lightgrey;
+    width: 30vw;
 }
 
 ul{
@@ -45,9 +47,15 @@ li.topic:hover{
 }
 
 li.site{
-    font-size: 1.2em;  
+    font-size: 1.2em;
+    text-align: right;  
+    /* display: flex; */
 }
 
 li.note{
     display: none;
+}
+
+input[type="radio"]{
+    margin-left: 15px;
 }
