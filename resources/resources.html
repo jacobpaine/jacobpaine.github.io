@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Some Kind of Blog</title>
+    <title>Some Kind of Resources</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -16,18 +16,166 @@
             <div id="nav-list">
                 <ul>
                     <li id="home" data-href="home">Home</li>
-                    <li id="resources">Resources</li>
                     <li id="blog" data-href="blog">Blog</li>
                 </ul>
             </div>
         </div>
     </header>
+
+    <div id="resources-main">
+
+        <div id="topics-col" class="column">
+            <ul>
+                <li class='topic' data-topic='patterns'>Design Patterns</li>
+                <li class='topic' data-topic='javascript'>Javascript</li>
+                <li class='topic' data-topic='css'>CSS</li>
+                <li class='topic' data-topic='node'>Node.js</li>
+            </ul>
+        </div>
+
+        <div id="sites-col" class="column">
+            <ul class='patterns sites'>
+                <li class='site'>
+                    <a href="https://github.com/trekhleb/javascript-algorithms">Algorithms</a>
+                    <input type="radio" name="choice" data-note='algorithms'>
+                </li>
+                <li class="site">
+                    <a href="https://addyosmani.com/resources/essentialjsdesignpatterns/book/">Essential JS Design
+                        Patterns</a>
+                    <input type="radio" name="choice" data-note='essentialJsDesignPatterns'>
+
+                </li>
+            </ul>
+            <ul class='javascript sites'>
+                <li class='site'>
+                    <a href="https://gomakethings.com/">Go Make Things</a>
+                    <input type="radio" name="choice" data-note='goMakeThings'>
+                </li>
+                <li class='site'>
+                    <a href="https://github.com/getify/You-Dont-Know-JS">You Don't Know JS</a>
+                    <input type="radio" name="choice" data-note='youDontKnowJs'>
+                </li>
+                <li class='site'>
+                    <a href="https://github.com/mbeaudru/modern-js-cheatsheet">JS Cheatsheet</a>
+                    <input type="radio" name="choice" data-note='jsCheatsheet'>
+                </li>
+                <li class="site">
+                    <a href="https://wesbos.com/category/es6/">Wes Bos</a>
+                    <input type="radio" name="choice" data-note='wesBos'>
+                </li>
+            </ul>
+            <ul class='css sites'>
+                <li class='site'>
+                    <a class='site' href="https://www.youtube.com/playlist?list=PLyuRouwmQCjl4wTSNbb8RTKZuyMhoIxBe">Steve
+                        Griffith's YouTube Channel</a>
+                    <input type="radio" name="choice" data-note='steveGriffith'>
+                </li>
+                <li class='site'>
+                    <a class='site' href="https://css-tricks.com/">CSS Tricks</a>
+                    <input type="radio" name="choice" data-note='cssTricks'> </li>
+            </ul>
+            <ul class='node sites'>
+                <li class='site'>
+                    <a href="https://bestofjs.org/projects/nodejs-best-practices">Node.js Best Practices</a>
+                    <input type="radio" name="choice" data-note='bestOfJs'>
+                </li>
+                <li class='site'>
+                    <a href="https://expressjs.com/">Express</a>
+                    <input type="radio" name="choice" data-note='express'>
+                </li>
+            </ul>
+        </div>
+
+        <div id="notes-col" class="column">
+            <ul class="notes">
+                <li id='steveGriffith' class="note">A CSS YouTube channel that comes highly reccommended. I haven't
+                    completed it yet.</li>
+                <li id='goMakeThings' class='note'>Chris Ferdinandi's paid courses. I can't recommend them higher for
+                    new and brushing up devs. Covers all the basics, XML requests, plus a good introduction to
+                    Revealing Module and
+                    Constructor patterns.</li>
+                <li id='cssTricks' class='note'>A great resource for various CSS articles when you forget how to style.</li>
+                <li id="bestOfJs" class='note'>Best of JS - Node: A wildly popular site for all your JS needs. This is
+                    a direct link to the Node portion. </li>
+                <li id="express" class='note'>The framework you are most likely using with Node.</li>
+                <li id="youDontKnowJs" class='note'>The github repo for You Don't Know JS, a great learning resource
+                    for ES5/ES6.</li>
+                <li id="algorithms" class='note'>Algorithms that could come in handy later in my career.</li>
+                <li id="jsCheatsheet" class='note'>The Cheatsheet for when you can't quite recall what how to do that
+                    one things you've done so many times...</li>
+                <li id="wesBos" class='note'>Wes Bos. One of the most well-known educators in web development.</li>
+                <li id="essentialJsDesignPatterns" class='note'>The Book on design patterns by Addy Osmani.</li>
+
+            </ul>
+        </div>
+    </div>
+
     <script src="/nav/nav.js"></script>
     <script>
+
+        // Variables
+
+        // Methods
+        function topicHandler(event) {
+            var topic = event.target.getAttribute('data-topic');
+
+            // Hide all the other sites 
+            var sites = document.querySelectorAll('.sites');
+            for (var site of sites) {
+                site.style.display = "none";
+            };
+
+
+            // Add the noteHandler to each site
+            var eachSite = document.querySelectorAll('.site');
+            for (var radio of eachSite) {
+                radio.addEventListener('click', noteHandler, false);
+            };
+
+            var sitesToShow = document.querySelector('.' + topic);
+            sitesToShow.style.display = "block";
+        }
+
+        function noteHandler(event) {
+            // Hide all the notes
+            var notes = document.querySelectorAll('.note');
+            for (var note of notes) {
+                note.style.display = "none";
+            };
+
+            // Display notes chosen by radio button
+            var noteToDisplay = event.target.getAttribute('data-note');
+            if (noteToDisplay) {
+                document.getElementById(noteToDisplay).style.display = "block";
+            }
+        }
+
+        // Chamges large circles to 
+        function switchHandler(event) {
+            console.log(event)
+            var target = event.target.textContent === "◐" ? "◑" : "◐";
+            var id = event.target.getAttribute('data-note');
+
+            console.log(target)
+            if (target === '◐') {
+                document.getElementById(id).style.display = "none";
+                console.log(document.getElementById(id).style.display)
+            }
+            event.target.innerHTML = target;
+        }
+
+        // Event Listeners  
+        var topics = document.querySelectorAll('.topic');
+        for (var topic of topics) {
+            topic.addEventListener('click', topicHandler, false);
+        }
 
 
 
     </script>
+    <!-- <footer>
+        <p>This is just a place to store useful resources.</p>
+    </footer> -->
 </body>
 
 </html>

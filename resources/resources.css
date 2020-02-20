@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+div#resources-main{
+    display: flex;
+}
+
+div.column{
+    width: 33vw;
+    height: 100vh;
+    padding: 8px;
+}
+
+div#topics-col{
+    background-color: lightcoral;
+}
+div#sites-col{
+    background-color: lightseagreen;
+}
+div#notes-col{
+    background-color: lightsteelblue;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul.sites{
+    display: none;
+}
+
+div.topics-col ul{
+    text-align: center;
+}
+
+li.topic{
+    text-align: left;
+    font-size: 1.5em;
+}
+
+li.topic:hover{
+    background-color: yellow;   
+}
+
+li.site{
+    font-size: 1.2em;  
+}
+
+li.note{
+    display: none;
+}
