@@ -23,12 +23,17 @@ function navHandler(event) {
 
     // To the resources page
     if (target === 'resources') {
-        window.open('/resources.html', '_blank');
+        window.open('/resources/resources.html', '_blank');
     }
 
     // To the blog page
     if (dataHref === 'blog') {
         window.open('/blog/blog.html', '_blank');
+    }
+
+    // To the words project
+    if (dataHref === 'words') {
+        window.open('/portfolio/word.html', '_blank');
     }
 
     // To the main page
