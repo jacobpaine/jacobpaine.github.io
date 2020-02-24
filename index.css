@@ -8,6 +8,7 @@ html, body {
     padding: 0;
     position: absolute;
     background-color: #9faebf;
+    font-size: 18px;
 }
 header {
     text-align: center;
