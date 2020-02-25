@@ -2,203 +2,114 @@
 *{
     box-sizing: border-box;
 }
-
-html, body {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    background-color: #9faebf;
+body{
     font-size: 18px;
 }
-header {
-    text-align: center;
-    font-size: 1.8em;
-    color: #426fa7  ;
-}
-@media only screen and (max-width: 700px) {
-    header {
-        font-size: 1.6em;
-    }
-  }
 
-p{
-    font-size: 1em;
-}
-header, div#nav-menu {
-    min-height: 20vh;
-    max-height: 25vh;
-}
-
-
-/* The landing display styles  */
-div#main{
-    max-width: 100%;
-    width: 100vw;
-    /* height: 100vh; */
-    margin: 0 auto;
+/* Title card */
+header{
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 10px;
 }
 
-div.technology-list{
-    /* display: inline-flex; */
+div#myTitle{
+    font-style: italic;
+}
+
+div#title-box, div.topic-box{
+    display: grid;
+    align-content: center;
     text-align: center;
-    font-size: 1em;
-}
-div.technology-list ul li{
-    display: inline-block;
-    padding: 5px;
 }
 
-/* Profile Image */
-img#portfolio-image{
-    min-width: 40vw;
-    max-width: 40vw;
-    width: 100%;
-    border-radius: 0 75% 75% 0;
-    border: 10px inset #426fa7;
+div.topic-box{
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-div#portfolio-image-box{
+
+div.topic{
+    flex: 1;
+    margin-block-start: 2em;
+    margin-block-end: 2em;
+    margin-inline-start: 1em;
+    margin-inline-end: 1em;
+    font-weight: bold;
+    border: 1px solid transparent;
+    cursor: pointer;
 }
 
-ul#profile-topics{
-    list-style-type: none;
-    margin: .5em 0 .5em 0;  
+div.topic:hover{
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0.2em 0.125em 0.125em rgba(0, 0, 0, 0.25), 0.02em 0.02em 0.02em rgba(0, 0, 0, 0.4), 0.05em 0.05em 0.02em rgba(255, 255, 255, 0.8) inset;
+}
+div.topic:active{
+    background-color:#EDEDED;
+}
+@media only screen and (max-width: 641px){
+    div.topic-box {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    div.topic{
+        flex: 1;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        /* margin-inline-start: 0.5px;
+        margin-inline-end: 0.5px; */
+        font-weight: bold;
+    
+        cursor: pointer;
+    }
 }
 
+div#display-topics{
+    padding: 10% 20%;
+}
 
 div.display{
     display: none;
-    /* max-width: 55vw; */
-    min-width: 55vw;
-    color: #426fa7;
-}
-
-/* Choose a topic */
-div#topic-box{
-    font-size: 1.8em;
-}
-
-div.show-topic{
-    display: block;
-    background-color: #d5dae1;
-    border-color: #426fa7;
-    border-width: 12px;
-    border-style: ridge;
-    margin: 0 auto;
-    padding: 10px;    
-    max-width: 50%;  
-}
-
-div.show-topic h2{
     text-align: center;
+    border: .5px solid transparent;
+    padding: 25px;
+
+    border-radius: 10px;
+    -webkit-box-shadow: inset 5px 5px 5px 0px rgba(237,237,237,0.85), -5px -5px 5px 1px rgba(237,237,237,0.85); 
+    box-shadow: inset 5px 5px 5px 0px rgba(201,201,201,0.85), -5px -5px 5px 0px rgba(255,255,255,0.85);
+    background-color: #EDEDED;
 }
 
-/* Topics shown */
-div#display-topics{
-    /* margin-left: 50%; */
-}
-div#display-technologies{
-    text-align: center;
-}   
+/* -webkit-box-shadow: inset -5px -5px 5px 1px rgba(237,237,237,0.85); 
+box-shadow: inset -5px -5px 5px 1px rgba(237,237,237,0.85); */
 
-div#contact-subdisplay{
-    text-align: center;
+div.display p{
+    text-align: left;
 }
 
-span.contactLink{
-    font-weight: bolder;
-}
-span.contactLink:hover{
-    color: red;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-div#display-portfolio{
-    text-align: center
-}
-
-div#portfolio-box{
-}
-
-div.portfolio-unknown-item{
-    display: inline-block;
-    padding: 100px 50px;
-    border: 2px dashed black;
-    vertical-align: top;
-}
-
-div.portfolio-item{
-    display: inline-block;
-}
-
-div.portfolio-item:hover{
-    background-color: #9faebf;
-    cursor: pointer;
-    border: 3px double black;
-}
-
-div.portfolio-item img{
-    width: 185px;
-    height: 200px;
-}
-
-img#githubJacob:hover{
-    background-color: yellow;
-    cursor: pointer;
-}
-
-/* Auto underline the topics */
-
-li.topic {
-    text-decoration: none;
-    color: #426fa7;
-    z-index: 1;
-    position: relative;
-    margin: 3%;
-    cursor: pointer;
-}
-  
-li.topic:before {
-    content: "";
-    position: absolute;
-    width: 150px;
-    height: 4px;
-    bottom: 0;
-    left: 0;
-    background:#426fa7;
-    visibility: hidden;
-    border-radius: 2px;
-    transform: scaleX(.1);
-    transition: .35s linear;
-}
-li.topic:hover:before,
-li.topic:focus:before {
-    visibility: visible;
-    transform: scaleX(1);
-}
-
-/* Icons */
-div#contact-icons-box, div#tech-icons{
-    text-align: center;
-}
-div#contact-icons-box *, div#tech-icons *{
-    margin: 2%;
-    margin: 2%;
-    fill: #426fa7;
+div.icons {
     width: 50px;
     display: inline-block;
 }
 
-div.icons, div#githubJacob{
-    fill: #426fa7;
-    width: 50px;
-    display: inline-block;
+div.technology-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 8px;
+}
+@media only screen and (max-width: 641px){
+    div.technology-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 8px;
+    }
 }
 
-div#contact-icons-box div.icons:hover, div#githubJacob:hover{
-    background-color: #9faebf;
+div#tech-icons div {
+    margin: 8px;
+}
+
+.github, #emailJacob, #linkedinJacob{
     cursor: pointer;
 }
