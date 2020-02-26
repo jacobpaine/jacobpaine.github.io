@@ -34,7 +34,7 @@ img#nav-toggle:active {
     width: 33vw;
     height: 100vh;
     background-color: #c3ccd7;
-    opacity: 0.89;
+    /* opacity: 0.89; */
     position: fixed;
     top: 0;
     left: 0;
@@ -46,6 +46,8 @@ img#nav-toggle:active {
 
 #nav-list.show {
     transform: translate3d(67vw, 0, 0);
+    -webkit-box-shadow: -12px 0px 5px 0px rgba(0,0,0,0.36); 
+    box-shadow: -12px 0px 5px 0px rgba(0,0,0,0.36);
 }
 
 #nav-list h2 a {
