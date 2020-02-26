@@ -27,7 +27,6 @@ div.topic-box{
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-
 div.topic{
     flex: 1;
     margin-block-start: 1.5em;
@@ -114,5 +113,9 @@ div#tech-icons div {
 }
 
 .github, #emailJacob, #linkedinJacob{
+    cursor: pointer;
+}
+
+div.portfolio-item img{
     cursor: pointer;
 }
