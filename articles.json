@@ -1,78 +1,31 @@
 [
     {
-        "uuid": "0000Q",
-        "type": "acro",
-        "images": [
-            {
-                "src": "../images/test.jpg",
-                "width": "",
-                "classes": "center",
-                "alt": "alt"
-            },
-            {
-                "src": "../images/test.jpg",
-                "width": "",
-                "classes": "center",
-                "alt": "alt"
-            },
-            {
-                "src": "../images/test.jpg",
-                "width": "",
-                "classes": "center",
-                "alt": "alt"
-            }
-        ],
-        "title": "_TEST_2 Acroyoga article",
-        "paragraphs": [
-            "test paragraph w/image",
-            "test paragraph w/image",
-            "test paragraph w/image"
-        ],
-        "paragraph_classes": [
-            "test1",
-            "test2",
-            "test3"
-        ]
-    },
-    {
         "uuid": "00001",
-        "type": "Web Development",
+        "type": "development",
         "images": [],
         "title": "DRAFT VanillaJS Toolkit & Chris Ferdinandi",
         "paragraphs": [
             "<h2>Vanilla JS</h2>",
-            "<p>Vanilla Javascript is just a complicated way to say plain Javascript, unadorned with frameworks or too many outside libraries. At this point in my career, I think it is possibly the best place to start for anyone starting out in web development.</p>",
-            "<p>Why? Simplicity & gradual complexity. Adding frameworks or libraries on top of the dozens of other methods you can't recall does not establish a good foundation. Believe me, I've lived it. As much as I enjoy web development, the culture has a significant lack of good teaching practice. Devs in my experience, for whatever reason, struggle to communicate.</p>",
-            "<p>  \"But Jacob!\", you say incredulously, \"Take any five YouTube tutorials, and you will find beginners effusively thanking the poster for their clarity\". Well stranger, you're right! The problem isn't the students, it's the teaching. And kudos to those people who post tutorials. I haven't had the courage to start doing that.</p>",
-            "<p>What do I mean that something wrong wth the teaching? Well, when we communicate, we make assumptions about our audience. I assume my audience reads English (or has a passable translator). Also, I have to admit I use a more advanced vocabulary. You're typical YouTube tutorial uses a vocabulary (and thought patterns) that come naturally to people who find coding easy. And as juniors are brought into the periphery of a senior, these words and patterns are absolutely crucial. Unfortunately, concepts with much deeper implications get thrown at students faster than can be reasonably understood. The introduction to development needs work. Students need an invitation to learning.</p>",
-            "<p>So when I recommend Chris Ferdinandi's VanillaJS Toolkit and his guides, I'm saying they are approachable for me. I found them an astoundingly good refresher on a lot of concepts I had encountered but forgot. Or my Sr. Devs knew, but only barely mentioned (<b>*ahem*</b> design patterns <b>*ahem*</b>). In any case, I appreciate Chris Ferdinandi's style and his commitment to simplicity and clarity. If you are a true beginner, you may need to take the course a couple of times, but it is an excellent place to start.</p>"
+            "<p>Vanilla Javascript is just the complicated way to say plain Javascript, unadorned with frameworks or too many outside libraries. At this point in my career, I think it is possibly the best place to start for anyone starting out in web development. </p>",
+            "<p>Why? Simplicity & gradual complexity. A good foundation in code starts very inefficiently. Libraries and obscure helper functions might make the finished work more polished. And polished work makes us feel good. However, because libraries come and go, it is important to be able to create the entire thing without the helper functions and libraries. JQuery, React, most anything that you will npm install are shortcuts. They are important, but at the beginning you have to take the long way around. Believe me, I've lived it. As much as I enjoy web development, something is wrong with teaching practice around anything that feels inefficient.</p>",
+            "<p>What do I mean that something wrong wth the teaching? There are two distinct styles that I appreciate. Things become complicated when these two styles become intertwined. Th first style is the long lecture. The instructor has full control over the direction of the class and expounds on the minutia. It usually answers the question 'Why?'. The second style is the short-and-sweet. It answers the question, 'How?'. </p>",
+            "<p> Well, when we communicate, we make assumptions about our audience. I assume my audience reads English (or has a passable translator). Also, I have to admit I use a more advanced vocabulary. You're typical YouTube tutorial uses a vocabulary (and thought patterns) that come naturally to people who find coding easy. And as juniors are brought into the periphery of a senior, these words and patterns are absolutely crucial. Unfortunately, concepts with much deeper implications get thrown at students faster than can be reasonably understood. The introduction to development needs work. Students need an invitation to learning.</p>",
+            "<p>So when I recommend Chris Ferdinandi's VanillaJS Toolkit and his guides, I'm saying they are approachable for me. It is very clearly in the short-and-sweet style. I found them an astoundingly good refresher on a lot of concepts I had encountered but forgot. Or my Sr. Devs knew, but only barely mentioned (<b>*ahem*</b> design patterns <b>*ahem*</b>). In any case, I appreciate Chris Ferdinandi's style and his commitment to simplicity and clarity. If you are a true beginner, you may need to take the course a couple of times, but it is an excellent place to start.</p>"
         ],
         "paragraph_classes": []
     },
     {
         "uuid": "00002",
-        "type": "Web Development",
+        "type": "development",
         "images": [],
-        "title": " _Test_ A second article in web dev",
+        "title": "My Roadmap",
         "paragraphs": [
-            " Test paragraph w/o image"
-        ],
-        "paragraph_classes": []
-    },
-    {
-        "uuid": "00003",
-        "type": "acro",
-        "images": [
-            {
-                "src": "../images/test.jpg",
-                "width": "",
-                "classes": "center",
-                "alt": "alt"
-            }
-        ],
-        "title": "_TEST_ Acroyoga article",
-        "paragraphs": [
-            "test paragraph w/image"
+            "<p>My current development roadmap looks like this: </p>",
+            "<ul>",
+            "<li>Udemy: React - The Complete Guide (from Academind) by Maximilian Schwarzmüller</li>",
+            "<li>Udemy: VueJS 2 - The Complete Guide (from Academind) by Maximilian Schwarzmüller</li>",
+            "<li>Udemy: Learn Python Programming Masterclass by Tim Buchalka</li>",
+            "</ul>"
         ],
         "paragraph_classes": []
     }

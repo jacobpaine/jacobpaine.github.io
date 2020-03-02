@@ -56,7 +56,7 @@
         var displayArticlesNav = function (event) {
             event.preventDefault();
             var target = event.target.parentNode.id;
-
+            console.log(target)
             // Map and Boolean filter the global articles to get ready for display in the nav
             var listOfArticles = articles.map(function (current) {
                 if (current.type.toLowerCase() !== target) return null;
