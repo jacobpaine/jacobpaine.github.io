@@ -1,0 +1,574 @@
+[
+    {
+        "id": "1",
+        "title": "Burpees",
+        "type": "cardio",
+        "duration": [
+            "30",
+            "60"
+        ],
+        "part": [
+            "upper",
+            "lower",
+            "core"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "2",
+        "title": "Speed Squats",
+        "type": "cardio",
+        "duration": [
+            "30",
+            "60"
+        ],
+        "part": [
+            "lower"
+        ],
+        "equipment": [
+            "bodyweight",
+            "weights"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "3",
+        "title": "Assisted Pistol Squats",
+        "type": "strength",
+        "sets": [
+            "3",
+            "5"
+        ],
+        "duration": [
+            "30",
+            "60"
+        ],
+        "part": [
+            "lower"
+        ],
+        "equipment": [
+            "wall",
+            "chair"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "4",
+        "title": "Walk the Box",
+        "type": "strength",
+        "sets": [
+            "3",
+            "5"
+        ],
+        "duration": [
+            "30",
+            "60"
+        ],
+        "part": [
+            "lower"
+        ],
+        "equipment": [
+            "bodyweight",
+            "bands"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "4",
+        "title": "Calf Raises",
+        "type": "strength",
+        "sets": [
+            "3"
+        ],
+        "duration": [
+            "60"
+        ],
+        "part": [
+            "lower"
+        ],
+        "equipment": [
+            "bodyweight",
+            "weight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "5",
+        "title": "Horse Stance",
+        "type": "strength",
+        "sets": [
+            "3"
+        ],
+        "duration": [
+            "60"
+        ],
+        "part": [
+            "lower"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "6",
+        "title": "Bow Stance",
+        "type": "strength",
+        "sets": [
+            "3"
+        ],
+        "duration": [
+            "60"
+        ],
+        "part": [
+            "lower"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "7",
+        "title": "Single Leg Squats",
+        "type": "strength",
+        "sets": [
+            "3"
+        ],
+        "duration": [
+            "30"
+        ],
+        "part": [
+            "lower"
+        ],
+        "equipment": [
+            "bodyweight",
+            "weights",
+            "chair",
+            "wall"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "8",
+        "title": "High knees",
+        "type": "cardio",
+        "sets": [
+            "3"
+        ],
+        "duration": [
+            "30"
+        ],
+        "part": [
+            "lower"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "9",
+        "title": "Wind sprints",
+        "type": "cardio",
+        "sets": [
+            "6",
+            "12"
+        ],
+        "duration": [
+            "10"
+        ],
+        "part": [
+            "lower"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "10",
+        "title": "Slow push ups",
+        "type": "strength",
+        "sets": [
+            "3"
+        ],
+        "duration": [
+            "60"
+        ],
+        "part": [
+            "upper"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "11",
+        "title": "Inclined push ups",
+        "type": "strength",
+        "sets": [
+            "3"
+        ],
+        "duration": [
+            "30"
+        ],
+        "part": [
+            "upper"
+        ],
+        "equipment": [
+            "chair"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "12",
+        "title": "Plyo push ups",
+        "type": "strength",
+        "sets": [
+            "3"
+        ],
+        "duration": [
+            "30"
+        ],
+        "part": [
+            "upper"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "13",
+        "title": "Assisted Handstands",
+        "type": "strength",
+        "sets": [
+            "3"
+        ],
+        "duration": [
+            "60"
+        ],
+        "part": [
+            "upper"
+        ],
+        "equipment": [
+            "wall"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "14",
+        "title": "Free Handstands",
+        "type": "strength",
+        "sets": [
+            "3"
+        ],
+        "duration": [
+            "10"
+        ],
+        "part": [
+            "upper"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "15",
+        "title": "Dips",
+        "type": "strength",
+        "sets": [
+            "3"
+        ],
+        "repetitions": [
+            "10"
+        ],
+        "part": [
+            "upper"
+        ],
+        "equipment": [
+            "chair"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "16",
+        "title": "Ring Dips",
+        "type": "strength",
+        "sets": [
+            "3"
+        ],
+        "repetitions": [
+            "8"
+        ],
+        "part": [
+            "upper"
+        ],
+        "equipment": [
+            "rings"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "17",
+        "title": "L-Sit",
+        "type": "strength",
+        "sets": [
+            "3"
+        ],
+        "duration": [
+            "30"
+        ],
+        "part": [
+            "upper"
+        ],
+        "equipment": [
+            "rings"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "18",
+        "title": "Straddle Lifts",
+        "type": "strength",
+        "sets": [
+            "3"
+        ],
+        "repetitions": [
+            "20"
+        ],
+        "part": [
+            "lower"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "19",
+        "title": "Pike Lifts",
+        "type": "strength",
+        "sets": [
+            "3"
+        ],
+        "repetitions": [
+            "20"
+        ],
+        "part": [
+            "lower"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "20",
+        "title": "Pike Lifts",
+        "type": "strength",
+        "sets": [
+            "3"
+        ],
+        "repetitions": [
+            "20"
+        ],
+        "part": [
+            "lower"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "21",
+        "title": "Tricep Isometric Groundbreaker",
+        "type": "strength",
+        "sets": [
+            "2"
+        ],
+        "repetitions": [
+            "6"
+        ],
+        "duration": [
+            "6"
+        ],
+        "part": [
+            "upper"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "22",
+        "title": "Diamond pushups",
+        "type": "strength",
+        "sets": [
+            "3"
+        ],
+        "duration": [
+            "30"
+        ],
+        "part": [
+            "upper"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "23",
+        "title": "Under the fence",
+        "type": "strength",
+        "sets": [
+            "3"
+        ],
+        "duration": [
+            "15"
+        ],
+        "part": [
+            "upper"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "24",
+        "title": "Face Pulls (towel)",
+        "type": "strength",
+        "sets": [
+            "3"
+        ],
+        "repetitions": [
+            "10"
+        ],
+        "part": [
+            "upper"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "25",
+        "title": "V-ups",
+        "type": "strength",
+        "duration": [
+            "30"
+        ],
+        "part": [
+            "core"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "26",
+        "title": "Russian V-up Twist",
+        "type": "strength",
+        "duration": [
+            "30",
+            "60"
+        ],
+        "part": [
+            "core"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "27",
+        "title": "Elbow to Knee",
+        "type": "strength",
+        "duration": [
+            "30",
+            "60"
+        ],
+        "part": [
+            "core"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "28",
+        "title": "Frog-ups",
+        "type": "strength",
+        "duration": [
+            "30",
+            "60"
+        ],
+        "part": [
+            "core"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "29",
+        "title": "Oblique Crunches",
+        "type": "strength",
+        "duration": [
+            "30",
+            "60"
+        ],
+        "part": [
+            "core"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    }
+]

@@ -1,0 +1,557 @@
+[
+    {
+        "id": "sh001",
+        "title": "Handstand Push-ups",
+        "type": "shoulder",
+        "duration": [
+            "30"
+        ],
+        "sets": [
+            "3"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "sh002",
+        "title": "Inclined Push-ups",
+        "type": "shoulder",
+        "duration": [
+            "60"
+        ],
+        "sets": [
+            "3"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "sh003",
+        "title": "Handstand Holds",
+        "type": "shoulder",
+        "duration": [
+            "60"
+        ],
+        "sets": [
+            "3"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "sh004",
+        "title": "Archer Push-ups",
+        "type": "shoulder",
+        "duration": [
+            "30"
+        ],
+        "sets": [
+            "3"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "bi001",
+        "title": "Biceps Resistance (towel)",
+        "type": "biceps",
+        "duration": [
+            "8"
+        ],
+        "sets": [
+            "8"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "bi002",
+        "title": "Curls (towel + weight)",
+        "type": "biceps",
+        "duration": [
+            "8"
+        ],
+        "sets": [
+            "8"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "tri001",
+        "title": "Triceps resistance (towel)",
+        "type": "triceps",
+        "duration": [
+            "8"
+        ],
+        "sets": [
+            "8"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "tri002",
+        "title": "Groundbreaker",
+        "type": "triceps",
+        "duration": [
+            "8"
+        ],
+        "sets": [
+            "8"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "tri003",
+        "title": "L-sit",
+        "type": "triceps",
+        "duration": [
+            "8"
+        ],
+        "sets": [
+            "8"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "ch001",
+        "title": "Twisting Inclined Push-ups",
+        "type": "chest",
+        "duration": [
+            "30"
+        ],
+        "sets": [
+            "3"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "ch002",
+        "title": "Flat Push-ups",
+        "type": "chest",
+        "duration": [
+            "30"
+        ],
+        "sets": [
+            "3"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "back001",
+        "title": "Angels",
+        "type": "chest",
+        "duration": [
+            "30"
+        ],
+        "sets": [
+            "3"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "back002",
+        "title": "Under the Fence",
+        "type": "chest",
+        "duration": [
+            "30"
+        ],
+        "sets": [
+            "3"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "glute001",
+        "title": "Glute Bridge",
+        "type": "glutes",
+        "duration": [
+            "60"
+        ],
+        "sets": [
+            "3"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "glute002",
+        "title": "Single Leg Deadlift",
+        "type": "glutes",
+        "duration": [
+            "60"
+        ],
+        "sets": [
+            "3"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "thigh001",
+        "title": "Speed Squats",
+        "type": "thighs",
+        "duration": [
+            "60"
+        ],
+        "sets": [
+            "3"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "thigh002",
+        "title": "Horse stance",
+        "type": "thighs",
+        "duration": [
+            "60"
+        ],
+        "sets": [
+            "3"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "thigh003",
+        "title": "Wall Sit",
+        "type": "thighs",
+        "duration": [
+            "30"
+        ],
+        "sets": [
+            "6"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "thigh004",
+        "title": "Side Lunge",
+        "type": "thighs",
+        "duration": [
+            "30"
+        ],
+        "sets": [
+            "5"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "thigh005",
+        "title": "Forward Lunge",
+        "type": "thighs",
+        "duration": [
+            "30"
+        ],
+        "sets": [
+            "5"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "core001",
+        "tier": "A",
+        "title": "Figure 8's",
+        "type": "core",
+        "duration": [
+            "30",
+            "60"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "core002",
+        "tier": "A",
+        "title": "Heels to the Heavens",
+        "type": "core",
+        "duration": [
+            "30",
+            "60"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "core003",
+        "tier": "B",
+        "title": "Elbow to Knee Tucks",
+        "type": "core",
+        "duration": [
+            "30",
+            "60"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "core004",
+        "tier": "B",
+        "title": "Tuck Planks",
+        "type": "core",
+        "duration": [
+            "30",
+            "60"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "core005",
+        "tier": "C",
+        "title": "Accordions (each side)",
+        "type": "core",
+        "duration": [
+            "60"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "core006",
+        "tier": "C",
+        "title": "Starfish Crunch",
+        "type": "core",
+        "duration": [
+            "30",
+            "60"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "core007",
+        "tier": "D",
+        "title": "V-ups",
+        "type": "core",
+        "duration": [
+            "30",
+            "60"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "core008",
+        "tier": "D",
+        "title": "Crunch & Twist",
+        "type": "core",
+        "duration": [
+            "30",
+            "60"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "core009",
+        "tier": "D",
+        "title": "Frog Crunch",
+        "type": "core",
+        "duration": [
+            "30",
+            "60"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "core010",
+        "tier": "D",
+        "title": "T-Planks",
+        "type": "core",
+        "duration": [
+            "30",
+            "60"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "maintenance001",
+        "title": "Face Pulls",
+        "type": "maintenance",
+        "duration": [
+            "30",
+            "60"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "maintenance002",
+        "title": "Face Pulls",
+        "type": "maintenance",
+        "duration": [
+            "30",
+            "60"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "maintenance003",
+        "title": "Straddle Leg Raises (each leg)",
+        "type": "maintenance",
+        "duration": [
+            "30"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "maintenance004",
+        "title": "Back Extension",
+        "type": "maintenance",
+        "duration": [
+            "30"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "cardio001",
+        "title": "Burpees",
+        "type": "cardio",
+        "duration": [
+            "60"
+        ],
+        "sets": [
+            "3"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    },
+    {
+        "id": "cardio002",
+        "title": "Wind Sprints",
+        "type": "cardio",
+        "duration": [
+            "15"
+        ],
+        "sets": [
+            "8"
+        ],
+        "equipment": [
+            "bodyweight"
+        ],
+        "instructions": "Do something",
+        "gif": "images/veg.gif"
+    }
+]
