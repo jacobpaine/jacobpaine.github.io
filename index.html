@@ -23,13 +23,8 @@
             Portfolio
           </div>
           <div class="topic" data-href="contact" id="contact">Contact</div>
-          <!-- <div class="topic" data-href="blog" id="blog">Blog</div> -->
-          <!-- <div class="topic" data-href="resources" id="resources">
-            Resources
-          </div> -->
         </div>
       </header>
-
       <div id="display-topics">
         <div class="display" id="display-about">
           <p>
@@ -38,7 +33,6 @@
             AWS. I currently spend my time diving deeper on React and Vue. I'm
             also a Junior Instructor at the Nashville Software School.
           </p>
-
           <p>
             I'm currently available for full time or contract positions. Feel
             free to
@@ -132,9 +126,6 @@
             </svg>
           </div>
           <div id="portfolio-box">
-            <div data-href="blog" class="portfolio-item">
-              <img data-href="blog" src="/images/blog.png" />
-            </div>
             <div data-href="words" class="portfolio-item">
               <img data-href="words" src="/images/lorem.jpg" />
             </div>
@@ -181,7 +172,6 @@
           </div>
         </div>
       </div>
-
       <script>
         // Handle all the clicks on screen
         function clickHandler(event) {
@@ -191,22 +181,6 @@
 
           if (dataHref === "emailJacob") {
             window.open("mailto:painejacob@gmail.com");
-            return;
-          }
-
-          if (dataHref === "blog") {
-            var blog = "/blog/blog.html";
-            window.open(blog, "_blank");
-            return;
-          }
-          if (dataHref === "words") {
-            var words = "/portfolio/words.html";
-            window.open(words, "_blank");
-            return;
-          }
-          if (dataHref === "resources") {
-            var resources = "/resources/resources.html";
-            window.open(resources, "_blank");
             return;
           }
 
