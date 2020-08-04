@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="studentHelp.css" rel="stylesheet">
+
+<head>
+    <meta charset="utf-8">
+    <title>E13 NSS Student Help</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <div id='intro'>Okay! Before you submit a ticket for help, let's ask some questions that might help. </div>
+    </header>
+
+    <div id="usernameQuestion" class="hidden question">
+        <label for="username">What is your name?</label>
+        <textarea id='username' type='text'></textarea>
+    </div>
+    <div id="describeQuestion" class="hidden question">
+        <label for="describe">Describe the Problem.</label>
+        <div class='example'> **NOT ACCEPTABLE:** "Everything is broken!" ❌</div>
+        <div class="example">**ACCEPTABLE:** "When I click on my edit button, my animal's information doesn't show
+            up in the animal
+            edit form" ✔
+        </div>
+        <textarea id='describe' type='text'></textarea>
+    </div>
+    <div id="refsQuestion" class="hidden question">
+        <label for="refs">What have you Googled? Have you used any other references?</label>
+        <div class="example">Ex: "how to get data to show up in a form from another component in react"</div>
+        <textarea id='refs' type='text'></textarea>
+    </div>
+    <div id="errorsQuestion" class="hidden">
+        <label for="errors">Have you used your console.logs? Debugger? If so, what is your error message?</label>
+        <div class="example">Ex: 'useState' is not defined</div>
+        <textarea id='errors' type='text'></textarea>
+    </div>
+    <div id="otherQuestion" class="hidden">
+        <label for="other">Have you talked to a classmate or tried to rubberduck it out? What else have you tried?</label>
+        <textarea id='other' type='text'></textarea>
+    </div>
+    <div id="codeQuestion" class="hidden">
+        <label for="code">Do you have a code snippet?</label>
+        <textarea id='code' type='text'></textarea>
+    </div>
+    <div id="end" class="hidden">Copy the markdown below, hit the Continue button, and paste it into the issue box.
+        <div id='templateBox'></div>
+    </div>
+    <button id='nextQuestion'>Continue</button>
+    <script src="index.js"></script>
+
+    <script>
+ 
+    </script>
+
+</body>
+
+</html>

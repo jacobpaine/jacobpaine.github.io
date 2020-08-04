@@ -1,0 +1,20 @@
+.hidden{
+    display: none;
+}
+
+#intro{
+    text-align: center; 
+}
+
+body{
+    text-align: center;
+}
+
+.markdown div {
+    text-align: left;
+    padding: 5px;
+}
+.markdown {
+    margin: 5%;
+    border: 1px solid black;
+}
