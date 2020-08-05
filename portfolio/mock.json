@@ -1,0 +1,34 @@
+{
+  "projects": {
+    "a": {
+      "filename": "filename.html",
+      "header": "",
+      "synopsis": ""
+    },
+    "b": {
+      "filename": "filename.html",
+      "header": "",
+      "body": ""
+    },
+    "c": {
+      "filename": "filename.html",
+      "header": "",
+      "body": ""
+    },
+    "d": {
+      "filename": "filename.html",
+      "header": "",
+      "body": ""
+    },
+    "e": {
+      "filename": "filename.html",
+      "header": "",
+      "body": ""
+    },
+    "f": {
+      "filename": "filename.html",
+      "header": "",
+      "body": ""
+    }
+  }
+}
