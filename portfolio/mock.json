@@ -1,32 +1,32 @@
 {
-  "projects": {
+  "thirtyDays": {
     "a": {
-      "filename": "filename.html",
+      "filename": "filename1.html",
       "header": "",
       "synopsis": ""
     },
     "b": {
-      "filename": "filename.html",
+      "filename": "filename2.html",
       "header": "",
       "body": ""
     },
     "c": {
-      "filename": "filename.html",
+      "filename": "filename3.html",
       "header": "",
       "body": ""
     },
     "d": {
-      "filename": "filename.html",
+      "filename": "filename4.html",
       "header": "",
       "body": ""
     },
     "e": {
-      "filename": "filename.html",
+      "filename": "filename5.html",
       "header": "",
       "body": ""
     },
     "f": {
-      "filename": "filename.html",
+      "filename": "filename6.html",
       "header": "",
       "body": ""
     }
