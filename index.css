@@ -48,8 +48,8 @@ div.topic:hover {
 }
 div.topic:active {
   background-color: #ededed;
->>>>>>> development
 }
+
 @media only screen and (max-width: 641px) {
   div.topic-box {
     display: grid;
@@ -110,9 +110,17 @@ div#tech-icons div {
   margin: 8px;
 }
 
-
 .github,
 #emailJacob,
 #linkedinJacob {
+  cursor: pointer;
+}
+#portfolio-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.portfolio-item {
+  padding: 8px;
   cursor: pointer;
 }
