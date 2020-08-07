@@ -12,7 +12,11 @@ function createNavLink(direction, link) {
   if (direction && link !== "toggle" && link !== null) {
     a.className = direction;
     icon.innerText =
-      direction === "forward" ? "arrow_forward" : "arrow_backward";
+      direction === "forward"
+        ? "arrow_forward"
+        : direction === "previous"
+        ? "arrow_backward"
+        : "";
     icon.className = "material-icons";
     a.appendChild(icon);
     a.setAttribute("href", "../" + link);

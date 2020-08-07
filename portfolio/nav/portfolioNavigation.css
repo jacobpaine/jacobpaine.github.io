@@ -35,12 +35,8 @@ body {
 #nav-box {
   display: flex;
 }
+
 #nav-box * {
   width: 100%;
   text-align: center;
 }
-
-/* .disabled {
-  color: grey;
-  cursor: unset;
-} */
