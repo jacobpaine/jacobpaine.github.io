@@ -35,13 +35,6 @@ const portfolioData = {
       next: "",
       prev: "",
     },
-    {
-      filename: "filename6.html",
-      header: "",
-      body: "",
-      next: "",
-      prev: "",
-    },
   ],
 };
 

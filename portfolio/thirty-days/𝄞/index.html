@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link href="./font/STAFCPE_.ttf" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="../../../portfolio/nav/portfolioNavigation.css"
+    />
+  </head>
+  <body>
+    <div id="musicBox">
+      <div id="scale"></div>
+      <div id="note"></div>
+      <button id="randomNote">Random</button>
+    </div>
+    <!-- <div class="keys">
+      <div class="key" data-key="65">
+        <kbd>A</kbd>
+        <span class="sound">clap</span>
+      </div>
+    </div> -->
+
+    <!-- <audio data-key="65" src="../drum-kit/sounds/clap.wav"></audio> -->
+    <script type="module">
+      import { portfolioNavigation } from "../../../portfolio/nav/portfolioNavigation.js";
+      import { portfolioData } from "../../mockJson.js";
+
+      // portfolioNavigation("currentFileAsNamedInJSON", "currentProject", JSON)
+      portfolioNavigation("𝄞", "thirtyDays", portfolioData);
+
+      // Default to natural and middle octave
+      let currentNote = { accidental: "natural", octave: 2 };
+
+      function playSound(e) {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+        if (!audio) return;
+        audio.currentTime = 0;
+        audio.play();
+        key.classList.add("playing");
+      }
+
+      function recordKey(e) {
+        // Ignore keystroke if shift, ctrl, or option/numbers 1-5/letters a-g
+        if (
+          (e.keyCode < 16 || e.keyCode > 18) &&
+          (e.keyCode < 49 || e.keyCode > 52) &&
+          (e.keyCode < 65 || e.keyCode > 71)
+        )
+          return;
+
+        if (e.keyCode >= 16 && e.keyCode <= 18) {
+          currentNote.accidental =
+            e.key === "Control"
+              ? "natural"
+              : e.key === "Alt"
+              ? "flat"
+              : e.key === "Shift"
+              ? "sharp"
+              : "natural";
+        }
+
+        if (e.keyCode >= 49 && e.keyCode <= 52) {
+          currentNote.octave = e.key;
+        }
+
+        if (e.keyCode >= 65 && e.keyCode <= 71) {
+          currentNote.tone = e.key;
+        }
+
+        displayNote(currentNote);
+      }
+
+      function displayNote(note) {
+        // No note, no display
+        if (note.tone === null || note.tone === undefined) return;
+
+        let foundNote = `${findNoteToDisplay(currentNote)}`;
+        console.log("currentNote:", currentNote);
+        if (foundNote === null || foundNote === "undefined" || foundNote === "")
+          return;
+        document.getElementById("scale").innerHTML = `&${foundNote}||`;
+        document.getElementById(
+          "note"
+        ).innerHTML = `${currentNote.tone.toUpperCase()} ${
+          currentNote.accidental
+        } `;
+      }
+
+      function findNoteToDisplay(currentNote) {
+        const dictionaryOfNaturals = [
+          ["z", "x", "c", "v", "b", "n", "m"],
+          ["a", "s", "d", "f", "g", "h", "j"],
+          ["q", "w", "e", "r", "t", "y", "u"],
+          ["1", "2", "3", "4", "5", "6", "7"],
+        ];
+
+        const dictionaryOfFlats = [
+          ["Ω", "≈", "ç", "√", "∫", "˜", "µ"],
+          ["å", "ß", "∂", "ƒ", "©", "˙", "∆"],
+          ["œ", "∑", "´", "®", "†", "¥", "¨"],
+          ["¡", "™", "£", "¢", "∞", "§", "¶"],
+        ];
+        const dictionaryOfSharps = [
+          ["Z", "X", "C", "V", "B", "N", "M"],
+          ["A", "S", "D", "F", "G", "H", "J"],
+          ["Q", "W", "E", "R", "T", "Y", "U"],
+          ["!", "@", "#", "$", "%", "^"],
+        ];
+        const dictionaryOfTones = ["c", "d", "e", "f", "g", "a", "b"];
+        let currentDictionary =
+          currentNote.accidental === "sharp"
+            ? dictionaryOfSharps
+            : currentNote.accidental === "flat"
+            ? dictionaryOfFlats
+            : dictionaryOfNaturals;
+        let notesInOctave = currentDictionary[currentNote.octave - 1];
+        let indexOfNote = dictionaryOfTones.indexOf(currentNote.tone);
+        let note = notesInOctave[indexOfNote];
+        return note;
+      }
+
+      const randomNote = () => {
+        function getRandomInt(max) {
+          return Math.floor(Math.random() * Math.floor(max));
+        }
+        const scale = ["a", "b", "c", "d", "e", "f", "g"];
+        const accidentals = ["sharp", "flat", "natural"];
+        let octave = String(getRandomInt(3) + 1);
+        let tone = scale[Math.floor(Math.random() * scale.length)];
+        let accidental =
+          accidentals[Math.floor(Math.random() * accidentals.length)];
+        currentNote.octave = octave;
+        currentNote.tone = tone;
+        currentNote.accidental = accidental;
+
+        return displayNote(currentNote);
+      };
+      // function removeTransition(e) {
+      //   if (e.propertyName !== "transform") return;
+      //   this.classList.remove("playing");
+      // }
+
+      // const keys = document.querySelectorAll(".key");
+      // keys.forEach((key) =>
+      //   key.addEventListener("transitionend", removeTransition)
+      // );
+      window.addEventListener("keydown", recordKey);
+      document
+        .getElementById("randomNote")
+        .addEventListener("click", randomNote);
+    </script>
+  </body>
+</html>
