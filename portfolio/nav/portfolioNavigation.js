@@ -75,7 +75,21 @@ function portfolioNavigation(currentPage, projectName, json) {
 
   let pageInfo = thisProject.filter((page) => page.filename === currentPage);
   pageInfo = pageInfo[0];
-  let infoBody = createText("portfolio-info-body", pageInfo.body);
+  let div1class = pageInfo.div1class
+    ? pageInfo.div1class
+    : "portfolio-info-body";
+  let div2class = pageInfo.div2class
+    ? pageInfo.div2class
+    : "portfolio-info-body";
+  let div3class = pageInfo.div3class
+    ? pageInfo.div3class
+    : "portfolio-info-body";
+  console.log("div3class: ", div3class);
+  console.log("pageInfo: ", pageInfo);
+  let infoBody1 = createText(div1class, pageInfo.div1);
+  let infoBody2 = createText(div2class, pageInfo.div2);
+  let infoBody3 = createText(div3class, pageInfo.div3);
+
   let heading = createText("portfolio-info-heading", pageInfo.header);
   let toggle = createNavLink("", "info-toggle");
   let backward = createNavLink("previous", pageInfo.prev);
@@ -86,7 +100,9 @@ function portfolioNavigation(currentPage, projectName, json) {
   navBox.appendChild(forward);
   body.appendChild(navBox);
   info.appendChild(heading);
-  info.appendChild(infoBody);
+  info.appendChild(infoBody1);
+  info.appendChild(infoBody2);
+  info.appendChild(infoBody3);
 
   document.addEventListener("click", navHandler, false);
 }

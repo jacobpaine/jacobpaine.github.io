@@ -17,6 +17,9 @@ body {
 }
 
 /* Info */
+.portfolio-info-heading {
+  text-align: center;
+}
 .portfolio-info-heading,
 .portfolio-info-body {
   transition: margin-left 0.5s;
@@ -39,4 +42,10 @@ body {
 #nav-box * {
   width: 100%;
   text-align: center;
+}
+
+.g-clef-div3 {
+  color: lightblue;
+  padding: 16px;
+  font-size: 1.3em;
 }
