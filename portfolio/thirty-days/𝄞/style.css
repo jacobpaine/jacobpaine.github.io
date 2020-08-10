@@ -24,3 +24,40 @@ html {
   flex-direction: column;
 }
 
+.tone {
+  color: black;
+  font-size: 1.3rem;
+  margin: 0;
+  line-height: 50px;
+  animation: tone 3.75s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes tone {
+  from {
+    transform: translateY(-50%);
+  }
+  38% {
+    opacity: 1;
+  }
+  42% {
+    transform: translateY(-435%);
+    color: red;
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(-535%);
+    color: red;
+  }
+  62% {
+    transform: translateY(-900%);
+    color: white;
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.portfolio-info-heading {
+  font-size: 5em;
+}

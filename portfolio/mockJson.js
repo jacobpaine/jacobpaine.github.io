@@ -10,7 +10,8 @@ const portfolioData = {
     {
       filename: "𝄞",
       header: "𝄞",
-      body: "G #",
+      body:
+        "Inspired by the Drum Kit, I made this small environment to play with musical scales. I found a freely available font and recorded all the sounds on GarageBand. Use numbers 2 - 5 to change the octave, letters A - G to change the tone, and Shift, Control and Alt to change the accidental.",
       next: "css-js-clock",
       prev: "drum-kit",
     },
