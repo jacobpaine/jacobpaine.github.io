@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="../../../portfolio/nav/portfolioNavigation.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <title>CSS-JS Clock</title>
   </head>
   <body>
@@ -14,7 +22,13 @@
         <div class="hand second-hand"></div>
       </div>
     </div>
-    <script>
+
+    <script type="module">
+      import { portfolioNavigation } from "../../../portfolio/nav/portfolioNavigation.js";
+      import { portfolioData } from "../../mockJson.js";
+
+      // portfolioNavigation("currentFileAsNamedInJSON", "currentProject", JSON)
+      portfolioNavigation("css-js-clock", "thirtyDays", portfolioData);
       const secondHand = document.querySelector(".second-hand");
       const minuteHand = document.querySelector(".min-hand");
       const hourHand = document.querySelector(".hour-hand");
