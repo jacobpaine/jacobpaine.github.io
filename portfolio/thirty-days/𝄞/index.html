@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link href="./font/STAFCPE_.ttf" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="../../../portfolio/nav/portfolioNavigation.css"
+    />
+  </head>
+  <body>
+    <div id="musicBox">
+      <div id="scale"></div>
+      <div id="note"></div>
+      <button id="randomNote">Random</button>
+      <div id="muteBox">
+        <input id="mute" type="checkbox" checked />
+        <label for="mute">Mute</label>
+      </div>
+    </div>
+
+    <script type="module">
+      import { portfolioNavigation } from "../../../portfolio/nav/portfolioNavigation.js";
+      import { portfolioData } from "../../mockJson.js";
+
+      // portfolioNavigation("currentFileAsNamedInJSON", "currentProject", JSON)
+      portfolioNavigation("𝄞", "thirtyDays", portfolioData);
+
+      // Default to natural and middle octave
+      let currentNote = {
+        accidental: "natural",
+        octave: 3,
+        tone: "c",
+        mute: true,
+      };
+
+      const muteButton = document.getElementById("mute");
+
+      function createAudio(tone, octave, accidental) {
+        const audioElement = document.createElement("audio");
+        audioElement.id = `${tone + octave + accidental}`;
+        audioElement.setAttribute("data-key", `${tone + octave + accidental}`);
+        audioElement.setAttribute(
+          "src",
+          "tones/" + `${tone + octave + accidental}.wav`
+        );
+        audioElement.volume = 0.1;
+        document.getElementById("musicBox").appendChild(audioElement);
+        console.log("currentNote in create", currentNote);
+        if (currentNote.mute) return;
+        audioElement.play();
+      }
+
+      function playNote(note) {
+        let octave = note.octave;
+        let tone = note.tone;
+        let accidental =
+          (note.accidental === note.accidental) === "sharp"
+            ? "#"
+            : note.accidental === "flat"
+            ? "b"
+            : "natural";
+
+        // use note.accidental for file structure
+        let id = String(tone + octave + note.accidental);
+        let findAudio = document.getElementById(id);
+        if (findAudio) {
+          findAudio.volume = 0.1;
+          findAudio.currentTime = 0;
+          if (note.mute) return;
+          findAudio.play();
+        } else {
+          createAudio(tone, octave, note.accidental);
+        }
+      }
+
+      function recordKey(e) {
+        // Ignore keystroke if shift, ctrl, or option/numbers 1-5/letters a-g
+        if (
+          (e.keyCode < 16 || e.keyCode > 18) &&
+          (e.keyCode < 50 || e.keyCode > 53) &&
+          (e.keyCode < 65 || e.keyCode > 71)
+        )
+          return;
+
+        if (e.keyCode >= 16 && e.keyCode <= 18) {
+          currentNote.accidental =
+            e.key === "Control"
+              ? "natural"
+              : e.key === "Alt"
+              ? "flat"
+              : e.key === "Shift"
+              ? "sharp"
+              : "natural";
+        }
+
+        if (e.keyCode >= 50 && e.keyCode <= 53) {
+          currentNote.octave = e.key;
+        }
+
+        if (e.keyCode >= 65 && e.keyCode <= 71) {
+          currentNote.tone = e.key;
+        }
+        displayNote(currentNote);
+      }
+
+      function displayNote(note) {
+        // No note, no display
+        if (note.tone === null || note.tone === undefined) return;
+
+        let foundNote = `${findNoteToDisplay(currentNote)}`;
+        if (foundNote === null || foundNote === "undefined" || foundNote === "")
+          return;
+        document.getElementById("scale").innerHTML = `&${foundNote}||`;
+        document.getElementById(
+          "note"
+        ).innerHTML = `<div class='tone'>${currentNote.tone.toUpperCase()} ${
+          currentNote.accidental
+        } </div>`;
+        if (note.mute) return;
+        playNote(note);
+      }
+
+      function findNoteToDisplay(currentNote) {
+        const dictionaryOfNaturals = [
+          ["z", "x", "c", "v", "b", "n", "m"],
+          ["a", "s", "d", "f", "g", "h", "j"],
+          ["q", "w", "e", "r", "t", "y", "u"],
+          ["1", "2", "3", "4", "5", "6", "7"],
+        ];
+
+        const dictionaryOfFlats = [
+          ["Ω", "≈", "ç", "√", "∫", "˜", "µ"],
+          ["å", "ß", "∂", "ƒ", "©", "˙", "∆"],
+          ["œ", "∑", "´", "®", "†", "¥", "¨"],
+          ["¡", "™", "£", "¢", "∞", "§", "¶"],
+        ];
+        const dictionaryOfSharps = [
+          ["Z", "X", "C", "V", "B", "N", "M"],
+          ["A", "S", "D", "F", "G", "H", "J"],
+          ["Q", "W", "E", "R", "T", "Y", "U"],
+          ["!", "@", "#", "$", "%", "^"],
+        ];
+        const dictionaryOfTones = ["c", "d", "e", "f", "g", "a", "b"];
+        let currentDictionary =
+          currentNote.accidental === "sharp"
+            ? dictionaryOfSharps
+            : currentNote.accidental === "flat"
+            ? dictionaryOfFlats
+            : dictionaryOfNaturals;
+        let notesInOctave = currentDictionary[currentNote.octave - 2];
+        let indexOfNote = dictionaryOfTones.indexOf(currentNote.tone);
+        let note = notesInOctave[indexOfNote];
+        return note;
+      }
+
+      const randomNote = () => {
+        function getRandomInt(max) {
+          return Math.floor(Math.random() * Math.floor(max));
+        }
+        const scale = ["a", "b", "c", "d", "e", "f", "g"];
+        const accidentals = ["sharp", "flat", "natural"];
+        let octave = String(getRandomInt(3) + 2);
+        let tone = scale[Math.floor(Math.random() * scale.length)];
+        let accidental =
+          accidentals[Math.floor(Math.random() * accidentals.length)];
+        currentNote.octave = octave;
+        currentNote.tone = tone;
+        currentNote.accidental = accidental;
+
+        return displayNote(currentNote);
+      };
+
+      const toggleMute = () => {
+        return (currentNote.mute = !currentNote.mute);
+      };
+
+      muteButton.addEventListener("change", toggleMute);
+
+      window.addEventListener("keydown", recordKey);
+      document
+        .getElementById("randomNote")
+        .addEventListener("click", randomNote);
+      randomNote();
+    </script>
+  </body>
+</html>

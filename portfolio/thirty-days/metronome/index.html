@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../../../portfolio/nav/portfolioNavigation.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <title>Metronome</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="metronome">
+      <div class="face">
+        <div class="count"></div>
+        <div class="hand"></div>
+      </div>
+    </div>
+    <div id="bpmBox">
+      <label id="tempoLabel" for="tempo">BPM: </label>
+      <input id="tempo" type="number" min="33" max="250" value="60" />
+    </div>
+    <div class="beatBox">
+      <input type="radio" id="2" class="beat" name="beat" value="2" />
+      <label for="2">2</label>
+
+      <input type="radio" id="3" class="beat" name="beat" value="3" />
+      <label for="3">3</label>
+
+      <input type="radio" id="4" class="beat" name="beat" value="4" checked />
+      <label for="4">4</label>
+
+      <input type="radio" id="6" class="beat" name="beat" value="6" />
+      <label for="6">6</label>
+
+      <input type="radio" id="7" class="beat" name="beat" value="7" />
+      <label for="7">7</label>
+
+      <input type="radio" id="8" class="beat" name="beat" value="8" />
+      <label for="8">8</label>
+
+      <input type="radio" id="10" class="beat" name="beat" value="10" />
+      <label for="10">10</label>
+
+      <input type="radio" id="12" class="beat" name="beat" value="12" />
+      <label for="12">12</label>
+    </div>
+    <script type="module">
+      import { portfolioNavigation } from "../../../portfolio/nav/portfolioNavigation.js";
+      import { portfolioData } from "../../mockJson.js";
+
+      // portfolioNavigation("currentFileAsNamedInJSON", "currentProject", JSON)
+      portfolioNavigation("metronome", "thirtyDays", portfolioData);
+      const hand = document.querySelector(".hand");
+      const tempo = document.getElementById("tempo");
+      const beat = document.getElementsByClassName("beat");
+
+      let time = 1000;
+      let transition = "all 1s linear";
+      let interval;
+      let count = 0;
+      let countMax = 4;
+
+      function changeTempo(tempo) {
+        let value = 60 / tempo.target.value;
+        hand.style.transition = `all ${value}s linear`;
+        if (interval) {
+          clearInterval(interval);
+        }
+        interval = setInterval(setRhythmn, value * 1000);
+      }
+
+      function setRhythmn() {
+        console.log("count: ", count);
+        console.log("countMax: ", countMax);
+
+        if (count >= countMax) {
+          count = 1;
+        } else {
+          count++;
+        }
+        document.querySelector(".count").innerHTML = count;
+
+        if (document.querySelector(".oneSide")) {
+          hand.classList.remove("oneSide");
+          hand.classList.add("theOther");
+        } else if (document.querySelector(".theOther")) {
+          hand.classList.remove("theOther");
+          hand.classList.add("oneSide");
+        } else {
+          hand.classList.add("theOther");
+        }
+      }
+
+      function changeBeat(e) {
+        const beatsPerMeasure = e.target.value;
+        countMax = Number(beatsPerMeasure);
+        console.log(countMax);
+        return countMax;
+      }
+
+      tempo.addEventListener("change", changeTempo);
+      tempo.addEventListener("focusout", changeTempo);
+      for (let i = 0; i < beat.length; i++) {
+        beat[i].addEventListener("change", changeBeat);
+      }
+    </script>
+  </body>
+</html>

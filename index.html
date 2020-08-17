@@ -126,12 +126,11 @@
             </svg>
           </div>
           <div id="portfolio-box">
-            <!-- <div data-href="words" class="portfolio-item">
-              <img data-href="words" src="/images/lorem.jpg" />
-            </div> -->
-            <div data-href="" class="portfolio-item">
-              Currently under construction. Please email or check my Github if
-              you're interested in some of the work I'm currently doing.
+            <div data-href="thirtydays" class="portfolio-item">
+              <img data-href="thirtydays" src="./images/test.jpg" />
+              <div data-href="thirtydays" class="portfolio-title">
+                Thirty Days
+              </div>
             </div>
           </div>
         </div>
@@ -199,6 +198,13 @@
             var githubURL = "https://github.com/jacobpaine";
             // Open a new tab
             window.open(githubURL, "_blank");
+            return;
+          }
+
+          if (dataHref === "thirtydays") {
+            var thirtydays = "./portfolio/thirty-days/drum-kit/index.html";
+            // Open a new tab
+            window.open(thirtydays, "_self");
             return;
           }
 

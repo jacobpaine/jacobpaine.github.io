@@ -1,0 +1,64 @@
+#scale {
+  font-family: "StaffClefPitchesEasy", serif;
+  font-size: 3.5em;
+}
+
+html {
+  font-size: 14px;
+  background: url(https://i.imgur.com/b9r5sEL.jpg) bottom center;
+  background-size: cover;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#musicBox {
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tone {
+  color: black;
+  font-size: 1.3rem;
+  margin: 0;
+  line-height: 50px;
+  animation: tone 3.75s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes tone {
+  from {
+    transform: translateY(-50%);
+  }
+  38% {
+    opacity: 1;
+  }
+  42% {
+    transform: translateY(-435%);
+    color: red;
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(-535%);
+    color: red;
+  }
+  62% {
+    transform: translateY(-900%);
+    color: white;
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.portfolio-info-heading {
+  font-size: 5em;
+}
+
