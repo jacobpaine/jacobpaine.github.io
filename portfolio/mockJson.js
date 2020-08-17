@@ -55,17 +55,8 @@ const portfolioData = {
         "Simply click anywhere to get an ever-changing size and color paint brush.",
       div2: "",
       div3: "",
-      next: "audio-visual",
+      next: null,
       prev: "metronome",
-    },
-    {
-      filename: "audio-visual",
-      header: "Audio-visual",
-      div1: "",
-      div2: "",
-      div3: "",
-      next: "",
-      prev: "canvas-practice",
     },
   ],
 };
