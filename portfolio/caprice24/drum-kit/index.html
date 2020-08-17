@@ -71,9 +71,9 @@
 
     <script type="module">
       import { portfolioNavigation } from "../../../portfolio/nav/portfolioNavigation.js";
-      import { portfolioData } from "../../mockJson.js";
+      import { portfolioData } from "../../navJson.js";
 
-      portfolioNavigation("drum-kit", "thirtyDays", portfolioData);
+      portfolioNavigation("drum-kit", "caprice24", portfolioData);
 
       function playSound(e) {
         const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);

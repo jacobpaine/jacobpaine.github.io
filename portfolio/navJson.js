@@ -1,5 +1,5 @@
 const portfolioData = {
-  thirtyDays: [
+  caprice24: [
     {
       filename: "drum-kit",
       header: "Drum Kit",
