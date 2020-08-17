@@ -30,7 +30,8 @@ const portfolioData = {
     {
       filename: "css-js-clock",
       header: "css-js-clock",
-      div1: "",
+      div1:
+        "Wes Bos's clock app uses CSS rotate, CSS transitions, and a setInterval. I figured those technologies could make for a good metronome. Check it out on the next page.",
       div2: "",
       div3: "",
       next: "metronome",
@@ -39,20 +40,32 @@ const portfolioData = {
     {
       filename: "metronome",
       header: "Metronome",
-      div1: "",
+      div1:
+        "A little metronome using CSS transitions, CSS rotate, and setInterval.",
       div2: "",
-      div3: "",
-      next: null,
+      div3:
+        "Use the radio buttons to change the count of notes per meter. Change the number in the box to start the metronome. The number in the box represents beats per minute.",
+      next: "canvas-practice",
       prev: "css-js-clock",
     },
     {
-      filename: "filename5.html",
-      header: "",
+      filename: "canvas-practice",
+      header: "Playing on canvas",
+      div1:
+        "Simply click anywhere to get an ever-changing size and color paint brush.",
+      div2: "",
+      div3: "",
+      next: "audio-visual",
+      prev: "metronome",
+    },
+    {
+      filename: "audio-visual",
+      header: "Audio-visual",
       div1: "",
       div2: "",
       div3: "",
       next: "",
-      prev: "",
+      prev: "canvas-practice",
     },
   ],
 };

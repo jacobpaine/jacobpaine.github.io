@@ -1,5 +1,6 @@
 body {
   transition: background-color 0.5s;
+  justify-content: space-between;
 }
 
 #info {
@@ -31,7 +32,9 @@ body {
   cursor: pointer;
   display: inline-flex;
 }
-#info-toggle:hover {
+#info-toggle:hover,
+.forward:hover,
+.previous:hover {
   background-color: grey;
 }
 

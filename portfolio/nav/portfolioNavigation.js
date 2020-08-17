@@ -84,8 +84,6 @@ function portfolioNavigation(currentPage, projectName, json) {
   let div3class = pageInfo.div3class
     ? pageInfo.div3class
     : "portfolio-info-body";
-  console.log("div3class: ", div3class);
-  console.log("pageInfo: ", pageInfo);
   let infoBody1 = createText(div1class, pageInfo.div1);
   let infoBody2 = createText(div2class, pageInfo.div2);
   let infoBody3 = createText(div3class, pageInfo.div3);

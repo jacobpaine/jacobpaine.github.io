@@ -17,13 +17,12 @@ body {
 }
 
 .hand {
-  width: 25%;
+  width: 150px;
   height: 4px;
   background: black;
   position: absolute;
   top: 33%;
   transform-origin: 0%;
-  /* transition-timing-function: cubic-bezier(0, 1.26, 1, 1); */
 }
 
 .oneSide {
@@ -42,6 +41,21 @@ body {
   font-size: 2em;
 }
 
-label {
+label #tempoLabel {
   margin-right: 5px;
+}
+
+.beatBox {
+  display: flex;
+}
+
+.beatBox label {
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.portfolio-info-body {
+  font-size: 0.8em;
 }

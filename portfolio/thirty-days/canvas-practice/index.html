@@ -3,10 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <title>HTML5 Canvas</title>
+    <link
+      rel="stylesheet"
+      href="../../../portfolio/nav/portfolioNavigation.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
   </head>
   <body>
     <canvas id="draw" width="800" height="800"></canvas>
-    <script>
+    <script type="module">
+      import { portfolioNavigation } from "../../../portfolio/nav/portfolioNavigation.js";
+      import { portfolioData } from "../../mockJson.js";
+
+      // portfolioNavigation("currentFileAsNamedInJSON", "currentProject", JSON)
+      portfolioNavigation("canvas-practice", "thirtyDays", portfolioData);
+
       const canvas = document.querySelector("#draw");
       const ctx = canvas.getContext("2d");
       canvas.width = window.innerWidth;
@@ -43,6 +57,16 @@
           ctx.lineWidth--;
         }
       }
+      function firstDraw() {
+        isDrawing = true;
+        hue = "000";
+        let x = {
+          offsetX: 100,
+          offsetY: 100,
+        };
+        draw(x);
+      }
+      firstDraw();
 
       canvas.addEventListener("mousedown", (e) => {
         isDrawing = true;
@@ -58,6 +82,7 @@
       html,
       body {
         margin: 0;
+        height: 95vh;
       }
     </style>
   </body>
