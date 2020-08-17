@@ -4,12 +4,13 @@ const portfolioData = {
       filename: "drum-kit",
       header: "Drum Kit",
       div1:
-        "This is the first project of Wes Bos's Javascript 30. When I finished his projects, I put my own spin on a few of them. I added navigation at the bottom. Feel free to click the arrows to compare his projects to what I've created.",
-      div1class: "",
+        "Caprice24 is an ongoing project inspired by Wes Bos's Javascript 30. As I finish his projects, I decided put my own spin on a few of them. I've added the navigation at the bottom. Feel free to click the arrows to compare his projects to what I've created.",
+      div1class: "drumkit-nav",
       div2: "",
       div2class: "",
-      div3: "",
-      div3class: "",
+      div3:
+        "Drum Kit is the first project in Bos's Javascript 30. I took this and turned it into a tool to practice scales.",
+      div3class: "drumkit-nav",
       next: "𝄞",
       prev: null,
     },

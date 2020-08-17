@@ -53,3 +53,12 @@ body {
   padding: 16px;
   font-size: 1.3em;
 }
+
+.portfolio-info-heading {
+  font-size: 3em;
+}
+.drumkit-nav {
+  font-size: 1.6em;
+  text-align: center;
+  padding: 12px;
+}
