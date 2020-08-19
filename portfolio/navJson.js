@@ -1,6 +1,19 @@
 const portfolioData = {
   caprice24: [
     {
+      filename: "intro",
+      header: "Hi there!",
+      div1:
+        "This is my front-end portfolio of plain Javascript projects. When I run across projects with interesting functionality or designs, I code an example. If I like it, I share my working example here.",
+      div1class: "",
+      div2: "",
+      div2class: "",
+      div3: "",
+      div3class: "",
+      next: "𝄞",
+      prev: "null",
+    },
+    {
       filename: "𝄞",
       header: "𝄞",
       div1:
@@ -12,7 +25,7 @@ const portfolioData = {
         "Use numbers 2 - 5 to change the octave, letters A - G to change the tone, and Shift, Control and Alt to change the accidental.",
       div3class: "g-clef-div3",
       next: "metronome",
-      prev: "null",
+      prev: "intro",
     },
     {
       filename: "metronome",
@@ -32,7 +45,7 @@ const portfolioData = {
       filename: "canvas-paint",
       header: "Playing on canvas",
       div1:
-        "Simply click anywhere to get an ever-changing size and color paint brush.",
+        "Simply click on the screen to use a basic paint program. The dotted box will randomly select a color. The plus/minus change the size of the brush. The shapes on the right change the shape of the brush.",
       div1class: "",
       div2: "",
       div2class: "",
