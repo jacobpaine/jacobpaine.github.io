@@ -19,9 +19,12 @@ const portfolioData = {
       header: "Metronome",
       div1:
         "A little metronome using CSS transitions, CSS rotate, and setInterval.",
+      div1class: "",
       div2: "",
+      div2class: "",
       div3:
         "Use the radio buttons to change the count of notes per meter. Change the number in the box to start the metronome. The number in the box represents beats per minute.",
+      div3class: "",
       next: "canvas-paint",
       prev: "𝄞",
     },
@@ -30,8 +33,11 @@ const portfolioData = {
       header: "Playing on canvas",
       div1:
         "Simply click anywhere to get an ever-changing size and color paint brush.",
+      div1class: "",
       div2: "",
+      div2class: "",
       div3: "",
+      div3class: "",
       next: null,
       prev: "metronome",
     },

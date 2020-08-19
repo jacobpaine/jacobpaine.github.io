@@ -74,7 +74,9 @@ function portfolioNavigation(currentPage, projectName, json) {
   }
 
   let pageInfo = thisProject.filter((page) => page.filename === currentPage);
+  console.log("pageInfo:", pageInfo);
   pageInfo = pageInfo[0];
+
   let div1class = pageInfo.div1class
     ? pageInfo.div1class
     : "portfolio-info-body";
@@ -84,7 +86,7 @@ function portfolioNavigation(currentPage, projectName, json) {
   let div3class = pageInfo.div3class
     ? pageInfo.div3class
     : "portfolio-info-body";
-    
+
   let infoBody1 = createText(div1class, pageInfo.div1);
   let infoBody2 = createText(div2class, pageInfo.div2);
   let infoBody3 = createText(div3class, pageInfo.div3);

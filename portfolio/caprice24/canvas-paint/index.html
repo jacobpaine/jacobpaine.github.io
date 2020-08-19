@@ -19,6 +19,7 @@
       <div id="brushSize">
         <div id="smallerSize" class="tool">-</div>
         <div id="largerSize" class="tool">+</div>
+        <div id="brushWidth"></div>
       </div>
       <div id="colorChanger" class="tool"></div>
       <div id="shapes">
@@ -32,7 +33,7 @@
       import { portfolioData } from "../../navJson.js";
 
       // portfolioNavigation("currentFileAsNamedInJSON", "currentProject", JSON)
-      portfolioNavigation("canvas-practice", "caprice24", portfolioData);
+      portfolioNavigation("canvas-paint", "caprice24", portfolioData);
       const eraser = document.getElementById("eraser");
       const canvas = document.getElementById("draw");
       const smallerSize = document.getElementById("smallerSize");
@@ -56,11 +57,11 @@
       const erase = () => {
         hue = "#fff";
         colorChanger.style.backgroundColor = hue;
+        document.getElementById("brushWidth").style.backgroundColor = hue;
       };
 
       const changeShape = (e) => {
         let target = e.target.id;
-        console.log("target:", target);
         ctx.lineCap = target;
       };
 
@@ -70,6 +71,7 @@
         } else {
           ctx.lineWidth = ctx.lineWidth + 3;
         }
+        document.getElementById("brushWidth").innerText = ctx.lineWidth + "px";
       };
 
       const changeBrushColor = () => {
@@ -77,6 +79,7 @@
           "#" + Math.floor(Math.random() * 16777215).toString(16);
         hue = randomColor;
         colorChanger.style.backgroundColor = hue;
+        document.getElementById("brushWidth").style.backgroundColor = hue;
       };
 
       function draw(e) {
@@ -103,7 +106,6 @@
       colorChanger.addEventListener("click", changeBrushColor);
       smallerSize.addEventListener("click", changeSize);
       largerSize.addEventListener("click", changeSize);
-      console.log(shapes);
       for (let i = 0; i < shapes.length; i++) {
         shapes[i].addEventListener("click", changeShape);
       }
