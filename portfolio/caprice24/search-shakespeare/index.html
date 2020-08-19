@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../../../portfolio/nav/portfolioNavigation.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <div id="theText"></div>
+
+    <script type="module">
+      import { portfolioNavigation } from "../../../portfolio/nav/portfolioNavigation.js";
+      import { portfolioData } from "../../navJson.js";
+
+      import { midsummer } from "./midsummer.js";
+
+      // portfolioNavigation("currentFileAsNamedInJSON", "currentProject", JSON)
+      portfolioNavigation("metronome", "caprice24", portfolioData);
+
+      document.getElementById("theText").innerText = midsummer;
+    </script>
+  </body>
+</html>
