@@ -74,7 +74,6 @@ function portfolioNavigation(currentPage, projectName, json) {
   }
 
   let pageInfo = thisProject.filter((page) => page.filename === currentPage);
-  console.log("pageInfo:", pageInfo);
   pageInfo = pageInfo[0];
 
   let div1class = pageInfo.div1class
