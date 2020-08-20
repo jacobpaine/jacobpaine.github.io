@@ -17,7 +17,6 @@ body,
 html {
   display: flex;
   height: 100%;
-  /* align-items: center; */
   flex-flow: column nowrap;
   justify-content: space-between;
 }
@@ -27,7 +26,6 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* height: 95vh; */
 }
 
 .tone {
