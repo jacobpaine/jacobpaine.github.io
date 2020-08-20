@@ -48,6 +48,13 @@ body {
   text-align: center;
 }
 
+.forward i,
+.previous i,
+a#infoToggle i {
+  font-size: 2.5em;
+}
+
+/* Projects */
 .g-clef-div3 {
   color: lightblue;
   padding: 16px;
