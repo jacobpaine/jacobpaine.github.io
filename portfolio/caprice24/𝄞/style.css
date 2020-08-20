@@ -1,5 +1,6 @@
 #scale {
   font-family: "StaffClefPitchesEasy";
+  src: url("./font/STAFCP_.TTF") format("ttf");
   src: url("./font/StaffClefPitchesEasy.woff2") format("woff2"),
     url("./font/StaffClefPitchesEasy.woff") format("woff");
   font-weight: normal;
