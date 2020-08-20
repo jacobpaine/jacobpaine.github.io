@@ -10,7 +10,7 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-  font-size: 3.5em;
+  font-size: 5.5em;
 }
 
 body,
@@ -44,16 +44,16 @@ html {
     opacity: 1;
   }
   42% {
-    transform: translateY(-435%);
+    transform: translateY(-735%);
     color: red;
   }
   60% {
     opacity: 0;
-    transform: translateY(-535%);
+    transform: translateY(-935%);
     color: red;
   }
   62% {
-    transform: translateY(-900%);
+    transform: translateY(-1100%);
     color: white;
     opacity: 0;
   }
@@ -64,4 +64,49 @@ html {
 
 .portfolio-info-heading {
   font-size: 5em;
+}
+
+@media only screen and (max-width: 768px) {
+  #scale {
+    font-size: 10.5em;
+  }
+  #randomNote,
+  #muteBox {
+    font-size: 2em;
+  }
+  input[type="checkbox"] {
+    margin-top: 15px;
+    width: 2em;
+    height: 2em;
+  }
+
+  .tone {
+    font-size: 4em;
+  }
+
+  @keyframes tone {
+    from {
+      transform: translateY(-250%);
+    }
+    38% {
+      opacity: 1;
+    }
+    42% {
+      transform: translateY(-1135%);
+      color: red;
+    }
+    60% {
+      opacity: 0;
+      transform: translateY(-1335%);
+      color: red;
+    }
+    62% {
+      transform: translateY(-1500%);
+      color: white;
+      opacity: 0;
+    }
+    to {
+      opacity: 0;
+    }
+  }
 }
