@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
     <title>Front End Portfolio</title>
     <link
       rel="stylesheet"
@@ -19,7 +21,6 @@
     <script type="module">
       import { portfolioNavigation } from "../../../portfolio/nav/portfolioNavigation.js";
       import { portfolioData } from "../../navJson.js";
-      console.log(portfolioData.caprice24[0]);
       let introHeader = document.getElementById("intro-header");
       let intro = document.getElementById("intro");
       introHeader.innerText = portfolioData.caprice24[0].header;
@@ -32,11 +33,13 @@
       body {
         display: flex;
         height: 99vh;
-        font-size: 1.5em;
+        font-size: 1.2em;
       }
       #intro {
         align-self: center;
         max-width: 60%;
+      }
+      @media only screen and (max-width: 768px) {
       }
     </style>
   </body>

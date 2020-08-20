@@ -7,7 +7,6 @@ function createText(className, text) {
 }
 
 function createNavLink(direction, link, details) {
-  console.log(link);
   let a = document.createElement("a");
   let icon = document.createElement("i");
   if (direction && link !== "toggle" && link) {
