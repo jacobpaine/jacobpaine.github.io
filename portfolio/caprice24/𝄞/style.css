@@ -1,5 +1,10 @@
 #scale {
-  font-family: "StaffClefPitchesEasy", serif;
+  font-family: "StaffClefPitchesEasy";
+  src: url("./font/StaffClefPitchesEasy.woff2") format("woff2"),
+    url("./font/StaffClefPitchesEasy.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
   font-size: 3.5em;
 }
 
