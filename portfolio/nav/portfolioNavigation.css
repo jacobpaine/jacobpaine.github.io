@@ -1,8 +1,3 @@
-body {
-  /* transition: background-color 0.5s;
-  justify-content: space-between; */
-}
-
 #info {
   height: 100%;
   width: 0;
@@ -40,6 +35,7 @@ body {
 
 #nav-box {
   display: flex;
+  max-height: 15vh;
 }
 #nav-box > * {
   flex: 1 1 0;

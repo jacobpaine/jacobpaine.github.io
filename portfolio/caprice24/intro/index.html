@@ -30,17 +30,35 @@
       portfolioNavigation("intro", "caprice24", portfolioData);
     </script>
     <style>
+      html,
       body {
         display: flex;
-        height: 99vh;
-        font-size: 1.2em;
+        flex-direction: column;
+        height: 100%;
       }
+
+      #intro-header {
+        order: 0;
+        flex-grow: 1;
+      }
+
       #intro {
-        align-self: center;
-        max-width: 60%;
+        order: 1;
+        flex-grow: 1;
+        height: 80vh;
+        align-items: center;
+        display: flex;
+        width: 50%;
+        margin: 0 auto;
+        font-size: 1.6em;
       }
-      @media only screen and (max-width: 768px) {
+
+      #nav-box {
+        order: 2;
+        flex-grow: 1;
+        align-items: flex-end;
       }
+
     </style>
   </body>
 </html>
