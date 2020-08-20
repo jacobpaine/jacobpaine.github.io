@@ -1,8 +1,12 @@
+@font-face {
+  font-family: "StaffClefPitchesEasy";
+  src: url("./font/StaffClefPitchesEasy.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("./font/StaffClefPitchesEasy.woff")
+      format("woff"),
+    /* Pretty Modern Browsers */ url("./font/STAFCP_.TTF") format("truetype"); /* Safari, Android, iOS */
+}
 #scale {
   font-family: "StaffClefPitchesEasy";
-  src: url("./font/STAFCP_.TTF") format("ttf");
-  src: url("./font/StaffClefPitchesEasy.woff2") format("woff2"),
-    url("./font/StaffClefPitchesEasy.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
