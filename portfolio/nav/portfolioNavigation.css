@@ -53,11 +53,12 @@ body {
 a#infoToggle i {
   font-size: 2.5em;
 }
+
 @media only screen and (max-width: 600px) {
   .forward i,
   .previous i,
   a#infoToggle i {
-    font-size: 4em;
+    font-size: 4rem;
   }
 }
 
