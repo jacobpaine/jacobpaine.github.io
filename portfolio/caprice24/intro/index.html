@@ -13,14 +13,33 @@
     />
   </head>
   <body>
+    <h1 id="intro-header"></h1>
+    <div id="intro"></div>
+
     <script type="module">
       import { portfolioNavigation } from "../../../portfolio/nav/portfolioNavigation.js";
       import { portfolioData } from "../../navJson.js";
-
-
+      console.log(portfolioData.caprice24[0]);
+      let introHeader = document.getElementById("intro-header");
+      let intro = document.getElementById("intro");
+      introHeader.innerText = portfolioData.caprice24[0].header;
+      intro.innerText = portfolioData.caprice24[0].div1;
 
       // portfolioNavigation("currentFileAsNamedInJSON", "currentProject", JSON)
       portfolioNavigation("intro", "caprice24", portfolioData);
     </script>
+    <style>
+      body {
+        display: flex;
+        height: 99vh;
+      }
+      #intro-header {
+        /* flex: 1 1 2em; */
+      }
+      #intro {
+        align-self: center;
+        max-width: 60%;
+      }
+    </style>
   </body>
 </html>

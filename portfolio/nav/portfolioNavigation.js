@@ -6,10 +6,11 @@ function createText(className, text) {
   return div;
 }
 
-function createNavLink(direction, link) {
+function createNavLink(direction, link, details) {
+  console.log(link);
   let a = document.createElement("a");
   let icon = document.createElement("i");
-  if (direction && link !== "toggle" && link !== null) {
+  if (direction && link !== "toggle" && link) {
     a.className = direction;
     icon.innerText =
       direction === "forward"
@@ -22,13 +23,12 @@ function createNavLink(direction, link) {
     a.setAttribute("href", "../" + link);
   }
 
-  if (link === "info-toggle") {
+  if (link === "info-toggle" && details) {
     icon.innerText = "search";
     icon.className = "material-icons";
     a.id = "info-toggle";
     a.appendChild(icon);
   }
-
   return a;
 }
 
@@ -91,7 +91,7 @@ function portfolioNavigation(currentPage, projectName, json) {
   let infoBody3 = createText(div3class, pageInfo.div3);
 
   let heading = createText("portfolio-info-heading", pageInfo.header);
-  let toggle = createNavLink("", "info-toggle");
+  let toggle = createNavLink("", "info-toggle", pageInfo.details);
   let backward = createNavLink("previous", pageInfo.prev);
   let forward = createNavLink("forward", pageInfo.next);
 
