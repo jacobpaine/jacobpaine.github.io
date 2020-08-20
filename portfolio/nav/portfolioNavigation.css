@@ -1,6 +1,6 @@
 body {
-  transition: background-color 0.5s;
-  justify-content: space-between;
+  /* transition: background-color 0.5s;
+  justify-content: space-between; */
 }
 
 #info {
@@ -40,23 +40,32 @@ body {
 
 #nav-box {
   display: flex;
-  align-self: flex-end;
+}
+#nav-box > * {
+  flex: 1 1 0;
+  justify-content: center;
 }
 
-#nav-box * {
-  width: 100%;
-  text-align: center;
+a.forward {
+  text-align: right;
+}
+a.forward,
+a.previous {
+  max-width: 33%;
 }
 
 .forward i,
 .previous i,
-a#infoToggle i {
+a#info-toggle i {
   font-size: 2.5em;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .forward i,
   .previous i,
+  a#info-toggle i {
+    font-size: 4rem;
+  }
   a#infoToggle i {
     font-size: 4rem;
   }
