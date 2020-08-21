@@ -17,38 +17,41 @@
   <body>
     <div class="metronome">
       <div class="face">
+        <div class="hand oneSide"></div>
         <div class="count"></div>
-        <div class="hand"></div>
       </div>
     </div>
-    <div id="bpmBox">
-      <label id="tempoLabel" for="tempo">BPM: </label>
-      <input id="tempo" type="number" min="33" max="250" value="60" />
-    </div>
     <div class="beatBox">
-      <input type="radio" id="2" class="beat" name="beat" value="2" />
-      <label for="2">2</label>
+      <div id="bpmBox">
+        <label id="tempoLabel" for="tempo">Per Minute: </label>
+        <input id="tempo" type="number" min="33" max="250" value="60" />
+      </div>
+      <div class="beatButtons">
+        Per Measure
+        <input type="radio" id="2" class="beat" name="beat" value="2" />
+        <label for="2">2</label>
 
-      <input type="radio" id="3" class="beat" name="beat" value="3" />
-      <label for="3">3</label>
+        <input type="radio" id="3" class="beat" name="beat" value="3" />
+        <label for="3">3</label>
 
-      <input type="radio" id="4" class="beat" name="beat" value="4" checked />
-      <label for="4">4</label>
+        <input type="radio" id="4" class="beat" name="beat" value="4" checked />
+        <label for="4">4</label>
 
-      <input type="radio" id="6" class="beat" name="beat" value="6" />
-      <label for="6">6</label>
+        <input type="radio" id="6" class="beat" name="beat" value="6" />
+        <label for="6">6</label>
 
-      <input type="radio" id="7" class="beat" name="beat" value="7" />
-      <label for="7">7</label>
+        <input type="radio" id="7" class="beat" name="beat" value="7" />
+        <label for="7">7</label>
 
-      <input type="radio" id="8" class="beat" name="beat" value="8" />
-      <label for="8">8</label>
+        <input type="radio" id="8" class="beat" name="beat" value="8" />
+        <label for="8">8</label>
 
-      <input type="radio" id="10" class="beat" name="beat" value="10" />
-      <label for="10">10</label>
+        <input type="radio" id="10" class="beat" name="beat" value="10" />
+        <label for="10">10</label>
 
-      <input type="radio" id="12" class="beat" name="beat" value="12" />
-      <label for="12">12</label>
+        <input type="radio" id="12" class="beat" name="beat" value="12" />
+        <label for="12">12</label>
+      </div>
     </div>
     <script type="module">
       import { portfolioNavigation } from "../../../portfolio/nav/portfolioNavigation.js";
@@ -66,8 +69,9 @@
       let count = 0;
       let countMax = 4;
 
-      function changeTempo(tempo) {
-        let value = 60 / tempo.target.value;
+      function changeTempo() {
+        let tempo = document.getElementById("tempo").value;
+        let value = 60 / tempo;
         hand.style.transition = `all ${value}s linear`;
         if (interval) {
           clearInterval(interval);
@@ -76,9 +80,6 @@
       }
 
       function setRhythmn() {
-        console.log("count: ", count);
-        console.log("countMax: ", countMax);
-
         if (count >= countMax) {
           count = 1;
         } else {
@@ -100,13 +101,13 @@
       function changeBeat(e) {
         const beatsPerMeasure = e.target.value;
         countMax = Number(beatsPerMeasure);
-        console.log(countMax);
         return countMax;
       }
 
       tempo.addEventListener("change", changeTempo);
       tempo.addEventListener("focusout", changeTempo);
       for (let i = 0; i < beat.length; i++) {
+        beat[i].addEventListener("change", changeTempo);
         beat[i].addEventListener("change", changeBeat);
       }
     </script>

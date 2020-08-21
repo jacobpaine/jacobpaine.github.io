@@ -17,7 +17,7 @@ body,
 html {
   display: flex;
   height: 100%;
-  flex-flow: column nowrap;
+  flex-flow: column;
   justify-content: space-between;
 }
 
@@ -68,7 +68,7 @@ html {
 
 @media only screen and (max-width: 768px) {
   #scale {
-    font-size: 10.5em;
+    font-size: 6em;
   }
   #randomNote,
   #muteBox {
@@ -92,16 +92,16 @@ html {
       opacity: 1;
     }
     42% {
-      transform: translateY(-1135%);
+      transform: translateY(-835%);
       color: red;
     }
     60% {
       opacity: 0;
-      transform: translateY(-1335%);
+      transform: translateY(-935%);
       color: red;
     }
     62% {
-      transform: translateY(-1500%);
+      transform: translateY(-1300%);
       color: white;
       opacity: 0;
     }
