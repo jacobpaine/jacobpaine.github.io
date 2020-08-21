@@ -182,7 +182,16 @@
 
       muteButton.addEventListener("change", toggleMute);
 
+      const scaleClick = (e) => {
+        // c2 = screenY 485, d2 = 475
+        console.log(e);
+      };
+
+      const scale = document.getElementById("scale");
+      scale.addEventListener("click", scaleClick);
+
       window.addEventListener("keydown", recordKey);
+
       document
         .getElementById("randomNote")
         .addEventListener("click", randomNote);
