@@ -48,7 +48,7 @@ function portfolioNavigation(currentPage, projectName, json) {
   const info = document.getElementById("info");
 
   function showMenu() {
-    info.style.width = "50%";
+    info.style.width = "75%";
     info.style.marginLeft = "25%";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
   }
