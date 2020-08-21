@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta charset="UTF-8" />
     <title>HTML5 Canvas</title>
     <link
@@ -40,9 +41,13 @@
       const largerSize = document.getElementById("largerSize");
       const colorChanger = document.getElementById("colorChanger");
       const shapes = document.getElementsByClassName("shape");
+      const navBox = document.getElementById("nav-box");
+      const toolbox = document.getElementById("toolbox");
+
       const ctx = canvas.getContext("2d");
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight - 100;
+      canvas.height =
+        window.innerHeight - (navBox.clientHeight + toolbox.clientHeight);
       ctx.lineJoin = "round";
       ctx.lineCap = "square";
       ctx.lineWidth = 20;
@@ -83,13 +88,22 @@
       };
 
       function draw(e) {
+        let offsetX;
+        let offsetY;
+        if (e.changedTouches) {
+          offsetX = e.changedTouches[0].clientX;
+          offsetY = e.changedTouches[0].clientY;
+        } else {
+          offsetX = e.offsetX;
+          offsetY = e.offsetY;
+        }
         if (!isDrawing) return;
         ctx.strokeStyle = hue;
         ctx.beginPath();
         ctx.moveTo(lastX, lastY);
-        ctx.lineTo(e.offsetX, e.offsetY);
+        ctx.lineTo(offsetX, offsetY);
         ctx.stroke();
-        [lastX, lastY] = [e.offsetX, e.offsetY];
+        [lastX, lastY] = [offsetX, offsetY];
       }
 
       canvas.addEventListener("mousedown", (e) => {
@@ -97,11 +111,15 @@
         [lastX, lastY] = [e.offsetX, e.offsetY];
       });
 
+      canvas.addEventListener("touchstart", (e) => {
+        isDrawing = true;
+        [lastX, lastY] = [e.changedTouches.screenX, e.changedTouches.screenY];
+      });
+
       canvas.addEventListener("mousemove", draw);
       canvas.addEventListener("mouseup", () => (isDrawing = false));
       canvas.addEventListener("mouseout", () => (isDrawing = false));
 
-      canvas.addEventListener("touchstart", () => (isDrawing = true));
       canvas.addEventListener("touchmove", draw);
       canvas.addEventListener("touchend", () => (isDrawing = false));
 
@@ -120,17 +138,25 @@
         height: 50vh;
       }
       #toolbox {
-        height: 65px;
+        height: 25%;
         display: flex;
         justify-content: space-around;
         align-items: center;
+      }
+      @media only screen and (max-width: 768px) {
+        #toolbox {
+          height: 30%;
+          font-size: 2em;
+        }
+        #navBox {
+        }
       }
       #brushSize {
         display: flex;
       }
       div#brushSize div {
         margin: 8px;
-        font-size: 1.6em;
+        font-size: 1em;
       }
       .tool:hover {
         background-color: lightgrey;
