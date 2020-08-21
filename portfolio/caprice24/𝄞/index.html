@@ -22,6 +22,8 @@
       <div id="muteBox">
         <input id="mute" type="checkbox" checked />
         <label for="mute">Mute</label>
+        <button id="sharp">Sharp</button>
+        <button id="flat">Flat</button>
       </div>
     </div>
 
@@ -41,6 +43,8 @@
       };
 
       const muteButton = document.getElementById("mute");
+      const sharp = document.getElementById("sharp");
+      const flat = document.getElementById("flat");
 
       function createAudio(tone, octave, accidental) {
         const audioElement = document.createElement("audio");
@@ -172,7 +176,6 @@
         currentNote.octave = octave;
         currentNote.tone = tone;
         currentNote.accidental = accidental;
-
         return displayNote(currentNote);
       };
 
@@ -182,14 +185,49 @@
 
       muteButton.addEventListener("change", toggleMute);
 
-      const scaleClick = (e) => {
-        // c2 = screenY 485, d2 = 475
-        console.log(e);
+      const scaleClick = (evt) => {
+        const dictionaryOfAccidentals = ["flat", "natural", "sharp"];
+        const dictionaryOfTones = ["c", "d", "e", "f", "g", "a", "b"];
+        const direction = evt.target.id;
+
+        if (direction === "sharp") {
+          if (currentNote.tone === "b" && currentNote.accidental === "sharp") {
+            currentNote.octave = String(Number(currentNote.octave) + 1);
+          }
+          if (currentNote.accidental === "sharp") {
+            currentNote.tone =
+              dictionaryOfTones[
+                dictionaryOfTones.indexOf(currentNote.tone) + 1
+              ];
+          }
+          currentNote.accidental =
+            dictionaryOfAccidentals[
+              dictionaryOfAccidentals.indexOf(currentNote.accidental) + 1
+            ] || dictionaryOfAccidentals[0];
+        }
+
+        if (direction === "flat") {
+          console.log("currentNote: ", currentNote);
+          if (currentNote.tone === "c" && currentNote.accidental === "flat") {
+            let newOctave = Number(currentNote.octave) - 1;
+            currentNote.octave = String(newOctave);
+          }
+          if (currentNote.accidental === "flat") {
+            currentNote.tone =
+              dictionaryOfTones[
+                dictionaryOfTones.indexOf(currentNote.tone) - 1
+              ] || dictionaryOfTones[dictionaryOfTones.length - 1];
+          }
+          currentNote.accidental =
+            dictionaryOfAccidentals[
+              dictionaryOfAccidentals.indexOf(currentNote.accidental) - 1
+            ] || dictionaryOfAccidentals[2];
+        }
+        displayNote(currentNote);
       };
 
-      const scale = document.getElementById("scale");
-      scale.addEventListener("click", scaleClick);
-
+      sharp.addEventListener("click", scaleClick);
+      flat.addEventListener("click", scaleClick);
       window.addEventListener("keydown", recordKey);
 
       document
