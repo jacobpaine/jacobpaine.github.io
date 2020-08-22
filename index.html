@@ -177,7 +177,6 @@
         function clickHandler(event) {
           // Using data-href in case we have multiple targets that direct to the same end.
           var dataHref = event.target.getAttribute("data-href");
-          console.log("datahref: ", dataHref);
           if (!dataHref) return;
           if (dataHref === "emailJacob") {
             window.open("mailto:painejacob@gmail.com");
