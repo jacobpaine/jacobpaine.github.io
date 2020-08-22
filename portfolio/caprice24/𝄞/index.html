@@ -191,15 +191,27 @@
         const direction = evt.target.id;
 
         if (direction === "sharp") {
+          if (
+            currentNote.tone === "b" &&
+            currentNote.octave === "5" &&
+            currentNote.accidental === "sharp"
+          )
+            return;
+
           if (currentNote.tone === "b" && currentNote.accidental === "sharp") {
-            currentNote.octave = String(Number(currentNote.octave) + 1);
+            if (currentNote.octave === "5") return;
+            let newOctave = Number(currentNote.octave) + 1;
+            currentNote.octave = String(newOctave);
           }
+
           if (currentNote.accidental === "sharp") {
-            currentNote.tone =
+            let newTone =
               dictionaryOfTones[
                 dictionaryOfTones.indexOf(currentNote.tone) + 1
-              ];
+              ] || dictionaryOfTones[0];
+            currentNote.tone = newTone;
           }
+
           currentNote.accidental =
             dictionaryOfAccidentals[
               dictionaryOfAccidentals.indexOf(currentNote.accidental) + 1
@@ -207,21 +219,31 @@
         }
 
         if (direction === "flat") {
-          console.log("currentNote: ", currentNote);
+          if (
+            currentNote.tone === "c" &&
+            currentNote.octave === "2" &&
+            currentNote.accidental === "flat"
+          )
+            return;
+
           if (currentNote.tone === "c" && currentNote.accidental === "flat") {
             let newOctave = Number(currentNote.octave) - 1;
             currentNote.octave = String(newOctave);
           }
+
           if (currentNote.accidental === "flat") {
             currentNote.tone =
               dictionaryOfTones[
                 dictionaryOfTones.indexOf(currentNote.tone) - 1
               ] || dictionaryOfTones[dictionaryOfTones.length - 1];
           }
+
           currentNote.accidental =
-            dictionaryOfAccidentals[
-              dictionaryOfAccidentals.indexOf(currentNote.accidental) - 1
-            ] || dictionaryOfAccidentals[2];
+            currentNote.accidental !== "flat"
+              ? dictionaryOfAccidentals[
+                  dictionaryOfAccidentals.indexOf(currentNote.accidental) - 1
+                ] || dictionaryOfAccidentals[2]
+              : "sharp";
         }
         displayNote(currentNote);
       };
