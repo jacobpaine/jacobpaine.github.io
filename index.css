@@ -125,7 +125,6 @@ div#tech-icons div {
   cursor: pointer;
 }
 #display-portfolio {
-  display: flex;
   flex-direction: column;
   align-items: center;
 }
