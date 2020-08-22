@@ -19,7 +19,7 @@ const portfolioData = {
       details: true,
       header: "𝄞",
       div1:
-        "Inspired by Drum Kit from Wes Bos, I made this small environment to play with musical scales. I found a open source font (StaffClefPitchesEasy) and recorded my own sounds on GarageBand.",
+        "I made this small environment to play with musical scales. I found a open source font (StaffClefPitchesEasy) and recorded my own sounds on GarageBand.",
       div1class: "",
       div2: "",
       div2class: "",
