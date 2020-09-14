@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <link href="new.css" rel="stylesheet" />
+  <link href="modal.css" rel="stylesheet" />
   <head>
     <meta charset="utf-8" />
     <title>Jacob Paine</title>
@@ -22,42 +23,84 @@
       </div>
     </div>
     <div id="bio-page">
-      <div id="nav-box"><button id="nav-button"></button></div>
-      <nav>
-        burger to less than
-        <a>About</a>
-        <a>Portfolio</a>
-        <a>Contact</a>
+      <div id="nav-box">
+        <button id="nav">
+          <img class="icon" src="./icons/hamburger.svg" />
+        </button>
+      </div>
+
+      <nav id="modal-nav" class="modal-overlay">
+        <div class="modal-content">
+          <div class="modal-body">
+            <a href="./portfolio/caprice24/intro/">Portfolio</a>
+            <a id="contact1">Contact</a>
+            <div class="iconBox">
+              <a href="https://www.linkedin.com/in/jacobpaine/"
+                ><img class="icon" src="./icons/linkedin300.png"
+              /></a>
+              <a href="https://github.com/jacobpaine"
+                ><img class="icon" src="./icons/github300.png"
+              /></a>
+            </div>
+          </div>
+        </div>
       </nav>
+
+      <div id="modal-contact" class="modal-overlay">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div id="contact">Email: painejacob@gmail.com</div>
+          </div>
+        </div>
+      </div>
+
       <div id="about-doily"></div>
       <div id="about">
         <div id="myPhoto">Photo</div>
-        <div id="photoBox">
-          <a href="linkedin.com"
+        <div class="iconBox">
+          <a href="https://www.linkedin.com/in/jacobpaine/"
             ><img class="icon" src="./icons/linkedin300.png"
           /></a>
-          <a href="github.com"
+          <a href="https://github.com/jacobpaine"
             ><img class="icon" src="./icons/github300.png"
           /></a>
-          <a id="contact"><img class="icon" src="./icons/email300.png" /></a>
+          <a id="contact2"><img class="icon" src="./icons/email300.png" /></a>
         </div>
 
         <div id="myAbout">
-          Words about me going for a longer time than normal somewhere in the
-          few 100 word range
+          <p>
+            As a developer, I've explored both database and API architecture, as
+            well as fundamental skills in web design and frameworks. This
+            includes technologies like Javascript, Node.js, React, MySQL, and
+            AWS cloud services.
+          </p>
+          <p>
+            I'm always deepening my skill set by teaching, mentoring and
+            learning. I enjoy working with other developers. My ideal work
+            environment would be a team united for an important purpose.
+          </p>
+          <p>
+            I highly prefer projects that contribute to the field of education
+            or help people make better decisions with data. My passion for
+            development comes from my belief in using small incremental steps.
+            With smaller steps, I create new and elegant solutions for existing
+            problems.
+          </p>
         </div>
       </div>
     </div>
 
     <script type="module">
-      import {
-        scrollToDiv,
-        stickyNavigation,
-        toggleNav,
-      } from './modules/nav.js';
-      const navButton = document.getElementById('nav-button');
+      import { scrollToDiv } from './modules/nav.js';
+      import { modal } from './modules/modal.js';
+      const navButton = document.getElementById('nav');
       const aboutButton = document.getElementById('aboutButton');
       const contact = document.getElementById('contact');
+
+      // preps the modal
+      modal('nav');
+      modal('contact');
+      modal('about');
 
       function enlargeSquare() {
         const square = document.getElementById('square');
@@ -68,13 +111,8 @@
         square.className = squareToggle;
       }
 
-      contact.addEventListener('click', () => {
-        console.log('contact');
-      });
       aboutButton.addEventListener('mouseenter', () => enlargeSquare());
-      navButton.addEventListener('click', toggleNav);
       aboutButton.addEventListener('click', () => scrollToDiv('about'));
-      window.addEventListener('scroll', stickyNavigation);
     </script>
   </body>
 </html>

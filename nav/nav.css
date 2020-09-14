@@ -33,7 +33,6 @@ img#nav-toggle:active {
   width: 33vw;
   height: 100vh;
   background-color: #c3ccd7;
-  /* opacity: 0.89; */
   position: fixed;
   top: 0;
   left: 0;
@@ -75,5 +74,5 @@ img#nav-toggle:active {
 }
 
 #nav-list ul li:hover {
-  background-color: #d  5dae1;
+  background-color: #d 5dae1;
 }
