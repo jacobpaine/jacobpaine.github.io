@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=block"
+    rel="stylesheet"
+  />
   <link href="new.css" rel="stylesheet" />
   <link href="modal.css" rel="stylesheet" />
   <head>
@@ -11,15 +15,13 @@
     <div id="title-page">
       <div id="title-box">
         <div id="myName">Jacob Paine</div>
-        <div id="myFlavor">
-          Some words about me roughly equal to but not over 150 characters.
+        <div id="myFlavor">Full-stack Developer</div>
+        <div id="aboutButtons">
+          <button id="aboutButton">
+            <span id="square"></span>
+            <span id="triangle"></span>
+          </button>
         </div>
-      </div>
-      <div id="aboutButtons">
-        <button id="aboutButton">
-          <span id="square"></span>
-          <span id="triangle-down"></span>
-        </button>
       </div>
     </div>
     <div id="bio-page">
@@ -32,83 +34,87 @@
       <nav id="modal-nav" class="modal-overlay">
         <div class="modal-content">
           <div class="modal-body">
-            <a href="./portfolio/caprice24/intro/">Portfolio</a>
-            <a id="contact1">Contact</a>
-            <div class="iconBox">
-              <a href="https://www.linkedin.com/in/jacobpaine/"
-                ><img class="icon" src="./icons/linkedin300.png"
-              /></a>
-              <a href="https://github.com/jacobpaine"
-                ><img class="icon" src="./icons/github300.png"
-              /></a>
+            <a id="portfolio" href="./portfolio/caprice24/intro/">Portfolio</a>
+            <a id="contact">Contact</a>
+          </div>
+        </div>
+        <div id="modal-contacts">
+          <div class="modal-contact">
+            <div class="modal-body">
+              <div id="linkedin">
+                <a href="https://www.linkedin.com/in/jacobpaine/"
+                  ><img class="icon linkedInIcon" src="./icons/linkedin300.png"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="modal-contact">
+            <div class="modal-body">
+              <div id="email">painejacob@gmail.com</div>
+            </div>
+          </div>
+          <div class="modal-contact">
+            <div class="modal-body">
+              <div id="github">
+                <a href="https://github.com/jacobpaine"
+                  ><img class="icon gitHubIcon" src="./icons/github300.png"
+                /></a>
+              </div>
             </div>
           </div>
         </div>
       </nav>
-
-      <div id="modal-contact" class="modal-overlay">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div id="contact">Email: painejacob@gmail.com</div>
-          </div>
-        </div>
-      </div>
-
       <div id="about-doily"></div>
       <div id="about">
-        <div id="myPhoto">Photo</div>
-        <div class="iconBox">
-          <a href="https://www.linkedin.com/in/jacobpaine/"
-            ><img class="icon" src="./icons/linkedin300.png"
-          /></a>
-          <a href="https://github.com/jacobpaine"
-            ><img class="icon" src="./icons/github300.png"
-          /></a>
-          <a id="contact2"><img class="icon" src="./icons/email300.png" /></a>
-        </div>
-
-        <div id="myAbout">
-          <p>
-            As a developer, I've explored both database and API architecture, as
-            well as fundamental skills in web design and frameworks. This
-            includes technologies like Javascript, Node.js, React, MySQL, and
-            AWS cloud services.
-          </p>
-          <p>
-            I'm always deepening my skill set by teaching, mentoring and
-            learning. I enjoy working with other developers. My ideal work
-            environment would be a team united for an important purpose.
-          </p>
-          <p>
-            I highly prefer projects that contribute to the field of education
-            or help people make better decisions with data. My passion for
-            development comes from my belief in using small incremental steps.
-            With smaller steps, I create new and elegant solutions for existing
-            problems.
-          </p>
-        </div>
+        <img id="myPhoto" src="./images/myPhoto.png" />
+        <a id="contactNav"
+          ><img class="icon emailIcon" src="./icons/email300.png"
+        /></a>
+        <div class="iconBox"></div>
+      </div>
+      <div id="myAbout">
+        <p>
+          As a developer, I've explored both database and API architecture, as
+          well as fundamental skills in web design and frameworks. This includes
+          technologies like Javascript, Node.js, React, MySQL, and AWS cloud
+          services.
+        </p>
+        <p>
+          I'm always deepening my skill set by teaching, mentoring and learning.
+          I enjoy working with other developers. My ideal work environment would
+          be a team united for an important purpose.
+        </p>
+        <p>
+          I highly prefer projects that contribute to the field of education or
+          help people make better decisions with data. My passion for
+          development comes from my belief in using small incremental steps.
+          With smaller steps, I create new and elegant solutions for existing
+          problems.
+        </p>
       </div>
     </div>
-
     <script type="module">
       import { scrollToDiv } from './modules/nav.js';
       import { modal } from './modules/modal.js';
       const navButton = document.getElementById('nav');
       const aboutButton = document.getElementById('aboutButton');
-      const contact = document.getElementById('contact');
 
       // preps the modal
-      modal('nav');
-      modal('contact');
-      modal('about');
+      modal();
 
       function enlargeSquare() {
         const square = document.getElementById('square');
-        const squareToggle =
-          document.getElementById('square').className.split(' ')[0] === 'down'
-            ? 'up'
-            : 'down';
-        square.className = squareToggle;
+        const triangle = document.getElementById('triangle');
+
+        square.className = 'down';
+        triangle.className = 'down';
+
+        square.addEventListener('transitionend', function () {
+          square.style.position = 'absolute';
+          square.style.backgroundColor = 'blue';
+          triangle.style.position = 'absolute';
+          triangle.style.borderTop = '35px solid blue';
+        });
       }
 
       aboutButton.addEventListener('mouseenter', () => enlargeSquare());

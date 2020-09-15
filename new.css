@@ -37,13 +37,27 @@ nav {
   align-items: center;
   background-color: black;
 }
-#myName {
-  font-size: 3em;
-  text-align: center;
-}
 #title-box {
-  background-color: white;
+  background-color: black;
   padding: 5px;
+  color: white;
+}
+#myName {
+  font-size: 4.5em;
+  font-family: Poppins;
+  text-align: center;
+  font-weight: 600;
+}
+
+#myFlavor {
+  font-size: 2em;
+  text-align: center;
+  font-family: poppins;
+  font-weight: 500;
+}
+#aboutButtons {
+  display: flex;
+  justify-content: center;
 }
 
 #aboutButton {
@@ -53,10 +67,11 @@ nav {
   cursor: pointer;
   border: 0;
   border-radius: 0.25rem;
-  background: #000;
+  background: transparent;
   padding: 0.25rem 0.5rem;
   margin: 0.25rem;
 }
+
 #aboutButton:active,
 #aboutButton:focus {
   outline: 0;
@@ -68,31 +83,38 @@ nav {
 }
 
 #square.down {
-  transition: padding-top 0.75s ease-in;
-  padding-top: 200px;
-}
-#square.up {
   transition: padding-top 0.75s linear;
-  padding-top: 0px;
+  transition-delay: 0.003s;
+  padding-top: 564px;
+  position: absolute;
 }
 
-#triangle-down {
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-  border-top: 25px solid red;
+#triangle {
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-top: 35px solid red;
+  transition: margin-top 0.75s linear;
+}
+#triangle.down {
+  margin-top: 586px;
+  position: absolute;
 }
 /* End Title */
 /* Bio */
 #bio-page {
   height: 100vh;
+  font-family: poppins;
+  font-weight: normal;
 }
 #about {
   display: flex;
   flex-direction: column;
+  flex-flow: wrap;
   padding: 8px;
+  justify-content: space-between;
 }
 #about-doily {
-  width: 66vw;
+  width: 76vw;
   height: 77vh;
   z-index: -1;
   position: absolute;
@@ -100,7 +122,6 @@ nav {
 }
 
 #myAbout {
-  width: 66%;
   margin-left: 33%;
   background-color: grey;
   padding: 2vw;
@@ -111,14 +132,19 @@ nav {
   padding: 5px;
 }
 #myPhoto {
-  height: 120px;
-  width: 100px;
+  height: 250px;
+  width: 238px;
   margin: 5px;
-  border: 1px solid red;
-  background-color: red;
 }
 .icon {
   width: 25px;
+  padding: 2px;
+  cursor: pointer;
+}
+.gitHubIcon,
+.linkedInIcon,
+.emailIcon {
+  width: 50px;
   padding: 2px;
 }
 @media screen and (max-width: 480px) {
@@ -148,5 +174,17 @@ nav {
   }
   .iconBox {
     margin-left: 5vw;
+  }
+  #triangle.down {
+    transition: margin-top 0.75s linear, border-top 0.35s linear;
+    border-top: '32px solid blue';
+    margin-top: 532px;
+    position: absolute;
+  }
+  #square.down {
+    transition: padding-top 0.75s linear;
+    /* transition-delay: 0.003s; */
+    padding-top: 510px;
+    position: absolute;
   }
 }

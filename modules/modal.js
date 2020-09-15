@@ -1,36 +1,57 @@
-const modal = (modalName) => {
-  if (modalName === 'contact') {
-    document.getElementById('contact1').addEventListener('click', openModal);
-    document.getElementById('contact2').addEventListener('click', openModal);
-  } else {
-    document.getElementById(modalName).addEventListener('click', openModal);
-  }
+const modal = () => {
+  // Modal built specifically to accept params for new modals, should the need arise
+  const modalName = 'nav';
 
-  window.addEventListener('click', closeModal);
+  function openContactNav(e) {
+    const modal = document.getElementById('modal-nav');
+    const contacts = document.getElementById('modal-contacts');
+    if (modal) modal.style.display = 'block';
+    toggleContacts(null);
+  }
 
   function openModal(e) {
     const modal = document.getElementById('modal-' + modalName);
-
-    if (e.target.id === 'contact1') {
-      // Preventing multiple modal openings
-      closeModal({ target: { id: 'modal-nav', override: true } });
-    }
     if (modal) modal.style.display = 'block';
   }
 
-  // Click outside and close / or close Button
   function closeModal(e) {
-    const modal = document.getElementById('modal-' + modalName);
-
+    const modal = document.getElementById('modal-nav');
     if (e.target === modal) {
       modal.style.display = 'none';
-    } else if (e.target.id === 'modalClose') {
+      toggleContacts('close');
+    } else if (
+      e.target.id === 'modalClose' ||
+      e.target.id === 'modal-contacts'
+    ) {
       modal.style.display = 'none';
-    } else if (e.target.override) {
-      const modalClosing = document.getElementById(e.target.id);
-      modalClosing.style.display = 'none';
+      toggleContacts('close');
     }
   }
+
+  function toggleContacts(param) {
+    const contacts = document.getElementsByClassName('modal-contact');
+    const showContacts = document.getElementsByClassName('showContact');
+
+    if (param === 'close') {
+      for (let i = 0; i < contacts.length; i++) {
+        contacts[i].classList.remove('showContact');
+      }
+    } else {
+      for (let i = 0; i < contacts.length; i++) {
+        function show() {
+          contacts[i].className += ' showContact';
+        }
+        setTimeout(show, 500 + i * 150);
+      }
+    }
+  }
+
+  document.getElementById('contact').addEventListener('click', toggleContacts);
+  document
+    .getElementById('contactNav')
+    .addEventListener('click', openContactNav);
+  document.getElementById('nav').addEventListener('click', openModal);
+  window.addEventListener('click', closeModal);
 };
 
 export { modal };
