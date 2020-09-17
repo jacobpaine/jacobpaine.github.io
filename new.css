@@ -57,6 +57,7 @@ nav {
 }
 #aboutButtons {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -66,39 +67,52 @@ nav {
   align-items: center;
   cursor: pointer;
   border: 0;
-  border-radius: 0.25rem;
   background: transparent;
-  padding: 0.25rem 0.5rem;
-  margin: 0.25rem;
 }
 
 #aboutButton:active,
 #aboutButton:focus {
   outline: 0;
 }
+#arrowBox {
+  display: flex;
+  justify-content: center;
+}
+#contactNav {
+  display: flex;
+  justify-content: center;
+  width: 238px;
+}
 #square {
-  width: 25px;
-  height: 25px;
   background-color: red;
 }
-
-#square.down {
-  transition: padding-top 0.75s linear;
-  transition-delay: 0.003s;
-  padding-top: 564px;
+#square2 {
+  background-color: blue;
+  z-index: 1;
+  visibility: hidden;
+}
+#square,
+#square2 {
+  width: 25px;
+  height: 25px;
   position: absolute;
 }
 
+.down {
+  transition: padding-top 0.4s linear;
+}
+.down2 {
+  transition: padding-top 0.6s linear;
+}
 #triangle {
-  border-left: 35px solid transparent;
-  border-right: 35px solid transparent;
-  border-top: 35px solid red;
-  transition: margin-top 0.75s linear;
-}
-#triangle.down {
-  margin-top: 586px;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 40px solid red;
+  transition: margin-top 1s linear;
+  margin-top: 20px;
   position: absolute;
 }
+
 /* End Title */
 /* Bio */
 #bio-page {
@@ -109,7 +123,6 @@ nav {
 #about {
   display: flex;
   flex-direction: column;
-  flex-flow: wrap;
   padding: 8px;
   justify-content: space-between;
 }
@@ -124,7 +137,8 @@ nav {
 #myAbout {
   margin-left: 33%;
   background-color: cornflowerblue;
-  padding: 2vw;
+  padding: 5vw;
+  z-index: 3;
 }
 
 .iconBox {
@@ -135,6 +149,7 @@ nav {
   height: 250px;
   width: 238px;
   margin: 5px;
+  z-index: 1;
 }
 .icon {
   width: 25px;
@@ -148,12 +163,6 @@ nav {
   padding: 2px;
 }
 @media screen and (max-width: 480px) {
-  #myPhoto,
-  #photoBox {
-    align-self: flex-end;
-    margin-right: 8vw;
-  }
-
   #about-doily {
     width: 92vw;
     margin-top: 1vh;
@@ -174,17 +183,5 @@ nav {
   }
   .iconBox {
     margin-left: 5vw;
-  }
-  #triangle.down {
-    transition: margin-top 0.75s linear, border-top 0.35s linear;
-    border-top: '32px solid blue';
-    margin-top: 532px;
-    position: absolute;
-  }
-  #square.down {
-    transition: padding-top 0.75s linear;
-    /* transition-delay: 0.003s; */
-    padding-top: 510px;
-    position: absolute;
   }
 }

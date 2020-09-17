@@ -17,14 +17,17 @@
         <div id="myName">Jacob Paine</div>
         <div id="myFlavor">Full-stack Developer</div>
         <div id="aboutButtons">
-          <button id="aboutButton">
-            <span id="square"></span>
-            <span id="triangle"></span>
-          </button>
+          <div id="aboutButton">
+            <div id="square"></div>
+            <div id="triangle"></div>
+          </div>
         </div>
       </div>
     </div>
     <div id="bio-page">
+      <div id="arrowBox">
+        <div id="square2"></div>
+      </div>
       <div id="nav-box">
         <button id="nav">
           <img class="icon" src="./icons/hamburger.svg" />
@@ -96,26 +99,12 @@
     <script type="module">
       import { scrollToDiv } from './modules/nav.js';
       import { modal } from './modules/modal.js';
+      import { enlargeSquare } from './modules/animateArrow.js';
       const navButton = document.getElementById('nav');
       const aboutButton = document.getElementById('aboutButton');
 
       // preps the modal
       modal();
-
-      function enlargeSquare() {
-        const square = document.getElementById('square');
-        const triangle = document.getElementById('triangle');
-
-        square.className = 'down';
-        triangle.className = 'down';
-
-        square.addEventListener('transitionend', function () {
-          square.style.position = 'absolute';
-          square.style.backgroundColor = 'blue';
-          triangle.style.position = 'absolute';
-          triangle.style.borderTop = '35px solid blue';
-        });
-      }
 
       aboutButton.addEventListener('mouseenter', () => enlargeSquare());
       aboutButton.addEventListener('click', () => scrollToDiv('about'));
