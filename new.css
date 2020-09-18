@@ -99,15 +99,15 @@ nav {
 }
 
 .down {
-  transition: padding-top 0.35s linear;
+  transition: padding-top 0.33s linear;
 }
 .down2 {
   transition: padding-top 0.666s linear;
 }
 #triangle {
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
-  border-top: 40px solid red;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-top: 45px solid red;
   transition: margin-top 1s linear;
   margin-top: 20px;
   position: absolute;
@@ -131,7 +131,7 @@ nav {
   height: 77vh;
   z-index: -1;
   position: absolute;
-  border: 1px solid black;
+  border: 4px solid black;
 }
 
 #myAbout {

@@ -16,7 +16,6 @@ function enlargeSquare() {
   triangle.className = 'down';
 
   const squareDown = document.querySelector('#square.down');
-  squareDown.transition = 'padding-top 0.45s linear';
   const triangleDown = document.querySelector('#triangle.down');
 
   squareDown.style.paddingTop = midway - origin + 'px';
