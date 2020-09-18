@@ -28,9 +28,9 @@ function enlargeSquare() {
   }
 
   square.addEventListener('transitionend', function () {
-    squareTransition(bottomOfS2);
     triangle.style.position = 'absolute';
     triangle.style.borderTop = '40px solid blue';
+    squareTransition(bottomOfS2);
   });
 }
 

@@ -100,16 +100,16 @@ nav {
 }
 
 .down {
-  transition: padding-top 0.33s linear;
+  transition: padding-top 0.3s linear;
 }
 .down2 {
-  transition: padding-top 0.666s linear;
+  transition: padding-top 0.45s linear;
 }
 #triangle {
-  border-left: 45px solid transparent;
-  border-right: 45px solid transparent;
-  border-top: 45px solid red;
-  transition: margin-top 1s linear;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-top: 40px solid red;
+  transition: margin-top 0.75s linear;
   margin-top: 20px;
   position: absolute;
 }
