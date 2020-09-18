@@ -103,6 +103,7 @@
       import { modal } from './modules/modal.js';
       import { enlargeSquare } from './modules/animateArrow.js';
       const navButton = document.getElementById('nav');
+      const square2 = document.getElementById('square2');
       const aboutButton = document.getElementById('aboutButton');
 
       // preps the modal
@@ -110,6 +111,7 @@
 
       aboutButton.addEventListener('mouseenter', () => enlargeSquare());
       aboutButton.addEventListener('click', () => scrollToDiv('about'));
+      square2.addEventListener('click', () => scrollToDiv('about'));
     </script>
   </body>
 </html>

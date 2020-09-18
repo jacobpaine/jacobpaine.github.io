@@ -90,6 +90,7 @@ nav {
   background-color: blue;
   z-index: 1;
   visibility: hidden;
+  cursor: pointer;
 }
 #square,
 #square2 {
