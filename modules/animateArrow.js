@@ -8,6 +8,7 @@ function enlargeSquare() {
   const titlePage = document.getElementById('title-page');
 
   const origin = square.getBoundingClientRect().bottom;
+  const triangleOrigin = triangle.getBoundingClientRect().top;
   const midway = titlePage.getBoundingClientRect().bottom;
   const destination = myAbout.getBoundingClientRect().top;
   const bottomOfS2 = square2.getBoundingClientRect().bottom;
@@ -29,7 +30,7 @@ function enlargeSquare() {
 
   square.addEventListener('transitionend', function () {
     triangle.style.position = 'absolute';
-    triangle.style.borderTop = '40px solid blue';
+    triangle.style.borderTop = '25px solid blue';
     squareTransition(bottomOfS2);
   });
 }

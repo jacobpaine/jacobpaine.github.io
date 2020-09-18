@@ -37,7 +37,7 @@
 
 #modal-contacts {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 .modal-contact {
   display: flex;
@@ -47,7 +47,7 @@
   margin: 5vh auto;
   border-radius: 100%;
   padding: 5vh;
-  width: 50%;
+  width: 15vh;
   max-width: 265px;
   font-size: 0.9em;
   height: 15vh;

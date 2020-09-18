@@ -9,11 +9,6 @@ const modal = () => {
     toggleContacts(null);
   }
 
-  function openModal(e) {
-    const modal = document.getElementById('modal-' + modalName);
-    if (modal) modal.style.display = 'block';
-  }
-
   function closeModal(e) {
     const modal = document.getElementById('modal-nav');
     if (e.target === modal) {
@@ -46,11 +41,9 @@ const modal = () => {
     }
   }
 
-  document.getElementById('contact').addEventListener('click', toggleContacts);
   document
     .getElementById('contactNav')
     .addEventListener('click', openContactNav);
-  document.getElementById('nav').addEventListener('click', openModal);
   window.addEventListener('click', closeModal);
 };
 
